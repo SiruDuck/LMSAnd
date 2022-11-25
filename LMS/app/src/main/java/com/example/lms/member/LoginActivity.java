@@ -13,7 +13,9 @@ import android.widget.Toast;
 
 import com.example.lms.MainActivity;
 import com.example.lms.R;
+import com.example.lms.lecture.LectureVO;
 import com.example.lms.lms.CommonAskTask;
+import com.example.lms.lms.CommonVal;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -49,6 +51,7 @@ public class LoginActivity extends AppCompatActivity {
                             Toast.makeText(LoginActivity.this, "아이디/비번이 잘못되었습니다", Toast.LENGTH_SHORT).show();
                         }else{
                             MemberVO vo = new Gson().fromJson(data, MemberVO.class);
+                            CommonVal.loginInfo = new Gson().fromJson(data, new TypeToken<MemberVO>(){}.getType());
                             if(vo == null) {
                                 Toast.makeText(LoginActivity.this, "vo값이 없습니다", Toast.LENGTH_SHORT).show();
                             }else {

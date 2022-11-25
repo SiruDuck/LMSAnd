@@ -1,9 +1,10 @@
 package com.example.lms.lecture;
 
+import java.io.Serializable;
 import java.sql.Date;
 import java.util.List;
 
-public class LectureVO {
+public class LectureVO implements Serializable {
 	private String lecture_title, teacher_name, semester, sortation, lecture_room, lecture_time, id
 	, enrolment, reception_status, capacity, subjectcredit, state, book, lecture_year, lecture_day, host
 	, name, gender, grade, department_name, phone;

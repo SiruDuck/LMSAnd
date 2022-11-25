@@ -143,6 +143,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/lecture_year"
                 android:padding="5dp"
                 android:layout_weight="7"
                 android:layout_width="0dp"
@@ -166,6 +167,7 @@
                 android:textColor="#000"
                 />
             <TextView
+                android:id="@+id/semester"
                 android:padding="5dp"
                 android:layout_weight="7"
                 android:layout_width="0dp"
