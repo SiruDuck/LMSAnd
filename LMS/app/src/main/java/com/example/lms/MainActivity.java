@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import android.widget.ExpandableListView;
 import com.example.lms.lecture.LectureFragment;
 import com.example.lms.lms.CommonAskTask;
 import com.example.lms.member.MemberVO;
+import com.example.lms.notice.NoticeFragment;
 import com.example.lms.sidemenu.SideAdapter;
 import com.example.lms.sidemenu.SideVO;
 import com.google.android.material.navigation.NavigationView;
@@ -37,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = getIntent();
         MemberVO vo = (MemberVO) intent.getSerializableExtra("vo");
 
-
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new HomeFragment()).commit();
+        /*
         CommonAskTask askTask = new CommonAskTask("andLogin", this);
         askTask.addParam("id",new Gson().toJson(vo));
         askTask.addParam("pw", new Gson().toJson(vo));
@@ -49,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("비밀번호", "onResult: "+ data);
             }
         });
-
+*/
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -174,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         ArrayList<SideVO> sub_list4 = new ArrayList<>();
-        sub_list4.add(new SideVO("공지사항", new LectureFragment()));
+        sub_list4.add(new SideVO("공지사항", new NoticeFragment()));
         sub_list4.add(new SideVO("학습자료", new LectureFragment()));
         sub_list4.add(new SideVO("수강후기", new LectureFragment()));
         main_list.add(new SideVO("게시판","(공지사항 , 학습 자료 게시판... )" , "#661234"  , sub_list4 ));
@@ -205,7 +208,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         ArrayList<SideVO> sub_list4 = new ArrayList<>();
-        sub_list4.add(new SideVO("공지사항", new LectureFragment()));
+        sub_list4.add(new SideVO("공지사항", new NoticeFragment()));
         sub_list4.add(new SideVO("학습자료", new LectureFragment()));
         sub_list4.add(new SideVO("수강후기", new LectureFragment()));
 

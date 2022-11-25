@@ -14,7 +14,7 @@ public class ApiClient {
             retrofit = new Retrofit.Builder()
                     .baseUrl(BASEURL)// 스프링 미들웨어의 홈 주소를 의미함
                     .addConverterFactory(ScalarsConverterFactory.create())// json String형태 사용가능하게 함.
-                    //.client(new OkHttpClient.Builder().readTimeout(10 , TimeUnit.SECONDS).build())
+                    .client(new OkHttpClient.Builder().readTimeout(10 , TimeUnit.SECONDS).build())
                     // 10초안에 응답이 안오면 통신 연결시도를 종료하고 실패처리를 한다.↑
                     .build();
 

@@ -62,5 +62,6 @@ dependencies {
     // annotationProcessor : annotation processor classpath 에서 compile processor classpath를 분리하여 빌드 성능개선
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
+    implementation 'com.synnapps:carouselview:0.1.5'
 
 }

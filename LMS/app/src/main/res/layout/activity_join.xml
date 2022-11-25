@@ -4,382 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
     android:orientation="vertical"
     tools:context=".member.JoinActivity">
 
-    <LinearLayout
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+    <FrameLayout
+        android:id="@+id/joinframe1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@color/lmsdark"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="회원가입"
-            android:textSize="25dp"
-            android:textStyle="bold"
-            android:layout_marginBottom="20dp"
+            android:textSize="30dp"
+            android:textColor="@color/white"
+            android:layout_gravity="bottom"
+            android:layout_margin="30dp"/>
+    </FrameLayout>
 
-            />
+    <FrameLayout
+        android:layout_below="@+id/joinframe1"
 
-        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="* 아이디"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+            android:elevation="20dp"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="10dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="아이디를 입력하세요(영문소문자,숫자)"
-                android:maxLines="1"
-                android:textCursorDrawable="@drawable/cursor_maindrawble" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/lmsmainbl"
-                android:text="중복확인" />
-        </LinearLayout>
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="* 비밀번호"
-            android:textSize="18dp"
-            android:textStyle="bold" />
 
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="비밀번호를 입력하세요"
-            android:maxLines="1"
-            android:textCursorDrawable="@drawable/cursor_maindrawble" />
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="* 비밀번호 확인"
-            android:textSize="18dp"
-            android:textStyle="bold" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:textCursorDrawable="@drawable/cursor_maindrawble" />
 
-        <TextView
 
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="* 구분"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
 
-
-        <RadioGroup
-            android:id="@+id/rdo_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-
-            >
-
-            <RadioButton
-                android:id="@+id/rdo_stu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:text="학생" />
-
-            <RadioButton
-                android:id="@+id/rdo_tea"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:text="교수" />
-
-            <RadioButton
-                android:id="@+id/rdo_emp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="직원" />
-        </RadioGroup>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="* 성명"
-            android:textSize="18dp"
-            android:textStyle="bold" />
-
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:textCursorDrawable="@drawable/cursor_maindrawble" />
-
-
-
-
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="* 이메일"
-            android:textSize="18dp"
-            android:textStyle="bold" />
-
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="이메일을 입력하세요"
-            android:maxLines="1"
-            android:textCursorDrawable="@drawable/cursor_maindrawble" />
-
-
-        <TextView
-
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="* 성별"
-            android:textSize="18dp"
-            android:textStyle="bold" />
-
-
-        <RadioGroup
-            android:id="@+id/rdo_gender"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-
-            >
-
-            <RadioButton
-                android:id="@+id/rdo_man"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:text="남" />
-
-            <RadioButton
-                android:id="@+id/rdo_woman"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:text="여" />
-
-        </RadioGroup>
-
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="* 생년월일"
-            android:textSize="18dp"
-            android:textStyle="bold" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-        <TextView
-            android:layout_weight="4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="생일을 적어주세요"
-            android:id="@+id/login_birthtxt"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/lmsdark"
-            android:text="생년월일"
-            android:id="@+id/login_birthbtn" />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="* 전화번호"
-            android:textSize="18dp"
-            android:textStyle="bold" />
-
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:textCursorDrawable="@drawable/cursor_maindrawble" />
-
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="* 주소"
-            android:textSize="18dp"
-            android:textStyle="bold" />
-
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:textCursorDrawable="@drawable/cursor_maindrawble" />
-
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="* 학년"
-            android:textSize="18dp"
-            android:textStyle="bold" />
-
-        <RadioGroup
-            android:id="@+id/rdo_gra"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-
-            >
-
-            <RadioButton
-                android:id="@+id/rdo_fir"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:text="1학년" />
-
-            <RadioButton
-                android:id="@+id/rdo_sec"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:text="2학년" />
-
-            <RadioButton
-                android:id="@+id/rdo_thi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3학년" />
-
-            <RadioButton
-                android:id="@+id/rdo_fou"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="4학년" />
-        </RadioGroup>
-
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="* 입학일"
-            android:textSize="18dp"
-            android:textStyle="bold" />
-
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:textCursorDrawable="@drawable/cursor_maindrawble" />
-
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="* 졸업일"
-            android:textSize="18dp"
-            android:textStyle="bold" />
-
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:textCursorDrawable="@drawable/cursor_maindrawble" />
-
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="* 상태"
-            android:textSize="18dp"
-            android:textStyle="bold" />
-
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:textCursorDrawable="@drawable/cursor_maindrawble" />
-
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="* 구분"
-            android:textSize="18dp"
-            android:textStyle="bold" />
-
-
-        <RadioGroup
-            android:id="@+id/rdo_sta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-
-            >
-
-            <RadioButton
-                android:id="@+id/rdo_atte"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:text="재학" />
-
-            <RadioButton
-                android:id="@+id/rdo_abs"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:text="휴학" />
-        </RadioGroup>
-
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="* 학과코드"
-            android:textSize="18dp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/departbtn1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/white"
-            android:text="학과아이디"
-            android:textColor="@color/lmsdark" />
-
-
-    </LinearLayout>
-
+    </RelativeLayout>
 </ScrollView>
