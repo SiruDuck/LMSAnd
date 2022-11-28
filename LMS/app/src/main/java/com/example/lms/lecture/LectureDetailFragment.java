@@ -3,6 +3,7 @@ package com.example.lms.lecture;
 import static com.example.lms.lms.CommonVal.loginInfo;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 
@@ -11,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,13 +33,14 @@ import java.util.List;
 
 
 public class LectureDetailFragment extends Fragment {
-    ImageView lec_detail;
-    CardView lec_detai;
+    CardView lec_detail;
+    List<LectureVO> list;
     Button btn_back, btn_modify, btn_delete;
-
+    LectureVO vo = null;
     TextView lecture_num, lecture_room, teacher_name, lecture_title, lecture_year, semester,
             subjectcredit, book, lecture_day, lecture_time, enrolment, capacity, midex, finalex,
             state, sortation, reception_status;
+    LectureFragment fragment;
 
     int lecture_num1;
 
@@ -53,7 +56,7 @@ public class LectureDetailFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_lecture_detail, container, false);
 
-        lec_detai = v.findViewById(R.id.lec_detai);
+
         lec_detail = v.findViewById(R.id.lec_detail);
 
         lecture_num = v.findViewById(R.id.lecture_num);
@@ -82,7 +85,7 @@ public class LectureDetailFragment extends Fragment {
 
         if(CommonVal.loginInfo.getInfo_cd() == 3){
             btn_modify.setVisibility(View.VISIBLE);
-            btn_delete.setVisibility(View.VISIBLE);
+            btn_delete.setVisibility(View.GONE);
             btn_back.setVisibility(View.VISIBLE);
         }else{
             btn_modify.setVisibility(View.GONE);
@@ -90,10 +93,34 @@ public class LectureDetailFragment extends Fragment {
             btn_back.setVisibility(View.VISIBLE);
         }
 
+        btn_modify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               Intent intent = new Intent(lecture_num.getContext(), LectureModifyActivity.class);
+               intent.putExtra("vo" , vo);
+               intent.putExtra("isEnable", false);
+
+               getActivity().startActivity(intent);
+            }
+        });
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new LectureFragment()).commit();
+            }
+        });
+
+        btn_delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CommonAskTask task = new CommonAskTask("anddelete.lec", btn_delete.getContext());
+                //task.addParam("lecture_num", vo);
+                task.executeAsk(new CommonAskTask.AsynckTaskCallback() {
+                    @Override
+                    public void onResult(String data, boolean isResult) {
+                        fragment.lecture_list();
+                    }
+                });
             }
         });
 
@@ -114,7 +141,7 @@ public class LectureDetailFragment extends Fragment {
             @Override
             public void onResult(String data, boolean isResult) {
                 if(isResult){
-                    LectureVO vo = new Gson().fromJson(data, new TypeToken<LectureVO>(){}.getType());
+                    vo = new Gson().fromJson(data, new TypeToken<LectureVO>(){}.getType());
 
                    lecture_num.setText(vo.getLecture_num()+"");
                    lecture_room.setText(vo.getLecture_room());

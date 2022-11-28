@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".lecture.LectureFragment"
     android:orientation="vertical"
-    android:layout_margin="10dp"
+    android:layout_margin="15dp"
     >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_marginBottom="10dp"
         >
 
@@ -21,8 +21,13 @@
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:textStyle="bold"
-        android:textColor="#4E73DF"
+        android:textColor="#060606"
         android:text="전체 강의 목록"/>
+
+        <View
+            android:layout_width="200dp"
+            android:layout_height="2dp"
+            android:background="@color/black"/>
 
 
     </LinearLayout>
