@@ -51,7 +51,10 @@
         android:theme="@style/Theme.LMS"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".myinfo.MyinfoActivity"
+            android:name=".lecture.Lecture_Tea_DetailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".lecture.LectureModifyActivity"
             android:exported="true" />
         <activity
             android:name=".equipment.EqInsertActivity"

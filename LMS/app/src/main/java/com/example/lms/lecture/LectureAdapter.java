@@ -1,9 +1,12 @@
 package com.example.lms.lecture;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -20,6 +23,8 @@ public class LectureAdapter extends RecyclerView.Adapter<LectureAdapter.LecHolde
     ArrayList<LectureVO> list;
     MainActivity activity;
 
+
+
     public LectureAdapter(LayoutInflater inflater, ArrayList<LectureVO> list, Activity activity) {
         this.inflater = inflater;
         this.list = list;
@@ -35,18 +40,23 @@ public class LectureAdapter extends RecyclerView.Adapter<LectureAdapter.LecHolde
     }
 
     @Override
-    public void onBindViewHolder(@NonNull LecHolder h, int i) {
+    public void onBindViewHolder(@NonNull LecHolder h, @SuppressLint("RecyclerView") int i) {
+
+
+        h.lecture_title.setText(list.get(i).getLecture_title());
         h.teacher_name.setText(list.get(i).getTeacher_name());
         h.lecture_room.setText(list.get(i).getLecture_room());
-        h.lecture_year.setText(list.get(i).getLecture_year());
-        h.semester.setText(list.get(i).getSemester());
-        h.lecture_title.setText(list.get(i).getLecture_title());
-        h.lec_detai.setOnClickListener(new View.OnClickListener() {
+        h.sortation.setText(list.get(i).getSortation());
+
+
+        h.lec_detail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.container, new LectureDetailFragment()).commit();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.container, new LectureDetailFragment(list.get(i).getLecture_num())).commit();
             }
         });
+
+
     }
 
     @Override
@@ -55,18 +65,25 @@ public class LectureAdapter extends RecyclerView.Adapter<LectureAdapter.LecHolde
     }
 
     public class LecHolder extends RecyclerView.ViewHolder {
-        CardView lec_detai;
-        TextView lecture_title, teacher_name, semester, lecture_room,  lecture_year;
-
+        CardView lec_detail;
+        TextView lecture_num, lecture_room, teacher_name, lecture_title, lecture_year, semester,
+                subjectcredit, book, lecture_day, lecture_time, enrolment, capacity, midex, finalex,
+                state, sortation, reception_status;
+        Button btn_modify, btn_delete, btn_save, btn_cancel;
 
         public LecHolder(@NonNull View v) {
             super(v);
-            lec_detai = v.findViewById(R.id.lec_detai);
-            teacher_name = v.findViewById(R.id.teacher_name);
+            sortation = v.findViewById(R.id.sortation);
+            lec_detail = v.findViewById(R.id.lec_detail);
             lecture_room = v.findViewById(R.id.lecture_room);
+            teacher_name = v.findViewById(R.id.teacher_name);
+            lecture_title = v.findViewById(R.id.lecture_title);
             lecture_year = v.findViewById(R.id.lecture_year);
             semester = v.findViewById(R.id.semester);
-            lecture_title = v.findViewById(R.id.lecture_title);
+            btn_modify = v.findViewById(R.id.btn_modify);
+            btn_delete = v.findViewById(R.id.btn_delete);
+            btn_save = v.findViewById(R.id.btn_save);
+
         }
     }
 }

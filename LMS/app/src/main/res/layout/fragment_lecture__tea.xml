@@ -16,13 +16,13 @@
         android:layout_marginBottom="10dp"
         >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        android:textColor="#060606"
-        android:text="전체 강의 목록"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="#060606"
+            android:text="내 강의 목록"/>
 
         <View
             android:layout_width="200dp"
@@ -33,7 +33,7 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recv_lecture"
+        android:id="@+id/recv_tea"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 

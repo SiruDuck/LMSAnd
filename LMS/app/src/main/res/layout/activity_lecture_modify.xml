@@ -5,34 +5,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".timetable.TimeTableDetailActivity">
+    tools:context=".timetable.TimeTableDetailActivity"
+    android:orientation="vertical"
+    android:layout_margin="20dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_margin="20dp"
-        android:padding="10dp">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:textStyle="bold"
         android:textColor="#111111"
-        android:text="강의 상세 정보"/>
+        android:text="강의 정보 수정"/>
 
     <View
         android:layout_marginTop="3dp"
         android:layout_width="200dp"
         android:layout_height="3dp"
-        android:background="#330000"/>
+        android:background="#2196F3"/>
+
+
 
     <LinearLayout
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:layout_height="400dp"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -62,10 +59,9 @@
                     android:padding="5dp"
                     android:layout_weight="6"
                     android:layout_width="0dp"
-                    android:textSize="13dp"
                     android:layout_height="match_parent"
                     android:maxLines="1"
-                    android:text="실용프로그래밍언어론"
+                    android:hint="10112"
                     />
             </LinearLayout>
             <LinearLayout
@@ -85,14 +81,14 @@
                     android:background="@drawable/shape_cell_detail"
                     android:textColor="#000"
                     />
-                <TextView
+                <EditText
+                    android:textSize="13dp"
                     android:id="@+id/lecture_room"
                     android:padding="5dp"
                     android:layout_weight="6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="강의실번호"
-                    android:textSize="13dp"
+                    android:hint="강의실번호"
                     />
             </LinearLayout>
         </LinearLayout>
@@ -118,14 +114,14 @@
                     android:background="@drawable/shape_cell_detail"
                     android:textColor="#000"
                     />
-                <TextView
+                <EditText
                     android:id="@+id/teacher_name"
                     android:padding="5dp"
+                    android:textSize="13dp"
                     android:layout_weight="6"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:textSize="13dp"
-                    android:text="교수명"
+                    android:hint="교수명"
                     />
             </LinearLayout>
             <LinearLayout
@@ -143,14 +139,14 @@
                     android:background="@drawable/shape_cell_detail"
                     android:textColor="#000"
                     />
-                <TextView
+                <EditText
                     android:id="@+id/lecture_title"
                     android:padding="5dp"
+                    android:textSize="13dp"
                     android:layout_weight="6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="13dp"
-                    android:text="강의명"
+                    android:hint="강의명"
                     />
             </LinearLayout>
         </LinearLayout>
@@ -175,14 +171,14 @@
                     android:textColor="#000"
                     android:textStyle="bold" />
 
-                <TextView
+                <EditText
                     android:id="@+id/lecture_year"
                     android:padding="5dp"
+                    android:textSize="13dp"
                     android:layout_weight="6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="13dp"
-                    android:text="강의번호내용"
+                    android:hint="강의번호내용"
                     />
             </LinearLayout>
             <LinearLayout
@@ -200,14 +196,14 @@
                     android:background="@drawable/shape_cell_detail"
                     android:textColor="#000"
                     />
-                <TextView
+                <EditText
                     android:id="@+id/semester"
                     android:padding="5dp"
+                    android:textSize="13dp"
                     android:layout_weight="6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="13dp"
-                    android:text="강의실내용"
+                    android:hint="강의실내용"
                     />
             </LinearLayout>
         </LinearLayout>
@@ -232,14 +228,14 @@
                     android:background="@drawable/shape_cell_detail"
                     android:textColor="#000"
                     />
-                <TextView
+                <EditText
                     android:id="@+id/subjectcredit"
                     android:padding="5dp"
+                    android:textSize="13dp"
                     android:layout_weight="6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="13dp"
-                    android:text="학점내용"
+                    android:hint="학점내용"
                     />
             </LinearLayout>
             <LinearLayout
@@ -257,14 +253,14 @@
                     android:background="@drawable/shape_cell_detail"
                     android:textColor="#000"
                     />
-                <TextView
+                <EditText
                     android:id="@+id/book"
                     android:padding="5dp"
+                    android:textSize="13dp"
                     android:layout_weight="6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="13dp"
-                    android:text="책"
+                    android:hint="책"
                     />
             </LinearLayout>
         </LinearLayout>
@@ -288,14 +284,14 @@
                     android:background="@drawable/shape_cell_detail"
                     android:textColor="#000"
                     />
-                <TextView
+                <EditText
                     android:id="@+id/lecture_day"
                     android:padding="5dp"
+                    android:textSize="13dp"
                     android:layout_weight="6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="13dp"
-                    android:text="수강요일내용"
+                    android:hint="수강요일내용"
                     />
             </LinearLayout>
             <LinearLayout
@@ -313,14 +309,14 @@
                     android:background="@drawable/shape_cell_detail"
                     android:textColor="#000"
                     />
-                <TextView
+                <EditText
                     android:id="@+id/lecture_time"
                     android:padding="5dp"
+                    android:textSize="13dp"
                     android:layout_weight="6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="13dp"
-                    android:text="교시"
+                    android:hint="교시"
                     />
             </LinearLayout>
         </LinearLayout>
@@ -344,14 +340,14 @@
                     android:background="@drawable/shape_cell_detail"
                     android:textColor="#000"
                     />
-                <TextView
+                <EditText
                     android:id="@+id/enrolment"
                     android:padding="5dp"
+                    android:textSize="13dp"
                     android:layout_weight="6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="13dp"
-                    android:text="수강신청여부"
+                    android:hint="수강신청여부"
                     />
             </LinearLayout>
             <LinearLayout
@@ -369,14 +365,14 @@
                     android:background="@drawable/shape_cell_detail"
                     android:textColor="#000"
                     />
-                <TextView
+                <EditText
                     android:id="@+id/capacity"
                     android:padding="5dp"
+                    android:textSize="13dp"
                     android:layout_weight="6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="13dp"
-                    android:text="수강인원"
+                    android:hint="수강인원"
                     />
             </LinearLayout>
         </LinearLayout>
@@ -400,14 +396,14 @@
                     android:background="@drawable/shape_cell_detail"
                     android:textColor="#000"
                     />
-                <TextView
+                <EditText
                     android:id="@+id/midex"
                     android:padding="5dp"
+                    android:textSize="13dp"
                     android:layout_weight="6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="13dp"
-                    android:text="날짜"
+                    android:hint="날짜"
                     />
             </LinearLayout>
             <LinearLayout
@@ -425,14 +421,14 @@
                     android:background="@drawable/shape_cell_detail"
                     android:textColor="#000"
                     />
-                <TextView
+                <EditText
                     android:id="@+id/finalex"
                     android:padding="5dp"
-                    android:layout_weight="6"
                     android:textSize="13dp"
+                    android:layout_weight="6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="기말날짜"
+                    android:hint="기말날짜"
                     />
             </LinearLayout>
         </LinearLayout>
@@ -457,14 +453,14 @@
                     android:background="@drawable/shape_cell_detail"
                     android:textColor="#000"
                     />
-                <TextView
+                <EditText
                     android:id="@+id/state"
                     android:padding="5dp"
+                    android:textSize="13dp"
                     android:layout_weight="6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="13dp"
-                    android:text="온/오프라인"
+                    android:hint="온/오프라인"
                     />
             </LinearLayout>
             <LinearLayout
@@ -482,14 +478,14 @@
                     android:background="@drawable/shape_cell_detail"
                     android:textColor="#000"
                     />
-                <TextView
+                <EditText
                     android:id="@+id/sortation"
                     android:padding="5dp"
+                    android:textSize="13dp"
                     android:layout_weight="6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="13dp"
-                    android:text="전공/교양"
+                    android:hint="전공/교양"
                     />
             </LinearLayout>
         </LinearLayout>
@@ -513,14 +509,14 @@
                     android:background="@drawable/shape_cell_detail"
                     android:textColor="#000"
                     />
-                <TextView
+                <EditText
                     android:id="@+id/reception_status"
                     android:padding="5dp"
+                    android:textSize="13dp"
                     android:layout_weight="6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="13dp"
-                    android:text="강의번호내용"
+                    android:hint="강의번호내용"
                     />
             </LinearLayout>
             <LinearLayout
@@ -536,51 +532,49 @@
                     android:gravity="center"
                     android:textStyle="bold"
                     android:background="@drawable/shape_cell_detail"
-                    android:textColor="#000"
+                    android:textColor="#A7A7A7"
                     />
                 <TextView
                     android:padding="5dp"
+                    android:textSize="13dp"
                     android:layout_weight="6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="13dp"
                     android:text="비고"
                     />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginTop="20dp"
             >
-        <Button
-            android:id="@+id/btn_back"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#851A1A"
-            android:text="뒤로가기"/>
-        <Button
-            android:id="@+id/btn_modify"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#851A1A"
-            android:layout_marginHorizontal="10dp"
-            android:text="수정하기"/>
+
             <Button
-                android:id="@+id/btn_delete"
+                android:id="@+id/btn_save"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#851A1A"
-                android:text="삭제하기"/>
+                android:backgroundTint="@color/lmssky"
+                android:layout_marginHorizontal="10dp"
+                android:text="저장"/>
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/lmssky"
+                android:text="취소"/>
         </LinearLayout>
-
     </LinearLayout>
+    <View
+        android:layout_gravity="right"
+        android:layout_width="200dp"
+        android:layout_height="3dp"
+        android:background="@color/lmssky"/>
 
-    </LinearLayout>
+
 </LinearLayout>
