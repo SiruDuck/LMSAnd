@@ -3,7 +3,6 @@ package com.example.lms.equipment;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -107,6 +106,7 @@ public class EqModifyActivity extends AppCompatActivity {
                         }else{
                             Toast.makeText(EqModifyActivity.this,"실패",Toast.LENGTH_SHORT).show();
                         }
+                        //return null;
                     }
                 });
 
@@ -128,6 +128,7 @@ public class EqModifyActivity extends AppCompatActivity {
                         }else{
                             Toast.makeText(EqModifyActivity.this,"실패",Toast.LENGTH_SHORT).show();
                         }
+                        //return null;
                     }
                 });
                 finish();

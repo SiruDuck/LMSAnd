@@ -15,7 +15,6 @@ import android.widget.Button;
 
 import com.example.lms.R;
 import com.example.lms.lms.CommonAskTask;
-import com.example.lms.lms.TestTask;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -75,6 +74,7 @@ public class EquipmentFragment extends Fragment {
                 }else{
                     Log.d("로그", "onResult:"+data);
                 }
+                //return null;
             }
         });
 

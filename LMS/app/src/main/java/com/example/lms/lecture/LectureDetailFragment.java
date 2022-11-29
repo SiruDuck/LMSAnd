@@ -1,34 +1,24 @@
 package com.example.lms.lecture;
 
-import static com.example.lms.lms.CommonVal.loginInfo;
-
-import android.app.Activity;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Parcelable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.lms.MainActivity;
 import com.example.lms.R;
 import com.example.lms.lms.CommonAskTask;
 import com.example.lms.lms.CommonVal;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -119,6 +109,7 @@ public class LectureDetailFragment extends Fragment {
                     @Override
                     public void onResult(String data, boolean isResult) {
                         fragment.lecture_list();
+                        //return null;
                     }
                 });
             }
@@ -166,6 +157,7 @@ public class LectureDetailFragment extends Fragment {
                 }else {
                     Log.d("TAG", "onResult: 안됨");
                 }
+                //eturn null;
             }
         });
     }

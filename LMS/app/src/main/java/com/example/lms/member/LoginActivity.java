@@ -8,19 +8,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.lms.MainActivity;
 import com.example.lms.R;
-import com.example.lms.lecture.LectureVO;
 import com.example.lms.lms.CommonAskTask;
 import com.example.lms.lms.CommonVal;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-
-import java.io.Serializable;
-import java.util.ArrayList;
 
 public class LoginActivity extends AppCompatActivity {
     EditText edtid, edtpw;

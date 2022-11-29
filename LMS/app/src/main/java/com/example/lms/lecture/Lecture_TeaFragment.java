@@ -2,7 +2,6 @@ package com.example.lms.lecture;
 
 import static com.example.lms.lms.CommonVal.loginInfo;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.cardview.widget.CardView;
@@ -18,11 +17,9 @@ import android.widget.TextView;
 
 import com.example.lms.R;
 import com.example.lms.lms.CommonAskTask;
-import com.example.lms.member.MemberVO;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import java.lang.reflect.Member;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -79,6 +76,7 @@ public class Lecture_TeaFragment extends Fragment {
                 }else{
 
                 }
+                //return null;
             }
         });
     }

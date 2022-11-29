@@ -11,11 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.lms.MainActivity;
 import com.example.lms.R;
 import com.example.lms.lms.CommonAskTask;
-import com.example.lms.notice.NoticeAdapter;
-import com.example.lms.notice.NoticeVO;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -63,6 +60,7 @@ public class BoardFragment extends Fragment {
                     board_recv.setLayoutManager(manager);
 
                 }
+                //return null;
             }
         });
 

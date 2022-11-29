@@ -14,8 +14,6 @@ import com.example.lms.R;
 import com.example.lms.lms.CommonAskTask;
 import com.google.gson.Gson;
 
-import java.sql.Date;
-
 public class LectureModifyActivity extends AppCompatActivity {
     EditText lecture_room, teacher_name, lecture_title, lecture_year, semester,
             subjectcredit, book, lecture_day, lecture_time, enrolment, capacity, midex, finalex,
@@ -110,6 +108,7 @@ public class LectureModifyActivity extends AppCompatActivity {
                         } else {
                             Toast.makeText(LectureModifyActivity.this, "실패", Toast.LENGTH_SHORT).show();
                         }
+                        //return null;
                     }
                 });
             }

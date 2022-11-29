@@ -97,6 +97,7 @@ public class EqInsertActivity extends AppCompatActivity {
                         }else{
                             Toast.makeText(EqInsertActivity.this,"실패",Toast.LENGTH_SHORT).show();
                         }
+                        //return null;
                     }
                 });
                 Toast.makeText(EqInsertActivity.this,"비품 추가 완료!",Toast.LENGTH_SHORT).show();
