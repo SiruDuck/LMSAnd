@@ -22,6 +22,7 @@ import com.example.lms.lecture.LectureFragment;
 import com.example.lms.lecture.Lecture_TeaFragment;
 import com.example.lms.lms.CommonAskTask;
 import com.example.lms.member.MemberVO;
+import com.example.lms.myinfo.MyinfoFragment;
 import com.example.lms.notice.NoticeFragment;
 import com.example.lms.sidemenu.SideAdapter;
 import com.example.lms.sidemenu.SideVO;
@@ -211,7 +212,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<SideVO> main_list = new ArrayList<>();
 
         ArrayList<SideVO> sub_list1 = new ArrayList<>();
-        main_list.add(new SideVO("내 정보","(내정보 확인 , 수정 ... )" , "#123456"  , sub_list1 , new LectureFragment()));
+        main_list.add(new SideVO("내 정보","(내정보 확인 , 수정 ... )" , "#123456"  , sub_list1 , new MyinfoFragment()));
         main_list.get(0).setImageId(R.drawable.menuimage1);
 
 
