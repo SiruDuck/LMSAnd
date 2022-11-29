@@ -5,8 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".timetable.TimeTableDetailActivity">
-
+    tools:context=".timetable.TimeTableDetailActivity"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/back08">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,7 +20,7 @@
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:textStyle="bold"
-        android:textColor="#111111"
+        android:textColor="#002B5B"
         android:text="강의 상세 정보"/>
 
     <View

@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.example.lms.R;
 
-// 시간표 정보 상세보기 popup
+//정보 상세보기
 public class TimeTableDetailActivity extends AppCompatActivity {
     TextView lecture_num, lecture_title, sortation, lecture_room, capacity, teacher_name, lecture_time, subjectcredit, state, book;
     Button btn_ok;
@@ -36,14 +36,14 @@ public class TimeTableDetailActivity extends AppCompatActivity {
         state = findViewById(R.id.state);
         book = findViewById(R.id.book);
 
-        lecture_num.setText(getText(table_vo.getLecture_num()));
+        lecture_num.setText(table_vo.getLecture_num()+"");
         lecture_title.setText(table_vo.getLecture_title());
         sortation.setText(table_vo.getSortation());
         lecture_room.setText(table_vo.getLecture_room());
-        capacity.setText(table_vo.getCapacity());
+        capacity.setText(table_vo.getCapacity() + "명");
         teacher_name.setText(table_vo.getTeacher_name());
         lecture_time.setText(table_vo.getLecture_time());
-        subjectcredit.setText(table_vo.getSubjectcredit());
+        subjectcredit.setText(table_vo.getSubjectcredit() + "학점");
         state.setText(table_vo.getState());
         book.setText(table_vo.getBook());
 

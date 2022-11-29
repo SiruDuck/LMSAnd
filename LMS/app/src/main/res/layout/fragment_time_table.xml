@@ -114,7 +114,7 @@
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/wed1"
-                android:text="4차산업혁명과데이터사이언스\n(공과실103호)"
+                android:text="강의이름이개길어서두줄이상넘어감\n(강의실)"
                 android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"

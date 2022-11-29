@@ -56,7 +56,7 @@ public class RegistListAdapter extends RecyclerView.Adapter<RegistListAdapter.Vi
             @Override
             public void onClick(View v) {
                 EnrolmentVO enrol_vo = new EnrolmentVO();
-                CommonAskTask task = new CommonAskTask("delete.at", holder.btn_regist.getContext());
+                CommonAskTask task = new CommonAskTask("regist.at", holder.btn_regist.getContext());
                 task.addParam("lecture_num", enrol_vo.getLecture_num());
                 task.executeAsk(new CommonAskTask.AsynckTaskCallback() {
                     @Override
