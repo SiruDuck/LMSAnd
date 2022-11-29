@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".timetable.TimeTableFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#1C3879">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#990000"
         android:gravity="center_horizontal">
         <TextView
             android:layout_width="wrap_content"
@@ -29,8 +29,7 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#990000">
+            android:layout_height="match_parent">
 
             <TextView
                 android:text=""
@@ -83,12 +82,11 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#990000">
+            android:layout_weight="1">
 
             <TextView
                 android:text="1"
-                android:layout_width="wrap_content"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textColor="#fff"
@@ -96,47 +94,52 @@
                 android:gravity="right"/>
             <TextView
                 android:id="@+id/mon1"
-                android:layout_width="wrap_content"
+                android:text="강의이름\n(강의실)"
+                android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
+                android:text=""
                 android:id="@+id/tue1"
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/wed1"
-                android:layout_width="wrap_content"
+                android:text="4차산업혁명과데이터사이언스\n(공과실103호)"
+                android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/thu1"
-                android:layout_width="wrap_content"
+                android:text=""
+                android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/fri1"
-                android:layout_width="wrap_content"
+                android:text=""
+                android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
 
@@ -145,8 +148,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#990000">
+            android:layout_weight="1">
 
             <TextView
                 android:text="2"
@@ -158,47 +160,52 @@
                 android:gravity="right"/>
             <TextView
                 android:id="@+id/mon2"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/tue2"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/wed2"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/thu2"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/fri2"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
 
@@ -207,8 +214,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#990000">
+            android:layout_weight="1">
 
             <TextView
                 android:text="3"
@@ -220,47 +226,52 @@
                 android:gravity="right"/>
             <TextView
                 android:id="@+id/mon3"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/tue3"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/wed3"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/thu3"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/fri3"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
 
@@ -269,8 +280,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#990000">
+            android:layout_weight="1">
 
             <TextView
                 android:text="4"
@@ -282,47 +292,52 @@
                 android:gravity="right"/>
             <TextView
                 android:id="@+id/mon4"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/tue4"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/wed4"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/thu4"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/fri4"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
 
@@ -331,8 +346,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#990000">
+            android:layout_weight="1">
 
             <TextView
                 android:text="5"
@@ -344,47 +358,52 @@
                 android:gravity="right"/>
             <TextView
                 android:id="@+id/mon5"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/tue5"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/wed5"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/thu5"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/fri5"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
 
@@ -393,8 +412,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#990000">
+            android:layout_weight="1">
 
             <TextView
                 android:text="6"
@@ -406,47 +424,52 @@
                 android:gravity="right"/>
             <TextView
                 android:id="@+id/mon6"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/tue6"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/wed6"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/thu6"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/fri6"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
 
@@ -455,8 +478,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#990000">
+            android:layout_weight="1">
 
             <TextView
                 android:text="7"
@@ -468,47 +490,52 @@
                 android:gravity="right"/>
             <TextView
                 android:id="@+id/mon7"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/tue7"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/wed7"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/thu7"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/fri7"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
 
@@ -517,8 +544,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#990000">
+            android:layout_weight="1">
 
             <TextView
                 android:text="8"
@@ -530,47 +556,52 @@
                 android:gravity="right"/>
             <TextView
                 android:id="@+id/mon8"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/tue8"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/wed8"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/thu8"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/fri8"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textStyle="bold"
                 android:background="@drawable/shape_timetable_cell"/>
 

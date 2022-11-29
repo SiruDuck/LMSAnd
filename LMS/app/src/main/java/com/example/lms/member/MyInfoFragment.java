@@ -1,4 +1,4 @@
-package com.example.lms.timetable;
+package com.example.lms.member;
 
 import android.os.Bundle;
 
@@ -10,15 +10,22 @@ import android.view.ViewGroup;
 
 import com.example.lms.R;
 
-
-public class RegistFragment extends Fragment {
-
-
+public class MyInfoFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v =inflater.inflate(R.layout.fragment_regist, container, false);
+        View v = inflater.inflate(R.layout.fragment_my_info, container, false);
+
+
+
+
+
+
+
+
+
+
         return v;
     }
 }

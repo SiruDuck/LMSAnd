@@ -7,12 +7,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.lms.R;
 
-
+// 내 시간표 보기
 public class TimeTableFragment extends Fragment {
-
+    TextView mon1;
 
 
     @Override

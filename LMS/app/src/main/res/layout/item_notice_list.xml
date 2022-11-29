@@ -4,13 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
 
     <androidx.cardview.widget.CardView
         app:cardCornerRadius="10dp"
         android:elevation="20dp"
         android:layout_margin="10dp"
         android:layout_width="match_parent"
+        android:id="@+id/notice_cardview"
         android:layout_height="wrap_content">
 
         <RelativeLayout
@@ -95,7 +97,7 @@
                     android:layout_weight="4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/logo"
+                    android:src="@drawable/ic_attachment_fill0_wght400_grad0_opsz48"
                     android:id="@+id/notice_imgfile"/>
 
             </LinearLayout>

@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.lms.MainActivity;
 import com.example.lms.R;
 import com.example.lms.lms.CommonAskTask;
 import com.google.gson.Gson;
@@ -20,24 +21,16 @@ import java.util.ArrayList;
 
 public class NoticeFragment extends Fragment {
     RecyclerView notice_recv;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_notice, container, false);
         notice_recv = v.findViewById(R.id.notice_recv);
 
-
-
-
-
-
-
-
-
-
+        notice_select();
         return v;
     }
-
 
     @Override
     public void onResume() {
@@ -45,37 +38,31 @@ public class NoticeFragment extends Fragment {
         notice_select();
     }
 
-    public void notice_select(){
-
-        CommonAskTask task = new CommonAskTask("notice.list" , getContext());
-        task.executeAsk(new CommonAskTask.AsynckTaskCallback() {
+    public void notice_select() {
+        CommonAskTask askTask = new CommonAskTask("nolist" , getContext());
+        askTask.executeAsk(new CommonAskTask.AsynckTaskCallback() {
             @Override
             public void onResult(String data, boolean isResult) {
-                // 통신 완료 시 데이터를 가지고 온다.
-                if(isResult){
+                Log.d("공지사항", "onResult: " + data);
+                if (isResult) {
                     ArrayList<NoticeVO> list =
-                            new Gson().fromJson(data , new TypeToken<ArrayList<NoticeVO>>(){}.getType());
+                            new Gson().fromJson(data, new TypeToken<ArrayList<NoticeVO>>() {
+                            }.getType());
+                    Log.d("공지사항", "onResult: " + list.size());
 
-                    NoticeAdapter adapter = new NoticeAdapter(getLayoutInflater() , list , NoticeFragment.this);
+                    NoticeAdapter adapter = new NoticeAdapter(getLayoutInflater(), list, getContext(), (MainActivity) getActivity());
                     RecyclerView.LayoutManager manager = new LinearLayoutManager(
                             getContext() , RecyclerView.VERTICAL , false
                     );
+
                     notice_recv.setAdapter(adapter);
                     notice_recv.setLayoutManager(manager);
 
-
-
-                }else {
-                    Log.d("고객", "onResult:Fail " + data);
                 }
             }
         });
 
     }
-
-
-
-
 
 
 

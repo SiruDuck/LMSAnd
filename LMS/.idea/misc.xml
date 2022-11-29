@@ -4,9 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/302LMSAND/LMS/app/src/main/res/drawable/mainbox.xml" value="0.38385416666666666" />
+        <entry key="..\:/302LMSAND/LMS/app/src/main/res/layout/activity_eq_insert.xml" value="0.36770833333333336" />
+        <entry key="..\:/302LMSAND/LMS/app/src/main/res/layout/activity_eq_modify.xml" value="0.21739130434782608" />
         <entry key="..\:/302LMSAND/LMS/app/src/main/res/layout/activity_join.xml" value="0.36770833333333336" />
         <entry key="..\:/302LMSAND/LMS/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/302LMSAND/LMS/app/src/main/res/layout/activity_main.xml" value="0.36770833333333336" />
+        <entry key="..\:/302LMSAND/LMS/app/src/main/res/layout/fragment_equipment.xml" value="0.21739130434782608" />
         <entry key="..\:/302LMSAND/LMS/app/src/main/res/layout/fragment_lecture.xml" value="0.36770833333333336" />
         <entry key="..\:/302LMSAND/LMS/app/src/main/res/layout/item_lecture.xml" value="0.36770833333333336" />
         <entry key="..\:/302LMSAND/LMS/app/src/main/res/layout/item_side_main.xml" value="0.36770833333333336" />
