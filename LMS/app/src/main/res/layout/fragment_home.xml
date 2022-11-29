@@ -108,11 +108,12 @@
                         app:cardCornerRadius="20dp" />
 
                     <androidx.cardview.widget.CardView
-                        android:layout_alignParentRight="true"
-                        android:backgroundTint="#DEE0FF"
+                        android:id="@+id/my_profile"
                         android:layout_width="160dp"
                         android:layout_height="140dp"
-                        app:cardCornerRadius="20dp"/>
+                        android:layout_alignParentRight="true"
+                        android:backgroundTint="#DEE0FF"
+                        app:cardCornerRadius="20dp" />
 
                 </RelativeLayout>
 
