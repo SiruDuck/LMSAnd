@@ -2,7 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="130dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
@@ -12,13 +12,14 @@
         android:elevation="20dp"
         android:layout_margin="10dp"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         >
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="#E4E4E4">
+
             <View
                 android:id="@+id/view_line"
                 android:layout_width="5dp"
@@ -128,13 +129,7 @@
                     android:layout_marginRight="25dp"
                     android:text="자세히보기" />
 
-                <ImageView
-                    android:id="@+id/lec_detai"
-                    android:layout_width="30dp"
-                    android:layout_height="20dp"
-                    android:backgroundTint="#000000"
-                    android:background="#000000"
-                    android:src="@drawable/right_arrow" />
+
             </LinearLayout>
 
 

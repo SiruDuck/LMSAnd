@@ -114,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
         //프래그먼트 붙이는처리
         Bundle bundle = new Bundle();
         bundle.putString("Name",vo.getName());
+        Log.d("태그", "onCreate: 번들값:"+vo.getName());
         Lecture_TeaFragment  Lecture_TeaFragment = new Lecture_TeaFragment();
         Lecture_TeaFragment.setArguments(bundle);
 

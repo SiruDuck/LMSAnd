@@ -51,6 +51,9 @@
         android:theme="@style/Theme.LMS"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".lecture.Lecture_Tea_DetailActivity"
+            android:exported="true" />
+        <activity
             android:name=".lecture.LectureModifyActivity"
             android:exported="true" />
         <activity
@@ -61,7 +64,6 @@
             android:exported="true" />
         <activity
             android:name=".notice.NoticeDetailActivity"
-
             android:exported="true" />
         <activity
             android:name=".timetable.TimeTableDetailActivity"
@@ -81,9 +83,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-
-
-
     </application>
 
 </manifest>
