@@ -24,6 +24,8 @@ import com.example.lms.lms.CommonAskTask;
 import com.example.lms.member.MemberVO;
 import com.example.lms.myinfo.MyinfoFragment;
 import com.example.lms.notice.NoticeFragment;
+import com.example.lms.score.ScoreFragment;
+import com.example.lms.score.ScoreTeacherFragment;
 import com.example.lms.sidemenu.SideAdapter;
 import com.example.lms.sidemenu.SideVO;
 import com.example.lms.timetable.RegistListFragment;
@@ -191,9 +193,10 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<SideVO> sub_list3 = new ArrayList<>();
         sub_list3.add(new SideVO("과제 등록", new LectureFragment()));
         sub_list3.add(new SideVO("시험문제 등록", new LectureFragment()));
-        sub_list3.add(new SideVO("학생 성적 확인", new LectureFragment()));
+        sub_list3.add(new SideVO("학생 성적 확인", new ScoreTeacherFragment()));
 
         main_list.add(new SideVO("성적 관리","(과제 등록 , 학생 성적 확인... )" , "#661234"  , sub_list3 ));
+
         main_list.get(2).setImageId(R.drawable.menuimage3);
 
 
@@ -225,6 +228,7 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<SideVO> sub_list3 = new ArrayList<>();
         sub_list3.add(new SideVO("과제 제출", new LectureFragment()));
+        sub_list3.add(new SideVO("성적 조회", new ScoreFragment()));
 
         main_list.add(new SideVO("성적 관리","(과제 등록 , 학생 성적 확인... )" , "#661234"  , sub_list3 ));
         main_list.get(2).setImageId(R.drawable.menuimage3);
@@ -259,6 +263,7 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<SideVO> sub_list3 = new ArrayList<>();
         sub_list3.add(new SideVO("과제 제출", new LectureFragment()));
+
 
         main_list.add(new SideVO("성적 관리","(과제 등록 , 학생 성적 확인... )" , "#661234"  , sub_list3 ));
         main_list.get(2).setImageId(R.drawable.menuimage3);
