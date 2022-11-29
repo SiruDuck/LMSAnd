@@ -114,6 +114,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:hint="교수명"
+                    android:background="@null"
                     />
             </LinearLayout>
             <LinearLayout

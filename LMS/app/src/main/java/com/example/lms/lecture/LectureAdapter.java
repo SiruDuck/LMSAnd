@@ -24,6 +24,7 @@ public class LectureAdapter extends RecyclerView.Adapter<LectureAdapter.LecHolde
     MainActivity activity;
 
 
+
     public LectureAdapter(LayoutInflater inflater, ArrayList<LectureVO> list, Activity activity) {
         this.inflater = inflater;
         this.list = list;
@@ -45,9 +46,7 @@ public class LectureAdapter extends RecyclerView.Adapter<LectureAdapter.LecHolde
         h.lecture_title.setText(list.get(i).getLecture_title());
         h.teacher_name.setText(list.get(i).getTeacher_name());
         h.lecture_room.setText(list.get(i).getLecture_room());
-        h.semester.setText(list.get(i).getSemester());
-        h.lecture_year.setText(list.get(i).getLecture_year());
-
+        h.sortation.setText(list.get(i).getSortation());
 
 
         h.lec_detail.setOnClickListener(new View.OnClickListener() {
@@ -74,6 +73,7 @@ public class LectureAdapter extends RecyclerView.Adapter<LectureAdapter.LecHolde
 
         public LecHolder(@NonNull View v) {
             super(v);
+            sortation = v.findViewById(R.id.sortation);
             lec_detail = v.findViewById(R.id.lec_detail);
             lecture_room = v.findViewById(R.id.lecture_room);
             teacher_name = v.findViewById(R.id.teacher_name);

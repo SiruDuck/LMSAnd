@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import android.widget.TextView;
 
 import com.example.lms.board.BoardFragment;
 import com.example.lms.lecture.LectureFragment;
+import com.example.lms.lecture.Lecture_TeaFragment;
 import com.example.lms.lms.CommonAskTask;
 import com.example.lms.member.MemberVO;
 import com.example.lms.notice.NoticeFragment;
@@ -109,6 +111,12 @@ public class MainActivity extends AppCompatActivity {
         }else if(vo.getInfo_cd() == 1){
             main_list = getStudentList();
         }
+        //프래그먼트 붙이는처리
+        Bundle bundle = new Bundle();
+        bundle.putString("Name",vo.getName());
+        Lecture_TeaFragment  Lecture_TeaFragment = new Lecture_TeaFragment();
+        Lecture_TeaFragment.setArguments(bundle);
+
 
         SideAdapter adapter = new SideAdapter(getLayoutInflater(), main_list, getSupportFragmentManager());
         expd_listv.setAdapter(adapter);
@@ -170,7 +178,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         ArrayList<SideVO> sub_list2 = new ArrayList<>();
-        sub_list2.add(new SideVO("내 강의목록", new LectureFragment()));
+        sub_list2.add(new SideVO("전체 강의목록", new LectureFragment()));
+        sub_list2.add(new SideVO("내 강의목록", new Lecture_TeaFragment()));
         sub_list2.add(new SideVO("내 시간표", new LectureFragment()));
         main_list.add(new SideVO("강의 관리","(강의 목록 , 시간표 ... )" , "#654321"  , sub_list2 ));
         main_list.get(1).setImageId(R.drawable.menuimage2);
