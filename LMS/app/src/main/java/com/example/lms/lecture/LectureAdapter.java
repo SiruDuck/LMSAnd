@@ -48,6 +48,11 @@ public class LectureAdapter extends RecyclerView.Adapter<LectureAdapter.LecHolde
         h.lecture_room.setText(list.get(i).getLecture_room());
         h.sortation.setText(list.get(i).getSortation());
 
+        if (list.get(i).getSemester().equals("2")){
+            h.view_line.setBackgroundResource(R.color.pink);
+        }else{
+            h.view_line.setBackgroundResource(R.color.black);
+        }
 
         h.lec_detail.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,6 +75,7 @@ public class LectureAdapter extends RecyclerView.Adapter<LectureAdapter.LecHolde
                 subjectcredit, book, lecture_day, lecture_time, enrolment, capacity, midex, finalex,
                 state, sortation, reception_status;
         Button btn_modify, btn_delete, btn_save, btn_cancel;
+        View view_line;
 
         public LecHolder(@NonNull View v) {
             super(v);
@@ -83,6 +89,7 @@ public class LectureAdapter extends RecyclerView.Adapter<LectureAdapter.LecHolde
             btn_modify = v.findViewById(R.id.btn_modify);
             btn_delete = v.findViewById(R.id.btn_delete);
             btn_save = v.findViewById(R.id.btn_save);
+            view_line = v.findViewById(R.id.view_line);
 
         }
     }

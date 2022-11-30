@@ -5,16 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".timetable.TimeTableDetailActivity"
+    tools:context=".lecture.LectureFragment"
     android:orientation="vertical"
-    android:padding="5dp"
     >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_margin="20dp"
-        android:padding="10dp">
+        >
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,6 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
             >
             <LinearLayout
                 android:layout_weight="1"
@@ -68,6 +68,7 @@
                     android:layout_height="match_parent"
                     android:maxLines="1"
                     android:text="실용프로그래밍언어론"
+                    android:textColor="#000000"
                     />
             </LinearLayout>
             <LinearLayout
@@ -95,6 +96,7 @@
                     android:layout_height="wrap_content"
                     android:text="강의실번호"
                     android:textSize="13dp"
+                    android:textColor="#000000"
                     />
             </LinearLayout>
         </LinearLayout>
@@ -102,6 +104,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
             >
             <LinearLayout
                 android:layout_weight="1"
@@ -128,6 +131,7 @@
                     android:layout_height="match_parent"
                     android:textSize="13dp"
                     android:text="교수명"
+                    android:textColor="#000000"
                     />
             </LinearLayout>
             <LinearLayout
@@ -153,6 +157,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="13dp"
                     android:text="강의명"
+                    android:textColor="#000000"
                     />
             </LinearLayout>
         </LinearLayout>
@@ -160,6 +165,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
             >
             <LinearLayout
                 android:layout_weight="1"
@@ -185,6 +191,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="13dp"
                     android:text="강의번호내용"
+                    android:textColor="#000000"
                     />
             </LinearLayout>
             <LinearLayout
@@ -210,6 +217,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="13dp"
                     android:text="강의실내용"
+                    android:textColor="#000000"
                     />
             </LinearLayout>
         </LinearLayout>
@@ -217,6 +225,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
             >
             <LinearLayout
                 android:layout_weight="1"
@@ -242,6 +251,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="13dp"
                     android:text="학점내용"
+                    android:textColor="#000000"
                     />
             </LinearLayout>
             <LinearLayout
@@ -267,6 +277,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="13dp"
                     android:text="책"
+                    android:textColor="#000000"
                     />
             </LinearLayout>
         </LinearLayout>
@@ -274,6 +285,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
             >
             <LinearLayout
                 android:layout_weight="1"
@@ -298,6 +310,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="13dp"
                     android:text="수강요일내용"
+                    android:textColor="#000000"
                     />
             </LinearLayout>
             <LinearLayout
@@ -323,6 +336,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="13dp"
                     android:text="교시"
+                    android:textColor="#000000"
                     />
             </LinearLayout>
         </LinearLayout>
@@ -330,6 +344,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
             >
             <LinearLayout
                 android:layout_weight="1"
@@ -354,6 +369,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="13dp"
                     android:text="수강신청여부"
+                    android:textColor="#000000"
                     />
             </LinearLayout>
             <LinearLayout
@@ -379,6 +395,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="13dp"
                     android:text="수강인원"
+                    android:textColor="#000000"
                     />
             </LinearLayout>
         </LinearLayout>
@@ -386,6 +403,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
             >
             <LinearLayout
                 android:layout_weight="1"
@@ -410,6 +428,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="13dp"
                     android:text="날짜"
+                    android:textColor="#000000"
                     />
             </LinearLayout>
             <LinearLayout
@@ -435,6 +454,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="기말날짜"
+                    android:textColor="#000000"
                     />
             </LinearLayout>
         </LinearLayout>
@@ -442,6 +462,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
             >
             <LinearLayout
                 android:layout_weight="1"
@@ -467,6 +488,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="13dp"
                     android:text="온/오프라인"
+                    android:textColor="#000000"
                     />
             </LinearLayout>
             <LinearLayout
@@ -492,6 +514,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="13dp"
                     android:text="전공/교양"
+                    android:textColor="#000000"
                     />
             </LinearLayout>
         </LinearLayout>
@@ -523,6 +546,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="13dp"
                     android:text="강의번호내용"
+                    android:textColor="#000000"
                     />
             </LinearLayout>
             <LinearLayout
@@ -547,6 +571,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="13dp"
                     android:text="비고"
+                    android:textColor="#000000"
                     />
             </LinearLayout>
         </LinearLayout>

@@ -6,30 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".lecture.LectureFragment"
     android:orientation="vertical"
-    android:layout_margin="15dp"
-    android:padding="10dp"
+    android:background="#F8F5F8"
     >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:padding="10dp"
+       android:orientation="vertical"
+       >
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_marginBottom="10dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:text="내 강의 목록"
-            android:textColor="#002B5B"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="전체 강의 목록"
+               android:textColor="#002B5B"
+               android:textSize="30dp"
+               android:textStyle="bold" />
 
-    </LinearLayout>
+       </LinearLayout>
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recv_lecture"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/recv_lecture"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"/>
 
+
+   </LinearLayout>
 </LinearLayout>
