@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".notice.NoticeDetailActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
@@ -21,28 +22,44 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/notice_detail_txt"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/activity_board_detail"
+            android:layout_marginRight="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#123"
+            app:cardCornerRadius="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="자유게시판"
-            android:textSize="30dp" />
+            android:layout_height="50dp">
+            <TextView
+                android:fontFamily="@font/welcomr"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/txtwhite"
+                android:text="자유게시판"/>
+        </androidx.cardview.widget.CardView>
 
-        <TableLayout
-            android:layout_below="@+id/notice_detail_txt"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_below="@+id/activity_board_detail"
             android:id="@+id/board_table"
-            android:stretchColumns="0,2,3"
             android:layout_width="match_parent"
             android:layout_height="600dp">
-            <TableRow
-                android:layout_height="0dp"
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
                 android:layout_width="match_parent">
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:background="@color/lmsmainbl"
+                    android:textColor="@color/txtwhite"
+                    android:background="@color/navy"
                     android:text="제목"/>
                 <TextView
                     android:layout_weight="1"
@@ -53,50 +70,55 @@
                     android:id="@+id/board_detail_title"
                     />
 
-            </TableRow>
-            <TableRow
-                android:layout_height="0dp"
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
                 android:layout_width="match_parent">
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:background="@color/lmsmainbl"
+                    android:background="@color/navy"
+                    android:textColor="@color/txtwhite"
                     android:text="작성자"/>
 
                 <TextView
                     android:id="@+id/board_detail_writer"
-                    android:layout_width="20dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:text="작성자"
 
                     />
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:background="@color/lmsmainbl"
+                    android:textColor="@color/txtwhite"
+                    android:background="@color/navy"
                     android:text="조회수"/>
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="조회수"
                     android:id="@+id/board_detail_readcnt"
                     android:padding="10dp"
                     />
-            </TableRow>
-            <TableRow
-                android:layout_height="0dp"
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
                 android:layout_width="match_parent">
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:background="@color/lmsmainbl"
+                    android:textColor="@color/txtwhite"
+                    android:background="@color/navy"
                     android:text="작성일자"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -107,21 +129,22 @@
                     android:padding="10dp"
 
                     />
-            </TableRow>
+            </LinearLayout>
 
 
 
-            <TableRow
-                android:layout_height="0dp"
+            <LinearLayout
+                android:layout_height="440dp"
                 android:layout_width="match_parent"
-                android:layout_weight="1"
+                android:orientation="horizontal"
                 >
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="100dp"
                     android:layout_height="match_parent"
+                    android:textColor="@color/txtwhite"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:background="@color/lmsmainbl"
+                    android:background="@color/navy"
                     android:text="내용"/>
                 <TextView
                     android:layout_weight="1"
@@ -133,17 +156,19 @@
                     android:text="내용"/>
 
 
-            </TableRow>
+            </LinearLayout>
 
-            <TableRow
-                android:layout_height="0dp"
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
                 android:layout_width="match_parent">
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
+                    android:textColor="@color/txtwhite"
                     android:gravity="center"
-                    android:background="@color/lmsmainbl"
+                    android:background="@color/navy"
                     android:text="첨부파일"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -155,16 +180,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:src="@drawable/ic_attachment_fill0_wght400_grad0_opsz48"
+                    android:src="@drawable/book2"
                     android:id="@+id/board_detail_filepath"
                     android:layout_gravity="center"
 
                     />
 
 
-            </TableRow>
+            </LinearLayout>
 
-        </TableLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -180,7 +205,7 @@
                 android:id="@+id/board_list"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/lmsmainbl"
+                android:backgroundTint="@color/navy"
                 android:text="목록"/>
             <Button
                 android:layout_margin="10dp"
@@ -243,7 +268,7 @@
                 android:hint="댓글 내용을 입력하세요"/>
             <Button
                 android:id="@+id/reg_button"
-                android:backgroundTint="@color/lmsmainbl"
+                android:backgroundTint="@color/navy"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:padding="8dp"

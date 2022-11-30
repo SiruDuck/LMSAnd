@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".notice.NoticeDetailFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
@@ -11,16 +12,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fragment_notic_detailcard"
+            android:layout_marginRight="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#123"
+            app:cardCornerRadius="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="공지사항 수정"
-            android:textSize="30dp"
-            android:id="@+id/notice_detail_txt"
-            />
+            android:layout_height="50dp">
+            <TextView
+                android:fontFamily="@font/welcomr"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#F1ECEC"
+                android:text="공지사항 수정"/>
+        </androidx.cardview.widget.CardView>
 
         <TableLayout
-            android:layout_below="@+id/notice_detail_txt"
+            android:layout_below="@+id/fragment_notic_detailcard"
             android:id="@+id/notice_table"
             android:stretchColumns="0,2,3"
             android:layout_width="match_parent"
@@ -33,7 +47,8 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:background="@color/lmsmainbl"
+                    android:background="@color/navy"
+                    android:textColor="@color/txtwhite"
                     android:text="제목"/>
                 <TextView
                     android:layout_weight="1"
@@ -41,6 +56,7 @@
                     android:layout_height="wrap_content"
                     android:text="제목"
                     android:padding="10dp"
+
                     android:id="@+id/notice_detail_title2"
                     />
 
@@ -53,7 +69,8 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:background="@color/lmsmainbl"
+                    android:textColor="@color/txtwhite"
+                    android:background="@color/navy"
                     android:text="작성자"/>
 
                 <TextView
@@ -69,7 +86,8 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:background="@color/lmsmainbl"
+                    android:textColor="@color/txtwhite"
+                    android:background="@color/navy"
                     android:text="조회수"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -87,7 +105,8 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:background="@color/lmsmainbl"
+                    android:textColor="@color/txtwhite"
+                    android:background="@color/navy"
                     android:text="작성일자"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -112,7 +131,8 @@
                     android:layout_height="match_parent"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:background="@color/lmsmainbl"
+                    android:textColor="@color/txtwhite"
+                    android:background="@color/navy"
                     android:text="내용"/>
                 <TextView
                     android:layout_weight="1"
@@ -132,9 +152,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/txtwhite"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:background="@color/lmsmainbl"
+                    android:background="@color/navy"
                     android:text="첨부파일"/>
                 <TextView
                     android:layout_width="wrap_content"

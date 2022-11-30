@@ -28,7 +28,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginRight="100dp"
-                android:background="@color/lmsmainbl" />
+                android:background="#123" />
 
             <LinearLayout
                 android:id="@+id/ln_layout"
