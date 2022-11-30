@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".board.BoardFragment"
     android:orientation="vertical"
+    android:scrollbars="none"
     >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".board.BoardFragment"
+        android:orientation="vertical"
+        android:scrollbars="none"
+        >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <TextView
         android:layout_width="wrap_content"
@@ -14,11 +27,53 @@
         android:textSize="30dp"
         android:text="자유게시판"
         android:textStyle="bold"
-        android:textColor="#4E73DF"/>
+        android:textColor="@color/lmsmainbl"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/board_pop_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="인기글"
+            android:textSize="20dp"
+            android:textColor="@color/translmsdark"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/board_pop_recv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/board_pop_txt"
+            android:background="@color/lmsdark" />
+
+
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/board_pop_recv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/board_recv"/>
 
-</LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+    </FrameLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="50dp"
+        android:backgroundTint="@color/lmsmainbl"
+        android:src="@drawable/ic_baseline_add_24"
+        android:id="@+id/board_btn_add"/>
+</FrameLayout>

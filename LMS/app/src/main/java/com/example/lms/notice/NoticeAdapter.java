@@ -1,11 +1,13 @@
 package com.example.lms.notice;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +24,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.lms.MainActivity;
 import com.example.lms.R;
+import com.example.lms.lms.CommonAskTask;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.w3c.dom.Text;
@@ -50,7 +53,7 @@ public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder h, int i) {
+    public void onBindViewHolder(@NonNull ViewHolder h, @SuppressLint("RecyclerView") int i) {
 
         h.notice_title.setText(list.get(i).getTitle());
         h.notice_time.setText(list.get(i).getWritedate());
@@ -67,6 +70,14 @@ public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.ViewHolder
                 intent.putExtra("isEnable", false);
                 intent.putExtra("vo", list.get(index));
                 h.notice_title.getContext().startActivity(intent);
+                CommonAskTask askTask = new CommonAskTask("andNolist",context);
+                askTask.addParam("id",list.get(i).getId());
+                askTask.executeAsk(new CommonAskTask.AsynckTaskCallback() {
+                    @Override
+                    public void onResult(String data, boolean isResult) {
+                        Log.d("TAG", "onResult: "+data);
+                    }
+                });
             }
         });
 

@@ -1,24 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".notice.NoticeDetailActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
-    android:id="@+id/container2"
     >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+
+
+
+
     <RelativeLayout
+        android:id="@+id/board_reative"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/notice_detail_txt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="자유게시판"
-            android:textSize="30dp"
-            android:id="@+id/notice_detail_txt"
-            />
+            android:textSize="30dp" />
 
         <TableLayout
             android:layout_below="@+id/notice_detail_txt"
@@ -164,6 +172,7 @@
             android:orientation="horizontal"
             android:layout_below="@+id/board_table"
             android:gravity="center"
+            android:id="@+id/board_btn_lin"
             >
 
             <Button
@@ -171,14 +180,17 @@
                 android:id="@+id/board_list"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/lmsmainbl"
                 android:text="목록"/>
             <Button
                 android:layout_margin="10dp"
                 android:id="@+id/board_modify"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/lmsdark"
                 android:text="수정"/>
             <Button
+                android:backgroundTint="#851A1A"
                 android:layout_margin="10dp"
                 android:id="@+id/board_delete"
                 android:layout_width="wrap_content"
@@ -192,9 +204,61 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/comment_linea"
+            android:layout_below="@+id/board_btn_lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="댓글"
+                android:textSize="30dp"/>
+
+            <FrameLayout
+                android:id="@+id/comment_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:orientation="vertical"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/comment_linea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="50dp"
+            >
+
+            <EditText
+                android:id="@+id/comment_et"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:layout_height="wrap_content"
+                android:background="#eeeeee"
+                android:layout_weight="1"
+                android:hint="댓글 내용을 입력하세요"/>
+            <Button
+                android:id="@+id/reg_button"
+                android:backgroundTint="@color/lmsmainbl"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:layout_marginLeft="5dp"
+                android:text="등록하기"/>
+        </LinearLayout>
+
 
 
 
     </RelativeLayout>
 
-</FrameLayout>
+
+
+    </FrameLayout>
+
+
+</ScrollView>

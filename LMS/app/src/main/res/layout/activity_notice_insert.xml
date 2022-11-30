@@ -2,11 +2,10 @@
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".notice.NoticeDetailActivity"
+    tools:context=".board.BoardDetailActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
-    android:id="@+id/container2"
     >
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,7 +14,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="자유게시판 수정"
+            android:text="공지사항 글쓰기"
             android:textSize="30dp"
             android:id="@+id/notice_detail_txt"
             />
@@ -40,9 +39,9 @@
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="제목"
+                    android:hint="제목"
                     android:padding="10dp"
-                    android:id="@+id/board_modify_title"
+                    android:id="@+id/notice_insert_title"
                     />
 
             </TableRow>
@@ -67,8 +66,8 @@
                     android:layout_height="match_parent"
                     android:padding="10dp"
                     android:gravity="left"
-                    android:id="@+id/board_modify_content"
-                    android:text="내용"/>
+                    android:id="@+id/notice_insert_content"
+                    android:hint="내용"/>
 
 
             </TableRow>
@@ -86,7 +85,7 @@
 
             <Button
                 android:layout_margin="10dp"
-                android:id="@+id/board_modify_save"
+                android:id="@+id/notice_insert_save"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/lmsmainbl"
@@ -94,7 +93,7 @@
             <Button
                 android:backgroundTint="@color/lmsdark"
                 android:layout_margin="10dp"
-                android:id="@+id/board_modify_cancel"
+                android:id="@+id/notice_insert_cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="취소"/>

@@ -1,5 +1,8 @@
 package com.example.lms.notice;
 
+
+
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -14,6 +17,8 @@ import android.view.ViewGroup;
 import com.example.lms.MainActivity;
 import com.example.lms.R;
 import com.example.lms.lms.CommonAskTask;
+import com.example.lms.lms.CommonVal;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -21,12 +26,33 @@ import java.util.ArrayList;
 
 public class NoticeFragment extends Fragment {
     RecyclerView notice_recv;
+    FloatingActionButton notice_btn_add;
+    NoticeVO vo = null;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_notice, container, false);
         notice_recv = v.findViewById(R.id.notice_recv);
+        notice_btn_add = v.findViewById(R.id.notice_btn_add);
+
+
+        if(CommonVal.loginInfo.getInfo_cd() == 3) {
+            notice_btn_add.setVisibility(View.VISIBLE);
+        }else{
+            notice_btn_add.setVisibility(View.GONE);
+        }
+
+
+        notice_btn_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), NoticeInsertActivity.class);
+                intent.putExtra("vo", vo);
+                startActivity(intent);
+            }
+        });
 
         notice_select();
         return v;
@@ -57,7 +83,6 @@ public class NoticeFragment extends Fragment {
 
                     notice_recv.setAdapter(adapter);
                     notice_recv.setLayoutManager(manager);
-
                 }
             }
         });

@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.lms.R;
 import com.example.lms.lms.CommonAskTask;
+import com.example.lms.lms.CommonVal;
 import com.google.gson.Gson;
 
 public class BoardDetailActivity extends AppCompatActivity {
@@ -33,6 +34,14 @@ public class BoardDetailActivity extends AppCompatActivity {
         board_list = findViewById(R.id.board_list);
         board_modify = findViewById(R.id.board_modify);
         board_delete = findViewById(R.id.board_delete);
+
+        if (CommonVal.loginInfo.getId().equals( vo.getWriter() )) {
+            board_modify.setVisibility(View.VISIBLE);
+            board_delete.setVisibility(View.VISIBLE);
+        }else{
+            board_modify.setVisibility(View.GONE);
+            board_delete.setVisibility(View.GONE);
+        }
 
 
 

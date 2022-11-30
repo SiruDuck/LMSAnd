@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.lms.R;
 import com.example.lms.lms.CommonAskTask;
+import com.example.lms.lms.CommonVal;
 import com.google.gson.Gson;
 
 public class NoticeDetailActivity extends AppCompatActivity {
@@ -35,6 +36,15 @@ public class NoticeDetailActivity extends AppCompatActivity {
         notice_list = findViewById(R.id.notice_list);
         notice_modify = findViewById(R.id.notice_modify);
         notice_delete = findViewById(R.id.notice_delete);
+
+
+        if (CommonVal.loginInfo.getInfo_cd() == 3){
+            notice_modify.setVisibility(View.VISIBLE);
+            notice_delete.setVisibility(View.VISIBLE);
+        }else{
+            notice_modify.setVisibility(View.GONE);
+            notice_delete.setVisibility(View.GONE);
+        }
 
 
         notice_detail_title.setText(vo.getTitle());
@@ -62,6 +72,9 @@ public class NoticeDetailActivity extends AppCompatActivity {
         notice_modify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent1 = new Intent(NoticeDetailActivity.this, NoticeModifyActivity.class);
+                intent1.putExtra("vo", vo);
+                startActivity(intent1);
 
             }
         });

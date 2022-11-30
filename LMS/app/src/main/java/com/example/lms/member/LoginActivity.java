@@ -19,7 +19,7 @@ import com.google.gson.reflect.TypeToken;
 
 public class LoginActivity extends AppCompatActivity {
     EditText edtid, edtpw;
-    Button edtlogin;
+    Button btnlogin;
 
 
     @Override
@@ -29,10 +29,10 @@ public class LoginActivity extends AppCompatActivity {
 
         edtid = findViewById(R.id.edtid);
         edtpw = findViewById(R.id.edtpw);
-        edtlogin = findViewById(R.id.edtlogin);
+        btnlogin = findViewById(R.id.btnlogin);
 
 
-        edtlogin.setOnClickListener(new View.OnClickListener() {
+        btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 CommonAskTask task = new CommonAskTask("andLogin", LoginActivity.this);
@@ -53,6 +53,7 @@ public class LoginActivity extends AppCompatActivity {
                             if(vo == null) {
                                 Toast.makeText(LoginActivity.this, "vo값이 없습니다", Toast.LENGTH_SHORT).show();
                             }else {
+                                CommonVal.loginInfo = vo;
                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                 intent.putExtra("vo", vo);
                                 startActivity(intent);
