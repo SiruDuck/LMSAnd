@@ -30,7 +30,7 @@ public class Lecture_TeaFragment extends Fragment {
     TextView teacher_name, lecture_num;
     List<LectureVO> list;
     CardView lec_tea_stu;
-    MemberVO vo;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
