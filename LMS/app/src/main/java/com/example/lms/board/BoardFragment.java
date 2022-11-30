@@ -51,17 +51,17 @@ public class BoardFragment extends Fragment {
 
 
 
-        board_pop_select();
-        board_select();
+        //board_pop_select();
+        //board_select();
         return v;
     }
 
 
     @Override
     public void onResume() {
+        super.onResume();
         board_select();
         board_pop_select();
-        super.onResume();
     }
 
 

@@ -54,7 +54,7 @@ public class NoticeFragment extends Fragment {
             }
         });
 
-        notice_select();
+        //notice_select();
         return v;
     }
 
