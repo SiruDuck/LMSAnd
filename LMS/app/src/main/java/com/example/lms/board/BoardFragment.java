@@ -50,9 +50,6 @@ public class BoardFragment extends Fragment {
         });
 
 
-
-        //board_pop_select();
-        //board_select();
         return v;
     }
 
