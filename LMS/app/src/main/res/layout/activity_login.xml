@@ -59,7 +59,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
                     <EditText
-                        android:text="10108"
+                        android:text="191002"
                         android:id="@+id/edtid"
                         android:hint="ID"
                         android:maxLines="1"
