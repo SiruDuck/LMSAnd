@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.example.lms.R;
 import com.example.lms.lms.CommonAskTask;
+import com.example.lms.member.MemberVO;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 

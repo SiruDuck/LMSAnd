@@ -93,7 +93,7 @@ public void test(ArrayList<InfoMemberVO> list){
     info_email.setText(list.get(0).getEmail());
     info_addr.setText(list.get(0).getAddr());
     info_post.setText(list.get(0).getPost());
-    start_date.setText("startdate : "+simpleDateFormat.format(list.get(0).getStart_date()));
+    start_date.setText("startdate : "+list.get(0).getStart_date());
 
 }
 
