@@ -30,7 +30,7 @@ public class MyinfoFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_myinfo, container, false);
         info_id = v.findViewById(R.id.info_id); info_name = v.findViewById(R.id.info_name); info_department_name = v.findViewById(R.id.info_department_name);
         info_grade = v.findViewById(R.id.info_grade); info_state = v.findViewById(R.id.info_state   ); info_start_date = v.findViewById(R.id.info_start_date);
-        info_phone = v.findViewById(R.id.info_phone); info_email = v.findViewById(R.id.info_email); info_addr = v.findViewById(R.id.info_addr); info_post = v.findViewById(R.id.info_post);
+        info_phone = v.findViewById(R.id.info_phone); info_email = v.findViewById(R.id.info_email); info_addr = v.findViewById(R.id.info_addr);
         start_date = v.findViewById(R.id.start_date);
 
         id = CommonVal.loginInfo.getId();
@@ -81,21 +81,20 @@ public void test(ArrayList<InfoMemberVO> list){
     info_department_name.setText(list.get(0).getDepartment_name());
     if(list.get(0).getInfo_name().equals("교수")){
         info_grade.setText("교수");
-        start_date.setText("입사일 : "+list.get(0).getStart_date());
+        start_date.setText("입사일 : "+list.get(0).getStart_date().substring(0, list.get(0).getStart_date().indexOf(" ")));
     }else if(list.get(0).getInfo_name().equals("관리자")){
         info_grade.setText("관리자");
-        start_date.setText("입사일 : "+list.get(0).getStart_date());
+        start_date.setText("입사일 : "+list.get(0).getStart_date().substring(0, list.get(0).getStart_date().indexOf(" ")));
     }else{
         info_grade.setText(list.get(0).getGrade());
-        start_date.setText("입학일 : "+list.get(0).getStart_date());
+        start_date.setText("입학일 : "+list.get(0).getStart_date().substring(0, list.get(0).getStart_date().indexOf(" ")));
     }
     //info_grade.setText(list.get(0).getGrade());
     info_state.setText(list.get(0).getState());
-    info_start_date.setText(list.get(0).getBirth());
+    info_start_date.setText("생년월일: "+list.get(0).getBirth().substring(0, list.get(0).getStart_date().indexOf(" ")));
     info_phone.setText(list.get(0).getPhone());
     info_email.setText(list.get(0).getEmail());
     info_addr.setText(list.get(0).getAddr());
-    info_post.setText(list.get(0).getPost());
     
 
 }
