@@ -30,7 +30,7 @@ public class RegistListFragment extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_regist_list, container, false);
         rcv_regist = v.findViewById(R.id.rcv_regist);
-        list_select();
+        //list_select();
 
         FlingAnimation fling = new FlingAnimation(v, DynamicAnimation.SCROLL_Y);
         fling.setStartVelocity(1)
