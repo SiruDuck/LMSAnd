@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".lecture.LectureFragment"
     android:orientation="vertical"
-    android:background="#F8F5F8"
+    android:background="@drawable/back12"
+
     >
 
    <LinearLayout
