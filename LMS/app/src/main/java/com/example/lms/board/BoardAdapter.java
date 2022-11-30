@@ -59,6 +59,7 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.RecHolder>{
                Intent intent = new Intent(h.board_title.getContext(), BoardDetailActivity.class);
                intent.putExtra("vo", list.get(index));
                h.board_title.getContext().startActivity(intent);
+
                CommonAskTask askTask = new CommonAskTask("andBolist",context);
                askTask.addParam("id",list.get(i).getId());
                askTask.executeAsk(new CommonAskTask.AsynckTaskCallback() {

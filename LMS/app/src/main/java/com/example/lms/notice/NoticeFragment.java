@@ -38,7 +38,7 @@ public class NoticeFragment extends Fragment {
         notice_btn_add = v.findViewById(R.id.notice_btn_add);
 
 
-        if(CommonVal.loginInfo.getInfo_cd() == 3) {
+        if(CommonVal.loginInfo.getInfo_cd() == 4) {
             notice_btn_add.setVisibility(View.VISIBLE);
         }else{
             notice_btn_add.setVisibility(View.GONE);
@@ -54,7 +54,7 @@ public class NoticeFragment extends Fragment {
             }
         });
 
-        notice_select();
+        //notice_select();
         return v;
     }
 
