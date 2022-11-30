@@ -60,7 +60,6 @@ public class EquipmentFragment extends Fragment {
                 //통신 완료 시 데이터를 가지고 온다.
                 Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
                 if(isResult){
-                    Log.d("로그", "onResult: 스프링에서 데이터 가져옴"+data);
                     ArrayList<EquipmentVO> list =
                             gson.fromJson(data, new TypeToken<ArrayList<EquipmentVO>>(){}.getType());
 

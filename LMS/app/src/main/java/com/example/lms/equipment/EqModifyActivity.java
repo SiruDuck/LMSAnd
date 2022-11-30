@@ -60,11 +60,9 @@ public class EqModifyActivity extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                 modidate.setText(year+"/" + (month+1) +"/" +dayOfMonth);
-                Log.d("로그", "onDateSet: Date"+modidate.getText());
                 Calendar c = Calendar.getInstance();
                 c.set(year , month , dayOfMonth);
                 vo.setBuy_day(new Date(c.getTimeInMillis()));      //구입날자
-                Log.d("TAG", "onDateSet: " + c.getTimeInMillis());
 
             }
         }, mYear, mMonth, mDay);

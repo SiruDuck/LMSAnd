@@ -24,7 +24,7 @@ CardView eqlist;
         eqlist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new EquipmentFragment()).commit();
+
             }
         });
 
