@@ -161,16 +161,7 @@
                             android:text="광주광역시 광산구 수완동 1426"
                             android:textAlignment="center" />
 
-                        <TextView
-                            android:elevation="5dp"
-                            android:gravity="center"
-                            android:id="@+id/info_post"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_margin="10dp"
-                            android:background="@drawable/border"
-                            android:text="32157"
-                            android:textAlignment="center" />
+
 
                         <TextView
                             android:elevation="5dp"

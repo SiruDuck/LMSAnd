@@ -3,16 +3,23 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".timetable.TimeTableDetailActivity"
     android:orientation="vertical"
-    android:background="@drawable/back01">
+    android:background="@drawable/back12"
+    android:clipToPadding="false">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="20dp"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="10dp">
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingLeft="15dp">
+        android:layout_height="match_parent">
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -26,7 +33,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:background="@drawable/shape_cell_detail"
-                android:textColor="#000"/>
+                android:textColor="#fff"/>
             <TextView
                 android:id="@+id/lecture_num"
                 android:padding="5dp"
@@ -49,7 +56,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:background="@drawable/shape_cell_detail"
-                android:textColor="#000"/>
+                android:textColor="#fff"/>
             <TextView
                 android:id="@+id/lecture_title"
                 android:padding="5dp"
@@ -72,7 +79,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:background="@drawable/shape_cell_detail"
-                android:textColor="#000"/>
+                android:textColor="#fff"/>
             <TextView
                 android:id="@+id/sortation"
                 android:text="전공"
@@ -95,7 +102,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:background="@drawable/shape_cell_detail"
-                android:textColor="#000"/>
+                android:textColor="#fff"/>
             <TextView
                 android:id="@+id/lecture_room"
                 android:padding="5dp"
@@ -118,7 +125,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:background="@drawable/shape_cell_detail"
-                android:textColor="#000"/>
+                android:textColor="#fff"/>
             <TextView
                 android:id="@+id/capacity"
                 android:padding="5dp"
@@ -141,7 +148,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:background="@drawable/shape_cell_detail"
-                android:textColor="#000"/>
+                android:textColor="#fff"/>
             <TextView
                 android:id="@+id/teacher_name"
                 android:padding="5dp"
@@ -164,7 +171,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:background="@drawable/shape_cell_detail"
-                android:textColor="#000"/>
+                android:textColor="#fff"/>
             <TextView
                 android:id="@+id/lecture_time"
                 android:padding="5dp"
@@ -187,7 +194,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:background="@drawable/shape_cell_detail"
-                android:textColor="#000"/>
+                android:textColor="#fff"/>
             <TextView
                 android:id="@+id/subjectcredit"
                 android:padding="5dp"
@@ -210,7 +217,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:background="@drawable/shape_cell_detail"
-                android:textColor="#000"/>
+                android:textColor="#fff"/>
             <TextView
                 android:id="@+id/state"
                 android:padding="5dp"
@@ -233,7 +240,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:background="@drawable/shape_cell_detail"
-                android:textColor="#000"/>
+                android:textColor="#fff"/>
             <TextView
                 android:id="@+id/book"
                 android:padding="5dp"
@@ -246,6 +253,7 @@
 
     </TableLayout>
 
+    </androidx.cardview.widget.CardView>
 
     <androidx.constraintlayout.utils.widget.MotionButton
         android:id="@+id/btn_ok"
@@ -256,7 +264,8 @@
         android:text="확인"
         android:textStyle="bold"
         android:textColor="#fff"
-        android:background="@drawable/shape_btn_detail"/>
+        android:elevation="10dp"
+        android:background="@drawable/btn_regist_shadow01"/>
 
 
 

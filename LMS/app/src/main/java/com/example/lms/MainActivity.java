@@ -1,6 +1,7 @@
 package com.example.lms;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -10,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -47,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
         Intent intent = getIntent();
         MemberVO vo = (MemberVO) intent.getSerializableExtra("vo");
 
@@ -66,7 +71,10 @@ public class MainActivity extends AppCompatActivity {
 */
 
         toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
+
         setSupportActionBar(toolbar);
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this,drawer,toolbar,
@@ -74,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
                 R.string.navigation_drawer_close
 
         );
-
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 

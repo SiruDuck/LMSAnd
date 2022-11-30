@@ -23,6 +23,8 @@
 
     <color name="team_main">#4e73df</color>
 
+    <color name="pink">#FA8888</color>
+
     <color name="gray1">#f1f3f5</color>
     <color name="gray2">#e9ecef</color>
     <color name="gray3">#dee2e6</color>
@@ -32,6 +34,7 @@
     <color name="navy">#123</color>
 
     <color name="txtwhite">#F1ECEC</color>
+
 
 
 

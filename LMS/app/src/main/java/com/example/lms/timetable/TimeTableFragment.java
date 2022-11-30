@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.example.lms.R;
 import com.example.lms.lms.CommonAskTask;
+import com.example.lms.lms.CommonVal;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -31,6 +32,7 @@ public class TimeTableFragment extends Fragment {
 
     public void table_list(){
         CommonAskTask task = new CommonAskTask("table.at", getContext());
+        task.addParam("id", "191002");
         task.executeAsk(new CommonAskTask.AsynckTaskCallback() {
             @Override
             public void onResult(String data, boolean isResult) {
