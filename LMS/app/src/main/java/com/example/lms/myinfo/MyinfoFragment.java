@@ -81,19 +81,22 @@ public void test(ArrayList<InfoMemberVO> list){
     info_department_name.setText(list.get(0).getDepartment_name());
     if(list.get(0).getInfo_name().equals("교수")){
         info_grade.setText("교수");
+        start_date.setText("입사일 : "+list.get(0).getStart_date());
     }else if(list.get(0).getInfo_name().equals("관리자")){
         info_grade.setText("관리자");
+        start_date.setText("입사일 : "+list.get(0).getStart_date());
     }else{
         info_grade.setText(list.get(0).getGrade());
+        start_date.setText("입학일 : "+list.get(0).getStart_date());
     }
     //info_grade.setText(list.get(0).getGrade());
     info_state.setText(list.get(0).getState());
-    info_start_date.setText(list.get(0).getStart_date());
+    info_start_date.setText(list.get(0).getBirth());
     info_phone.setText(list.get(0).getPhone());
     info_email.setText(list.get(0).getEmail());
     info_addr.setText(list.get(0).getAddr());
     info_post.setText(list.get(0).getPost());
-    start_date.setText("startdate : "+list.get(0).getStart_date());
+    
 
 }
 
