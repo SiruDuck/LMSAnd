@@ -1,11 +1,6 @@
 package com.example.lms.notice;
 
-import androidx.fragment.app.Fragment;
-
-import com.example.lms.sidemenu.SideVO;
-
 import java.io.Serializable;
-import java.util.ArrayList;
 
 public class NoticeVO implements Serializable {
 	private String id;
@@ -39,6 +34,7 @@ public class NoticeVO implements Serializable {
 	public void setId(String id) {
 		this.id = id;
 	}
+
 
 	public int getReadcnt() {
 		return readcnt;

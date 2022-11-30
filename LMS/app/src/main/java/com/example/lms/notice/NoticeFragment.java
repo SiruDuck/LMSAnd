@@ -28,6 +28,8 @@ public class NoticeFragment extends Fragment {
     RecyclerView notice_recv;
     FloatingActionButton notice_btn_add;
     NoticeVO vo = null;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -59,7 +61,6 @@ public class NoticeFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-
         notice_select();
     }
 

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".myinfo.MyinfoFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:background="#123"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp">
+
+                    <TextView
+                        android:id="@+id/info_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="20180000"
+                        android:textColor="#BFC9D3"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/info_profile"
+                        android:src="@drawable/homeview"
+                        android:layout_centerInParent="true"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"/>
+                </RelativeLayout>
+                <View
+                    android:background="#D1D8DF"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/info_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="김학생"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/info_name"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/info_department_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="#F6F0F0"
+                            android:text="게임개발학과"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/info_grade"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="#F6F0F0"
+                            android:text="1학년"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/info_state"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="#F6F0F0"
+                            android:text="재학중"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/info_start_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="#F6F0F0"
+                            android:text="1999/11/30"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/info_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="#F6F0F0"
+                            android:text="010-0000-0000"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/info_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="#F6F0F0"
+                            android:text="kim@naver.com"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/info_addr"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="#F6F0F0"
+                            android:text="광주광역시 광산구 수완동 1426"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/info_post"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="#F6F0F0"
+                            android:text="32157"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/start_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="#F6F0F0"
+                            android:text="입학일 : 18/03/02"
+                            android:textAlignment="center"
+
+                            />
+
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </ScrollView>
+
+</FrameLayout>

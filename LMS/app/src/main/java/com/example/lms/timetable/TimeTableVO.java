@@ -6,7 +6,7 @@ import java.io.Serializable;
 public class TimeTableVO implements Serializable {
 
 	private String lecture_title, syllabus, teacher_name, semester, sortation, lecture_room, lecture_year, lecture_time, enrolment, reception_status, capacity, midex, finalex,
-					subjectcredit, state, book, lecture_day;
+					subjectcredit, state, book, lecture_day, lecture_class;
 	private int lecture_num;
 	
 	public String getLecture_title() {
@@ -117,7 +117,12 @@ public class TimeTableVO implements Serializable {
 	public void setLecture_day(String lecture_day) {
 		this.lecture_day = lecture_day;
 	}
-	
-	
-	
+
+	public String getLecture_class() {
+		return lecture_class;
 	}
+
+	public void setLecture_class(String lecture_class) {
+		this.lecture_class = lecture_class;
+	}
+}

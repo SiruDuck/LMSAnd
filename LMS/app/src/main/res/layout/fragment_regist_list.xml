@@ -3,12 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".timetable.RegistFragment">
+    tools:context=".timetable.RegistListFragment"
+    android:background="@drawable/back08">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcv_regist"
-        android:layout_margin="5dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
+        android:layout_height="wrap_content"/>
 </FrameLayout>

@@ -86,6 +86,7 @@ public class BoardFragment extends Fragment {
                     board_recv.setLayoutManager(manager);
 
                 }
+                //return null;
             }
         });
 

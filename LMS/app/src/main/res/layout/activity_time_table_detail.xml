@@ -3,18 +3,21 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     tools:context=".timetable.TimeTableDetailActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/back01">
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:paddingLeft="15dp">
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dp">
+            android:gravity=""
+            android:padding="10dp">
             <TextView
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
@@ -28,6 +31,7 @@
                 android:id="@+id/lecture_num"
                 android:padding="5dp"
                 android:text="1234"
+                android:textStyle="bold"
                 android:textColor="#000"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -36,7 +40,7 @@
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dp">
+            android:padding="10dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -50,6 +54,7 @@
                 android:id="@+id/lecture_title"
                 android:padding="5dp"
                 android:textColor="#000"
+                android:textStyle="bold"
                 android:text="시스템프로그래밍"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -58,7 +63,7 @@
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dp">
+            android:padding="10dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -71,6 +76,7 @@
             <TextView
                 android:id="@+id/sortation"
                 android:text="전공"
+                android:textStyle="bold"
                 android:textColor="#000"
                 android:padding="5dp"
                 android:layout_width="match_parent"
@@ -80,7 +86,7 @@
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dp">
+            android:padding="10dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -94,6 +100,7 @@
                 android:id="@+id/lecture_room"
                 android:padding="5dp"
                 android:text="302호"
+                android:textStyle="bold"
                 android:textColor="#000"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -102,7 +109,7 @@
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dp">
+            android:padding="10dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -116,6 +123,7 @@
                 android:id="@+id/capacity"
                 android:padding="5dp"
                 android:text="40명"
+                android:textStyle="bold"
                 android:textColor="#000"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -124,7 +132,7 @@
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dp">
+            android:padding="10dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -138,6 +146,7 @@
                 android:id="@+id/teacher_name"
                 android:padding="5dp"
                 android:textColor="#000"
+                android:textStyle="bold"
                 android:text="김영문"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -146,7 +155,7 @@
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dp">
+            android:padding="10dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -160,6 +169,7 @@
                 android:id="@+id/lecture_time"
                 android:padding="5dp"
                 android:textColor="#000"
+                android:textStyle="bold"
                 android:text="월(4)"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -168,7 +178,7 @@
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dp">
+            android:padding="10dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -182,6 +192,7 @@
                 android:id="@+id/subjectcredit"
                 android:padding="5dp"
                 android:textColor="#000"
+                android:textStyle="bold"
                 android:text="3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -190,7 +201,7 @@
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dp">
+            android:padding="10dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -204,6 +215,7 @@
                 android:id="@+id/state"
                 android:padding="5dp"
                 android:textColor="#000"
+                android:textStyle="bold"
                 android:text="온라인"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -212,7 +224,7 @@
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dp">
+            android:padding="10dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -226,6 +238,7 @@
                 android:id="@+id/book"
                 android:padding="5dp"
                 android:textColor="#000"
+                android:textStyle="bold"
                 android:text="쉽게 배우는 알고리즘"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -233,11 +246,13 @@
 
     </TableLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
+
+    <androidx.constraintlayout.utils.widget.MotionButton
         android:id="@+id/btn_ok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:text="확인"
         android:textStyle="bold"
         android:textColor="#fff"

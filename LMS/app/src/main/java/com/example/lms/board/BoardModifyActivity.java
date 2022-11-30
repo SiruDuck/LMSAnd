@@ -59,6 +59,7 @@ public class BoardModifyActivity extends AppCompatActivity {
 
 
 
+
         board_modify_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

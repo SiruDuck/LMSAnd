@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rayoutcolor"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F1EEEE">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/eq_name"
+            android:gravity="center"
+            android:text="확성기"
+            android:layout_width="90dp"
+            android:layout_height="50dp"/>
+        <TextView
+            android:id="@+id/eq_quantity"
+            android:gravity="center"
+            android:text="수량"
+            android:layout_width="40dp"
+            android:layout_height="50dp"/>
+        <TextView
+            android:id="@+id/eq_day"
+            android:gravity="center"
+            android:text="구매일"
+            android:layout_width="90dp"
+            android:layout_height="50dp"/>
+        <TextView
+            android:id="@+id/eq_price"
+            android:gravity="center"
+            android:text="구입가격(개당)"
+            android:layout_width="90dp"
+            android:layout_height="50dp"/>
+        <Button
+            android:id="@+id/eqmodify"
+            android:layout_marginLeft="10dp"
+            android:textSize="12dp"
+            android:text="변경"
+            android:backgroundTint="#6BA0D5"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

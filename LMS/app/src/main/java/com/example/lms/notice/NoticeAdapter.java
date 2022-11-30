@@ -3,6 +3,9 @@ package com.example.lms.notice;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -44,14 +47,14 @@ public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.ViewHolder
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
         View v = inflater.inflate(R.layout.item_notice_list, parent, false);
-
-
         return new ViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, @SuppressLint("RecyclerView") int i) {
+
         h.notice_title.setText(list.get(i).getTitle());
         h.notice_time.setText(list.get(i).getWritedate());
         h.notice_content.setText(list.get(i).getContent());
@@ -88,6 +91,7 @@ public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.ViewHolder
     @Override
     public int getItemViewType(int position) {
         return position;
+
     }
 
     @Override
@@ -110,7 +114,6 @@ public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.ViewHolder
             notice_cardview = v.findViewById(R.id.notice_cardview);
         }
     }
-
 
 
 }

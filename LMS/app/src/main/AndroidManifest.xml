@@ -62,8 +62,17 @@
         <activity
             android:name=".board.BoardModifyActivity"
             android:exported="true" />
+        <activity    
+            android:name=".lecture.Lecture_Tea_DetailActivity"
+            android:exported="true" />
         <activity
-            android:name=".board.BoardDetailActivity"
+            android:name=".lecture.LectureModifyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".equipment.EqInsertActivity"
+            android:exported="true" />
+        <activity
+            android:name=".equipment.EqModifyActivity"
             android:exported="true" />
         <activity
             android:name=".notice.NoticeDetailActivity"
