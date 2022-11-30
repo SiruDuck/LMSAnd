@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".timetable.RegistListFragment"
-    android:background="@drawable/back08">
+    android:background="@drawable/back11">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcv_regist"

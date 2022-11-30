@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -66,7 +67,10 @@ public class MainActivity extends AppCompatActivity {
 */
 
         toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
+
         setSupportActionBar(toolbar);
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this,drawer,toolbar,
@@ -74,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
                 R.string.navigation_drawer_close
 
         );
-
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 

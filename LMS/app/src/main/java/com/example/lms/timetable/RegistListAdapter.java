@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.lms.CommonMethod;
 import com.example.lms.R;
 import com.example.lms.lms.CommonAskTask;
+import com.example.lms.lms.CommonVal;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
@@ -25,7 +26,6 @@ public class RegistListAdapter extends RecyclerView.Adapter<RegistListAdapter.Vi
     private final RegistListFragment registListFragment;
     LayoutInflater inflater;
     ArrayList<TimeTableVO> table_vo;
-    ArrayList<EnrolmentVO> enrol_vo;
 
     public RegistListAdapter(LayoutInflater inflater, ArrayList<TimeTableVO> table_vo, RegistListFragment registListFragment) {
         this.inflater = inflater;
@@ -66,7 +66,7 @@ public class RegistListAdapter extends RecyclerView.Adapter<RegistListAdapter.Vi
             public void onClick(View v) {
                 CommonAskTask task = new CommonAskTask("insert.at", holder.btn_regist.getContext());
                 //2022/11/29 : CommonVal에 Logininfo.getId로 수정해야함
-                task.addParam("id", "191002");
+                task.addParam("id", CommonVal.loginInfo.getId());
                 task.addParam("lecture_num", table_vo.get(index).getLecture_num());
 
                 task.executeAsk(new CommonAskTask.AsynckTaskCallback() {
@@ -90,7 +90,7 @@ public class RegistListAdapter extends RecyclerView.Adapter<RegistListAdapter.Vi
             public void onClick(View v) {
                 Log.d("lms", "onClick: 삭제");
                 CommonAskTask task_d = new CommonAskTask("delete.at", holder.btn_delete.getContext());
-                task_d.addParam("id", "191002");
+                task_d.addParam("id", CommonVal.loginInfo.getId());
                 task_d.addParam("lecture_num", table_vo.get(index).getLecture_num());
                 task_d.executeAsk(new CommonAskTask.AsynckTaskCallback() {
                     @Override
