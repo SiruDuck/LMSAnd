@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -21,6 +23,7 @@ import java.util.ArrayList;
 public class LectureFragment extends Fragment {
     RecyclerView recv_lecture;
     Button lec_detail;
+    Spinner spinner;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -28,7 +31,6 @@ public class LectureFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_lecture, container, false);
 
         recv_lecture = v.findViewById(R.id.recv_lecture);
-
 
         return v;
     }
