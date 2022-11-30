@@ -32,7 +32,7 @@ public class TimeTableFragment extends Fragment {
 
     public void table_list(){
         CommonAskTask task = new CommonAskTask("table.at", getContext());
-        task.addParam("id", CommonVal.loginInfo.getId());
+        task.addParam("id", "191002");
         task.executeAsk(new CommonAskTask.AsynckTaskCallback() {
             @Override
             public void onResult(String data, boolean isResult) {

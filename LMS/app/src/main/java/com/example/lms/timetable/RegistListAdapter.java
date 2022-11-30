@@ -66,7 +66,7 @@ public class RegistListAdapter extends RecyclerView.Adapter<RegistListAdapter.Vi
             public void onClick(View v) {
                 CommonAskTask task = new CommonAskTask("insert.at", holder.btn_regist.getContext());
                 //2022/11/29 : CommonVal에 Logininfo.getId로 수정해야함
-                task.addParam("id", CommonVal.loginInfo.getId());
+                task.addParam("id", "191002");
                 task.addParam("lecture_num", table_vo.get(index).getLecture_num());
 
                 task.executeAsk(new CommonAskTask.AsynckTaskCallback() {
@@ -90,7 +90,7 @@ public class RegistListAdapter extends RecyclerView.Adapter<RegistListAdapter.Vi
             public void onClick(View v) {
                 Log.d("lms", "onClick: 삭제");
                 CommonAskTask task_d = new CommonAskTask("delete.at", holder.btn_delete.getContext());
-                task_d.addParam("id", CommonVal.loginInfo.getId());
+                task_d.addParam("id","191002");
                 task_d.addParam("lecture_num", table_vo.get(index).getLecture_num());
                 task_d.executeAsk(new CommonAskTask.AsynckTaskCallback() {
                     @Override
