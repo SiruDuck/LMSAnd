@@ -48,7 +48,7 @@ public class BoardDetailActivity extends AppCompatActivity {
         board_detail_title.setText(vo.getTitle()+"");
         board_detail_writer.setText(vo.getWriter()+"");
         board_detail_readcnt.setText(vo.getReadcnt()+ "");
-        board_detail_writedate.setText(vo.getWritedate()+"");
+        board_detail_writedate.setText(vo.getWritedate().substring(0, vo.getWritedate().indexOf(" ")));
         board_detail_content.setText(vo.getContent()+"");
 
 
