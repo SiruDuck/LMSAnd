@@ -51,6 +51,15 @@
         android:theme="@style/Theme.LMS"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".notice.NoticeInsertActivity"
+            android:exported="true" />
+        <activity
+            android:name=".notice.NoticeModifyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".board.BoardInsertActivity"
+            android:exported="true" />
+        <activity
             android:name=".board.BoardModifyActivity"
             android:exported="true" />
         <activity

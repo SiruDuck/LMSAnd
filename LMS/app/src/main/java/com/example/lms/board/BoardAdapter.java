@@ -1,8 +1,10 @@
 package com.example.lms.board;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.media.Image;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.lms.R;
+import com.example.lms.lms.CommonAskTask;
 import com.example.lms.notice.NoticeAdapter;
 
 import java.util.ArrayList;
@@ -38,7 +41,7 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.RecHolder>{
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecHolder h, int i) {
+    public void onBindViewHolder(@NonNull RecHolder h, @SuppressLint("RecyclerView") int i) {
         h.board_title.setText(list.get(i).getTitle());
         h.board_time.setText(list.get(i).getWritedate());
         h.board_writer.setText(list.get(i).getWriter());
@@ -56,6 +59,14 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.RecHolder>{
                Intent intent = new Intent(h.board_title.getContext(), BoardDetailActivity.class);
                intent.putExtra("vo", list.get(index));
                h.board_title.getContext().startActivity(intent);
+               CommonAskTask askTask = new CommonAskTask("andBolist",context);
+               askTask.addParam("id",list.get(i).getId());
+               askTask.executeAsk(new CommonAskTask.AsynckTaskCallback() {
+                   @Override
+                   public void onResult(String data, boolean isResult) {
+                       Log.d("TAG", "onResult: "+data);
+                   }
+               });
 
            }
        });

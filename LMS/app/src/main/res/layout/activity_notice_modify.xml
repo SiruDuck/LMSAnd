@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="자유게시판 수정"
+            android:text="공지사항 수정"
             android:textSize="30dp"
             android:id="@+id/notice_detail_txt"
             />
@@ -42,7 +42,7 @@
                     android:layout_height="wrap_content"
                     android:text="제목"
                     android:padding="10dp"
-                    android:id="@+id/board_modify_title"
+                    android:id="@+id/notice_modify_title"
                     />
 
             </TableRow>
@@ -67,7 +67,7 @@
                     android:layout_height="match_parent"
                     android:padding="10dp"
                     android:gravity="left"
-                    android:id="@+id/board_modify_content"
+                    android:id="@+id/notice_modify_content"
                     android:text="내용"/>
 
 
@@ -86,17 +86,17 @@
 
             <Button
                 android:layout_margin="10dp"
-                android:id="@+id/board_modify_save"
+                android:id="@+id/notice_modify_save"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/lmsmainbl"
                 android:text="저장"/>
             <Button
-                android:backgroundTint="@color/lmsdark"
                 android:layout_margin="10dp"
-                android:id="@+id/board_modify_cancel"
+                android:id="@+id/notice_modify_cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/lmsdark"
                 android:text="취소"/>
 
 

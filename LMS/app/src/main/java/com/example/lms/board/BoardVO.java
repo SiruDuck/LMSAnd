@@ -5,19 +5,34 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class BoardVO implements Serializable {
-	private int id, readcnt =0;
+	private String id;
+	private  int readcnt;
 	private String title, content, writer,filename,	filepath;
 	private String writedate;
 	ArrayList<BoardVO> list = new ArrayList<>();
 
 
+	public BoardVO(String id, int readcnt, String title, String content, String writer, String filename, String filepath, String writedate, ArrayList<BoardVO> list) {
+		this.id = id;
+		this.readcnt = readcnt;
+		this.title = title;
+		this.content = content;
+		this.writer = writer;
+		this.filename = filename;
+		this.filepath = filepath;
+		this.writedate = writedate;
+		this.list = list;
+	}
 
+    public BoardVO() {
 
-	public int getId() {
+    }
+
+    public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
