@@ -42,24 +42,35 @@ public class ScoreFragment extends Fragment {
         list= new ArrayList<>();
         avglist= new ArrayList<>();
 
-
-        CommonAskTask  task = new CommonAskTask("and_score_list.sc", getContext());
-        task.addParam("id", loginInfo.getId());
-        task.executeAsk(new CommonAskTask.AsynckTaskCallback() {
+        CommonAskTask avgtask = new CommonAskTask("avg_sutdent_and.sc", getContext());
+        avgtask.addParam("id",loginInfo.getId());
+        avgtask.executeAsk(new CommonAskTask.AsynckTaskCallback() {
             @Override
             public void onResult(String data, boolean isResult) {
-                 if(isResult) {
-                   list =
-                            new Gson().fromJson(data, new TypeToken<ArrayList<ScoreVO>>() {
-                            }.getType());
-                    ScoreAdapter adapter = new ScoreAdapter(inflater,list,getContext());
-                    RecyclerView.LayoutManager manager = new LinearLayoutManager(
-                            getContext(),RecyclerView.VERTICAL,false
-                    );
-                    recv_score = v.findViewById(R.id.recv_score);
+                if(isResult){
+                    TextView tv_subAvg = v.findViewById(R.id.tv_subAvg);
+                    tv_subAvg.setText("총 평균: " + data + "          ");
 
-                    recv_score.setAdapter(adapter);
-                    recv_score.setLayoutManager(manager);
+                    CommonAskTask  task = new CommonAskTask("and_score_list.sc", getContext());
+                    task.addParam("id", loginInfo.getId());
+                    task.executeAsk(new CommonAskTask.AsynckTaskCallback() {
+                        @Override
+                        public void onResult(String data, boolean isResult) {
+                            if(isResult) {
+                                list =
+                                        new Gson().fromJson(data, new TypeToken<ArrayList<ScoreVO>>() {
+                                        }.getType());
+                                ScoreAdapter adapter = new ScoreAdapter(inflater,list,getContext());
+                                RecyclerView.LayoutManager manager = new LinearLayoutManager(
+                                        getContext(),RecyclerView.VERTICAL,false
+                                );
+                                recv_score = v.findViewById(R.id.recv_score);
+
+                                recv_score.setAdapter(adapter);
+                                recv_score.setLayoutManager(manager);
+                            }
+                        }
+                    });
                 }
             }
         });
