@@ -43,9 +43,8 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.RecHolder>{
     @Override
     public void onBindViewHolder(@NonNull RecHolder h, @SuppressLint("RecyclerView") int i) {
         h.board_title.setText(list.get(i).getTitle());
-        h.board_time.setText(list.get(i).getWritedate());
+        h.board_time.setText(list.get(i).getWritedate().substring(0, list.get(i).getWritedate().indexOf(" ")));
         h.board_writer.setText(list.get(i).getWriter());
-        h.board_content.setText(list.get(i).getContent());
 
        if(list.get(i).getFilepath()==null){
             Glide.with(context).load(list.get(i).getFilepath()).into(h.board_imgfile);
@@ -59,6 +58,7 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.RecHolder>{
                Intent intent = new Intent(h.board_title.getContext(), BoardDetailActivity.class);
                intent.putExtra("vo", list.get(index));
                h.board_title.getContext().startActivity(intent);
+
                CommonAskTask askTask = new CommonAskTask("andBolist",context);
                askTask.addParam("id",list.get(i).getId());
                askTask.executeAsk(new CommonAskTask.AsynckTaskCallback() {
@@ -95,7 +95,7 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.RecHolder>{
 
     public class RecHolder extends RecyclerView.ViewHolder {
         ImageView board_imgfile;
-        TextView board_title, board_time, board_writer, board_content;
+        TextView board_title, board_time, board_writer;
         CardView board_cardview;
         public RecHolder(@NonNull View v) {
             super(v);
@@ -103,7 +103,7 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.RecHolder>{
             board_title = v.findViewById(R.id.board_title);
             board_time = v.findViewById(R.id.board_time);
             board_writer = v.findViewById(R.id.board_writer);
-            board_content = v.findViewById(R.id.board_content);
+
             board_cardview = v.findViewById(R.id.board_cardview);
 
         }

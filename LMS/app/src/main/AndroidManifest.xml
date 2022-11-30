@@ -60,9 +60,12 @@
             android:name=".board.BoardInsertActivity"
             android:exported="true" />
         <activity
+            android:name=".board.BoardDetailActivity"
+            android:exported="true" />
+        <activity
             android:name=".board.BoardModifyActivity"
             android:exported="true" />
-        <activity    
+        <activity
             android:name=".lecture.Lecture_Tea_DetailActivity"
             android:exported="true" />
         <activity

@@ -50,7 +50,7 @@ public class NoticeDetailActivity extends AppCompatActivity {
         notice_detail_title.setText(vo.getTitle());
         notice_detail_writer.setText(vo.getWriter());
         notice_detail_readcnt.setText(vo.getReadcnt()+"");
-        notice_detail_writedate.setText(vo.getWritedate());
+        notice_detail_writedate.setText(vo.getWritedate().substring(0, vo.getWritedate().indexOf(" ")));
         notice_detail_content.setText(vo.getContent());
         if(vo.getFilename() != null) {
             notice_detail_filename.setText(vo.getFilename());

@@ -5,22 +5,36 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".notice.NoticeFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        android:textColor="#4E73DF"
-        android:text="공지사항"/>
+    >
+    <androidx.cardview.widget.CardView
+        android:layout_marginRight="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#123"
+        app:cardCornerRadius="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:fontFamily="@font/welcomr"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#F1ECEC"
+            android:text="공지사항"/>
+    </androidx.cardview.widget.CardView>
+
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/notice_recv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="70dp"
         />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -28,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
         android:layout_margin="20dp"
-        android:backgroundTint="@color/lmsmainbl"
+        android:backgroundTint="#D2D8DF"
         android:src="@drawable/ic_baseline_add_24"
         android:id="@+id/notice_btn_add"/>
 

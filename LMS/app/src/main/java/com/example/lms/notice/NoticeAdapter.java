@@ -56,7 +56,7 @@ public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.ViewHolder
     public void onBindViewHolder(@NonNull ViewHolder h, @SuppressLint("RecyclerView") int i) {
 
         h.notice_title.setText(list.get(i).getTitle());
-        h.notice_time.setText(list.get(i).getWritedate());
+        h.notice_time.setText(list.get(i).getWritedate().substring(0, list.get(i).getWritedate().indexOf(" ")));
         h.notice_content.setText(list.get(i).getContent());
         if(list.get(i).getFilepath()==null){
             Glide.with(context).load(list.get(i).getFilepath()).into(h.notice_imgfile);
