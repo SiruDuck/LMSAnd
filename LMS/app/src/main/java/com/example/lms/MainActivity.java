@@ -19,6 +19,7 @@ import android.widget.TextView;
 
 import com.example.lms.board.BoardFragment;
 import com.example.lms.lecture.LectureFragment;
+import com.example.lms.lecture.Lecture_StuFragment;
 import com.example.lms.lecture.Lecture_TeaFragment;
 import com.example.lms.lms.CommonAskTask;
 import com.example.lms.member.MemberVO;
@@ -214,7 +215,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         ArrayList<SideVO> sub_list2 = new ArrayList<>();
-        sub_list2.add(new SideVO("내 강의목록", new LectureFragment()));
+        sub_list2.add(new SideVO("전체 강의목록", new LectureFragment()));
+        sub_list2.add(new SideVO("내 강의목록", new Lecture_StuFragment()));
         sub_list2.add(new SideVO("내 시간표", new TimeTableFragment()));
         sub_list2.add(new SideVO("수강신청", new RegistListFragment()));
         main_list.add(new SideVO("강의 관리","(강의 목록 , 시간표 ... )" , "#654321"  , sub_list2 ));
