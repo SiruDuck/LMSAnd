@@ -1,6 +1,11 @@
 package com.example.lms.notice;
 
+import androidx.fragment.app.Fragment;
+
+import com.example.lms.sidemenu.SideVO;
+
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class NoticeVO implements Serializable {
 	private String id;
@@ -8,12 +13,12 @@ public class NoticeVO implements Serializable {
 	private String title, content, writer,filename,	filepath;
 	private String writedate;
 	private Fragment fragment;
-	ArrayList<SideVO> list = new ArrayList<>();
+	ArrayList<NoticeVO> list = new ArrayList<>();
 
 	public NoticeVO() {
 	}
 
-	public NoticeVO(String id, int readcnt, String title, String content, String writer, String filename, String filepath, String writedate, Fragment fragment, ArrayList<SideVO> list) {
+	public NoticeVO(String id, int readcnt, String title, String content, String writer, String filename, String filepath, String writedate, Fragment fragment, ArrayList<NoticeVO> list) {
 		this.id = id;
 		this.readcnt = readcnt;
 		this.title = title;
@@ -100,11 +105,11 @@ public class NoticeVO implements Serializable {
 		this.fragment = fragment;
 	}
 
-	public ArrayList<SideVO> getList() {
+	public ArrayList<NoticeVO> getList() {
 		return list;
 	}
 
-	public void setList(ArrayList<SideVO> list) {
+	public void setList(ArrayList<NoticeVO> list) {
 		this.list = list;
 	}
 }
