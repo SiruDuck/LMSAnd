@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="5dp"
+    >
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/subjcet_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="과목명 : "
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/avg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:text="평균점수"
+        android:textSize="15dp"
+        android:textColor="@color/black"/>
+
+
+
+</LinearLayout>

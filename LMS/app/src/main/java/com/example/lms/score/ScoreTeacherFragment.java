@@ -23,8 +23,8 @@ import com.google.gson.reflect.TypeToken;
 import java.util.ArrayList;
 
 public class ScoreTeacherFragment extends Fragment {
-    RecyclerView recv_scoret;
-    ArrayList<ScoreVO> teacher_score_list;
+    RecyclerView recv_scoret, recv_avg;
+    ArrayList<ScoreVO> teacher_score_list, avg_list;
     SearchView searchView;
 
     @Override
@@ -34,6 +34,7 @@ public class ScoreTeacherFragment extends Fragment {
 
 //        String id = this.getArguments().getString("id");
         teacher_score_list= new ArrayList<>();
+        avg_list= new ArrayList<>();
 
         CommonAskTask  avgTask = new CommonAskTask("avg_teacher_and.sc", getContext());
         avgTask.addParam("id",loginInfo.getId());
@@ -41,8 +42,16 @@ public class ScoreTeacherFragment extends Fragment {
             @Override
             public void onResult(String data, boolean isResult) {
                 if(isResult) {
-                    TextView tv_subAvg = v.findViewById(R.id.tv_subAvg);
-                    tv_subAvg.setText("총 평균: " + data + "          ");
+                    avg_list =
+                            new Gson().fromJson(data, new TypeToken<ArrayList<ScoreVO>>() {
+                            }.getType());
+                    AvgTeacherAdapter avgTeacherAdapter = new AvgTeacherAdapter(inflater,avg_list, getContext());
+                    RecyclerView.LayoutManager avgmanager = new LinearLayoutManager(
+                      getContext(), RecyclerView.VERTICAL, false
+                    );
+                    recv_avg = v.findViewById(R.id.recv_avg);
+                    recv_avg.setAdapter(avgTeacherAdapter);
+                    recv_avg.setLayoutManager(avgmanager);
 
 
                     CommonAskTask task = new CommonAskTask("and_scoret_list.sc", getContext());
@@ -52,6 +61,7 @@ public class ScoreTeacherFragment extends Fragment {
                         public void onResult(String data, boolean isResult) {
                             Log.d("교수", "onResult: isResult<<<<<< " + isResult);
                             if(isResult) {
+
                                 teacher_score_list =
                                         new Gson().fromJson(data, new TypeToken<ArrayList<ScoreVO>>() {
                                         }.getType());
