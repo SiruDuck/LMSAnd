@@ -25,7 +25,7 @@
             android:text="강의번호"
             android:gravity="center"
             android:textStyle="bold"
-            android:background="@drawable/shape_cell_detail"
+            android:background="@drawable/shape_cell_lecture_detail"
             android:textColor="#000"
             />
         <TextView
@@ -53,7 +53,7 @@
             android:text="강의실"
             android:gravity="center"
             android:textStyle="bold"
-            android:background="@drawable/shape_cell_detail"
+            android:background="@drawable/shape_cell_lecture_detail"
             android:textColor="#000"
             />
         <TextView
@@ -85,7 +85,7 @@
                 android:text="담당교수"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:background="@drawable/shape_cell_detail"
+                android:background="@drawable/shape_cell_lecture_detail"
                 android:textColor="#000"
                 />
             <TextView
@@ -109,7 +109,7 @@
                 android:text="강의명"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:background="@drawable/shape_cell_detail"
+                android:background="@drawable/shape_cell_lecture_detail"
                 android:textColor="#000"
                 />
             <TextView
@@ -135,7 +135,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/shape_cell_detail"
+                android:background="@drawable/shape_cell_lecture_detail"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="강의년도"
@@ -163,7 +163,7 @@
                 android:text="학기"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:background="@drawable/shape_cell_detail"
+                android:background="@drawable/shape_cell_lecture_detail"
                 android:textColor="#000"
                 />
             <TextView
@@ -193,7 +193,7 @@
                 android:text="학점"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:background="@drawable/shape_cell_detail"
+                android:background="@drawable/shape_cell_lecture_detail"
                 android:textColor="#000"
                 />
             <TextView
@@ -217,7 +217,7 @@
                 android:text="교재명"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:background="@drawable/shape_cell_detail"
+                android:background="@drawable/shape_cell_lecture_detail"
                 android:textColor="#000"
                 />
             <TextView
@@ -247,7 +247,7 @@
                 android:text="수강요일"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:background="@drawable/shape_cell_detail"
+                android:background="@drawable/shape_cell_lecture_detail"
                 android:textColor="#000"
                 />
             <TextView
@@ -271,7 +271,7 @@
                 android:text="교시"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:background="@drawable/shape_cell_detail"
+                android:background="@drawable/shape_cell_lecture_detail"
                 android:textColor="#000"
                 />
             <TextView
@@ -301,7 +301,7 @@
                 android:text="수강여부"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:background="@drawable/shape_cell_detail"
+                android:background="@drawable/shape_cell_lecture_detail"
                 android:textColor="#000"
                 />
             <TextView
@@ -325,7 +325,7 @@
                 android:text="수강인원"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:background="@drawable/shape_cell_detail"
+                android:background="@drawable/shape_cell_lecture_detail"
                 android:textColor="#000"
                 />
             <TextView
@@ -355,7 +355,7 @@
                 android:text="중간고사"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:background="@drawable/shape_cell_detail"
+                android:background="@drawable/shape_cell_lecture_detail"
                 android:textColor="#000"
                 />
             <TextView
@@ -379,7 +379,7 @@
                 android:text="기말고사"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:background="@drawable/shape_cell_detail"
+                android:background="@drawable/shape_cell_lecture_detail"
                 android:textColor="#000"
                 />
             <TextView
@@ -410,7 +410,7 @@
                 android:text="온/오프"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:background="@drawable/shape_cell_detail"
+                android:background="@drawable/shape_cell_lecture_detail"
                 android:textColor="#000"
                 />
             <TextView
@@ -434,7 +434,7 @@
                 android:text="이수구분"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:background="@drawable/shape_cell_detail"
+                android:background="@drawable/shape_cell_lecture_detail"
                 android:textColor="#000"
                 />
             <TextView
@@ -464,7 +464,7 @@
                 android:text="접수상태"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:background="@drawable/shape_cell_detail"
+                android:background="@drawable/shape_cell_lecture_detail"
                 android:textColor="#000"
                 />
             <TextView
@@ -482,12 +482,12 @@
             android:layout_height="wrap_content">
             <TextView
                 android:padding="5dp"
-                android:layout_width="wrap_content"
+                android:layout_width="62dp"
                 android:layout_height="wrap_content"
                 android:text="비고"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:background="@drawable/shape_cell_detail"
+                android:background="@drawable/shape_cell_lecture_detail"
                 android:textColor="#000"
                 />
             <TextView

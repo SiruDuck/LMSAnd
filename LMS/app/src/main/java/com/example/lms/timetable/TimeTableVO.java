@@ -8,13 +8,21 @@ public class TimeTableVO implements Serializable {
 	private String lecture_title, syllabus, teacher_name, semester, sortation, lecture_room, lecture_year, lecture_time, enrolment, reception_status, capacity, midex, finalex,
 					subjectcredit, state, book, lecture_day, lecture_class;
 	private int lecture_num;
-	
+	private int lecture_apply; /*수강신청여부*/
+
+	public int getLecture_apply() {
+		return lecture_apply;
+	}
+
+	public void setLecture_apply(int lecture_apply) {
+		this.lecture_apply = lecture_apply;
+	}
+
 	public String getLecture_title() {
 		return lecture_title;
 	}
 	public void setLecture_title(String lecture_title) {
-		this.lecture_title = lecture_title;
-	}
+		this.lecture_title = lecture_title;	}
 	public String getSyllabus() {
 		return syllabus;
 	}

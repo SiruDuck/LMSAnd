@@ -1,6 +1,7 @@
 package com.example.lms;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -10,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -18,7 +20,9 @@ import android.widget.ExpandableListView;
 import android.widget.TextView;
 
 import com.example.lms.board.BoardFragment;
+import com.example.lms.equipment.EquipmentFragment;
 import com.example.lms.lecture.LectureFragment;
+import com.example.lms.lecture.Lecture_StuFragment;
 import com.example.lms.lecture.Lecture_TeaFragment;
 import com.example.lms.lms.CommonAskTask;
 import com.example.lms.member.MemberVO;
@@ -45,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
         Intent intent = getIntent();
         MemberVO vo = (MemberVO) intent.getSerializableExtra("vo");
 
@@ -64,7 +71,10 @@ public class MainActivity extends AppCompatActivity {
 */
 
         toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
+
         setSupportActionBar(toolbar);
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this,drawer,toolbar,
@@ -72,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
                 R.string.navigation_drawer_close
 
         );
-
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
@@ -220,7 +229,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         ArrayList<SideVO> sub_list2 = new ArrayList<>();
-        sub_list2.add(new SideVO("내 강의목록", new LectureFragment()));
+        sub_list2.add(new SideVO("전체 강의목록", new LectureFragment()));
+        sub_list2.add(new SideVO("내 강의목록", new Lecture_StuFragment()));
         sub_list2.add(new SideVO("내 시간표", new TimeTableFragment()));
         sub_list2.add(new SideVO("수강신청", new RegistListFragment()));
         main_list.add(new SideVO("강의 관리","(강의 목록 , 시간표 ... )" , "#654321"  , sub_list2 ));
@@ -251,11 +261,13 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<SideVO> sub_list1 = new ArrayList<>();
         main_list.add(new SideVO("내 정보","(내정보 확인 , 수정 ... )" , "#123456"  , sub_list1 , new MyinfoFragment()));
+        main_list.add(new SideVO("비품관리","비품관리" , "#123456"  , sub_list1 , new EquipmentFragment()));
         main_list.get(0).setImageId(R.drawable.menuimage1);
 
 
         ArrayList<SideVO> sub_list2 = new ArrayList<>();
-        sub_list2.add(new SideVO("내 강의목록", new LectureFragment()));
+        sub_list2.add(new SideVO("전체 강의목록", new LectureFragment()));
+        sub_list2.add(new SideVO("내 강의목록", new Lecture_StuFragment()));
         sub_list2.add(new SideVO("내 시간표", new TimeTableFragment()));
         sub_list2.add(new SideVO("수강신청", new RegistListFragment()));
         main_list.add(new SideVO("강의 관리","(강의 목록 , 시간표 ... )" , "#654321"  , sub_list2 ));

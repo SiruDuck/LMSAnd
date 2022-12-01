@@ -3,22 +3,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".myinfo.MyinfoFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".myinfo.MyinfoFragment"
+    android:background="#F4F0F0">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_margin="10dp"
         >
+
         <androidx.cardview.widget.CardView
+            app:cardCornerRadius="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:background="@drawable/homeview">
                 <RelativeLayout
-                    android:background="#123"
+                    android:background="#C6000000"
                     android:layout_width="match_parent"
                     android:layout_height="250dp">
 
@@ -31,32 +38,38 @@
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="5dp"
                         android:text="20180000"
-                        android:textColor="#BFC9D3"
+                        android:textColor="#D9DDE1"
                         android:textSize="18dp"
                         android:textStyle="bold" />
+
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/info_profile"
-                        android:src="@drawable/homeview"
-                        android:layout_centerInParent="true"
                         android:layout_width="150dp"
-                        android:layout_height="150dp"/>
+                        android:layout_height="150dp"
+                        android:layout_centerInParent="true"
+                        android:elevation="5dp"
+                        android:src="@drawable/student" />
                 </RelativeLayout>
                 <View
-                    android:background="#D1D8DF"
+                    android:elevation="5dp"
+                    android:background="#5A748F"
                     android:layout_width="match_parent"
                     android:layout_height="6dp"/>
                 <RelativeLayout
+                    android:background="#FFF9F9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
+                        android:textColor="#123"
+                        android:fontFamily="@font/welcomr"
                         android:id="@+id/info_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="30dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="20dp"
                         android:text="김학생"
@@ -64,93 +77,107 @@
                         android:textStyle="bold" />
 
                     <LinearLayout
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/info_name"
                         android:orientation="vertical">
 
                         <TextView
+                            android:elevation="5dp"
+                            android:gravity="center"
                             android:id="@+id/info_department_name"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="40dp"
                             android:layout_margin="10dp"
-                            android:background="#F6F0F0"
+                            android:background="@drawable/border"
                             android:text="게임개발학과"
                             android:textAlignment="center" />
 
                         <TextView
+                            android:elevation="5dp"
+                            android:gravity="center"
                             android:id="@+id/info_grade"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="40dp"
                             android:layout_margin="10dp"
-                            android:background="#F6F0F0"
+                            android:background="@drawable/border"
                             android:text="1학년"
                             android:textAlignment="center" />
 
                         <TextView
+                            android:elevation="5dp"
+                            android:gravity="center"
                             android:id="@+id/info_state"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="40dp"
                             android:layout_margin="10dp"
-                            android:background="#F6F0F0"
+                            android:background="@drawable/border"
                             android:text="재학중"
                             android:textAlignment="center" />
 
                         <TextView
+                            android:elevation="5dp"
+                            android:gravity="center"
                             android:id="@+id/info_start_date"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="40dp"
                             android:layout_margin="10dp"
-                            android:background="#F6F0F0"
+                            android:background="@drawable/border"
                             android:text="1999/11/30"
                             android:textAlignment="center" />
 
                         <TextView
+                            android:elevation="5dp"
+                            android:gravity="center"
                             android:id="@+id/info_phone"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="40dp"
                             android:layout_margin="10dp"
-                            android:background="#F6F0F0"
+                            android:background="@drawable/border"
                             android:text="010-0000-0000"
                             android:textAlignment="center" />
 
                         <TextView
+                            android:elevation="5dp"
+                            android:gravity="center"
                             android:id="@+id/info_email"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="40dp"
                             android:layout_margin="10dp"
-                            android:background="#F6F0F0"
+                            android:background="@drawable/border"
                             android:text="kim@naver.com"
                             android:textAlignment="center" />
 
                         <TextView
+                            android:elevation="5dp"
+                            android:gravity="center"
                             android:id="@+id/info_addr"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="40dp"
                             android:layout_margin="10dp"
-                            android:background="#F6F0F0"
+                            android:background="@drawable/border"
                             android:text="광주광역시 광산구 수완동 1426"
                             android:textAlignment="center" />
 
-                        <TextView
-                            android:id="@+id/info_post"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:background="#F6F0F0"
-                            android:text="32157"
-                            android:textAlignment="center" />
+
 
                         <TextView
+                            android:elevation="5dp"
+                            android:gravity="center"
                             android:id="@+id/start_date"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="40dp"
                             android:layout_margin="10dp"
-                            android:background="#F6F0F0"
+                            android:background="@drawable/border"
                             android:text="입학일 : 18/03/02"
                             android:textAlignment="center"
 
                             />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"/>
 
 
 
@@ -158,7 +185,10 @@
 
                 </RelativeLayout>
 
-
+                <View
+                    android:background="#123"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
             </LinearLayout>
 
 

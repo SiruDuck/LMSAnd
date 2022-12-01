@@ -59,7 +59,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
                     <EditText
-                        android:text="10108"
+                        android:text="191002"
                         android:id="@+id/edtid"
                         android:hint="ID"
                         android:maxLines="1"
@@ -78,7 +78,7 @@
                         android:layout_width="250dp"
                         android:layout_height="50dp"/>
                     <Button
-                        android:id="@+id/edtlogin"
+                        android:id="@+id/btnlogin"
                         android:text="로그인"
                         android:textStyle="bold"
                         android:backgroundTint="#2D94E3"

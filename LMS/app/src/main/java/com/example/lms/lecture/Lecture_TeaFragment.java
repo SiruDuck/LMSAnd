@@ -2,7 +2,6 @@ package com.example.lms.lecture;
 
 import static com.example.lms.lms.CommonVal.loginInfo;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.cardview.widget.CardView;
@@ -22,22 +21,23 @@ import com.example.lms.member.MemberVO;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import java.lang.reflect.Member;
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class Lecture_TeaFragment extends Fragment {
     RecyclerView recv_tea;
-    TextView teacher_name;
+    TextView teacher_name, lecture_num;
     List<LectureVO> list;
     CardView lec_tea_stu;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_lecture__tea, container, false);
-        lec_tea_stu = v.findViewById(R.id.lec_tea_stu);
+        //lec_tea_stu = v.findViewById(R.id.lec_tea_stu);
 
 
         recv_tea = v.findViewById(R.id.recv_tea);
@@ -46,6 +46,10 @@ public class Lecture_TeaFragment extends Fragment {
         //teacher_name.setText(list.get(i).getTeacher_name());
         Log.d("loginInfo", "name: "+loginInfo.getName() );
         //teacher_name.setText( loginInfo.getName() );
+        final int index = i ;
+
+
+
         return v;
     }
 
@@ -79,6 +83,7 @@ public class Lecture_TeaFragment extends Fragment {
                 }else{
 
                 }
+                //return null;
             }
         });
     }

@@ -3,7 +3,6 @@ package com.example.lms.equipment;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -61,11 +60,9 @@ public class EqModifyActivity extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                 modidate.setText(year+"/" + (month+1) +"/" +dayOfMonth);
-                Log.d("로그", "onDateSet: Date"+modidate.getText());
                 Calendar c = Calendar.getInstance();
                 c.set(year , month , dayOfMonth);
                 vo.setBuy_day(new Date(c.getTimeInMillis()));      //구입날자
-                Log.d("TAG", "onDateSet: " + c.getTimeInMillis());
 
             }
         }, mYear, mMonth, mDay);
@@ -107,6 +104,7 @@ public class EqModifyActivity extends AppCompatActivity {
                         }else{
                             Toast.makeText(EqModifyActivity.this,"실패",Toast.LENGTH_SHORT).show();
                         }
+                        //return null;
                     }
                 });
 
@@ -128,6 +126,7 @@ public class EqModifyActivity extends AppCompatActivity {
                         }else{
                             Toast.makeText(EqModifyActivity.this,"실패",Toast.LENGTH_SHORT).show();
                         }
+                        //return null;
                     }
                 });
                 finish();

@@ -2,19 +2,16 @@ package com.example.lms.notice;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.example.lms.R;
 import com.example.lms.lms.CommonAskTask;
+import com.example.lms.lms.CommonVal;
 import com.google.gson.Gson;
 
 public class NoticeDetailActivity extends AppCompatActivity {
@@ -41,10 +38,19 @@ public class NoticeDetailActivity extends AppCompatActivity {
         notice_delete = findViewById(R.id.notice_delete);
 
 
+        if (CommonVal.loginInfo.getInfo_cd() == 3){
+            notice_modify.setVisibility(View.VISIBLE);
+            notice_delete.setVisibility(View.VISIBLE);
+        }else{
+            notice_modify.setVisibility(View.GONE);
+            notice_delete.setVisibility(View.GONE);
+        }
+
+
         notice_detail_title.setText(vo.getTitle());
         notice_detail_writer.setText(vo.getWriter());
         notice_detail_readcnt.setText(vo.getReadcnt()+"");
-        notice_detail_writedate.setText(vo.getWritedate());
+        notice_detail_writedate.setText(vo.getWritedate().substring(0, vo.getWritedate().indexOf(" ")));
         notice_detail_content.setText(vo.getContent());
         if(vo.getFilename() != null) {
             notice_detail_filename.setText(vo.getFilename());
@@ -66,6 +72,9 @@ public class NoticeDetailActivity extends AppCompatActivity {
         notice_modify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent1 = new Intent(NoticeDetailActivity.this, NoticeModifyActivity.class);
+                intent1.putExtra("vo", vo);
+                startActivity(intent1);
 
             }
         });

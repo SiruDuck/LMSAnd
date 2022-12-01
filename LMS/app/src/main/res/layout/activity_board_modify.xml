@@ -23,18 +23,18 @@
         <TableLayout
             android:layout_below="@+id/notice_detail_txt"
             android:id="@+id/board_table"
-            android:stretchColumns="0,1"
             android:layout_width="match_parent"
             android:layout_height="600dp">
             <TableRow
                 android:layout_height="0dp"
                 android:layout_width="match_parent">
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:gravity="center"
                     android:background="@color/lmsmainbl"
+                    android:maxLines="1"
                     android:text="제목"/>
                 <EditText
                     android:layout_weight="1"
@@ -45,46 +45,6 @@
                     android:id="@+id/board_modify_title"
                     />
 
-            </TableRow>
-            <TableRow
-                android:layout_height="0dp"
-                android:layout_width="match_parent">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:gravity="center"
-                    android:background="@color/lmsmainbl"
-                    android:text="작성자"/>
-
-                <EditText
-                    android:id="@+id/board_modify_writer"
-                    android:layout_width="20dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="작성자"
-
-                    />
-            </TableRow>
-            <TableRow
-                android:layout_height="0dp"
-                android:layout_width="match_parent">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:gravity="center"
-                    android:background="@color/lmsmainbl"
-                    android:text="작성일자"/>
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:id="@+id/board_modify_writedate"
-                    android:text="작성일자"
-                    android:padding="10dp"
-
-                    />
             </TableRow>
 
 
@@ -129,8 +89,10 @@
                 android:id="@+id/board_modify_save"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/lmsmainbl"
                 android:text="저장"/>
             <Button
+                android:backgroundTint="@color/lmsdark"
                 android:layout_margin="10dp"
                 android:id="@+id/board_modify_cancel"
                 android:layout_width="wrap_content"

@@ -25,7 +25,7 @@
             android:id="@+id/notice_table"
             android:stretchColumns="0,2,3"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="600dp">
             <TableRow
                 android:layout_height="0dp"
                 android:layout_width="match_parent">
@@ -42,6 +42,7 @@
                     android:layout_height="wrap_content"
                     android:text="제목"
                     android:padding="10dp"
+                    android:maxLines="1"
                     android:id="@+id/notice_detail_title"
                     />
 
@@ -156,28 +157,51 @@
 
             </TableRow>
 
-            <TableRow
-                android:layout_height="0dp"
-                android:layout_width="match_parent">
-                <Button
-                    android:id="@+id/notice_list"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="목록"/>
-                <Button
-                    android:id="@+id/notice_modify"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="수정"/>
-                <Button
-                    android:id="@+id/notice_delete"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="삭제"/>
 
-            </TableRow>
 
         </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/notice_table"
+            android:gravity="center"
+            android:id="@+id/board_btn_lin"
+            >
+
+            <Button
+                android:layout_margin="10dp"
+                android:id="@+id/notice_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/lmsmainbl"
+                android:text="목록"/>
+            <Button
+                android:layout_margin="10dp"
+                android:id="@+id/notice_modify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/lmsdark"
+                android:text="수정"/>
+            <Button
+                android:backgroundTint="#851A1A"
+                android:layout_margin="10dp"
+                android:id="@+id/notice_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="삭제"/>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
 
 
     </RelativeLayout>

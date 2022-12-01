@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -12,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.lms.R;
 import com.example.lms.lms.CommonAskTask;
+import com.example.lms.lms.CommonVal;
 import com.google.gson.Gson;
 
 public class BoardDetailActivity extends AppCompatActivity {
@@ -35,12 +35,20 @@ public class BoardDetailActivity extends AppCompatActivity {
         board_modify = findViewById(R.id.board_modify);
         board_delete = findViewById(R.id.board_delete);
 
+        if (CommonVal.loginInfo.getId().equals( vo.getWriter() )) {
+            board_modify.setVisibility(View.VISIBLE);
+            board_delete.setVisibility(View.VISIBLE);
+        }else{
+            board_modify.setVisibility(View.GONE);
+            board_delete.setVisibility(View.GONE);
+        }
+
 
 
         board_detail_title.setText(vo.getTitle()+"");
         board_detail_writer.setText(vo.getWriter()+"");
         board_detail_readcnt.setText(vo.getReadcnt()+ "");
-        board_detail_writedate.setText(vo.getWritedate()+"");
+        board_detail_writedate.setText(vo.getWritedate().substring(0, vo.getWritedate().indexOf(" ")));
         board_detail_content.setText(vo.getContent()+"");
 
 
