@@ -17,15 +17,14 @@
         android:layout_gravity="center"
         android:gravity="center"/>
 
-    <TextView
-        android:id="@+id/tv_subAvg"
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recv_avg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="평균 : 0.0"
-        android:textSize="15dp"
-        android:layout_marginBottom="10dp"
-        android:textColor="@color/black"
-        android:gravity="right"/>
+        android:layout_gravity="right"
+        android:padding="20dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recv_scoret"
