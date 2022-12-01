@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
@@ -118,18 +119,18 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:layout_marginTop="20dp"
+                 android:layout_marginTop="20dp"
                  android:layout_marginLeft="20dp"
                  android:layout_marginRight="20dp"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content">
 
-                 <androidx.cardview.widget.CardView
-                     android:layout_width="160dp"
-                     android:layout_height="140dp"
-                     android:layout_alignParentLeft="true"
-                     android:backgroundTint="#CFE5FF"
-                     app:cardCornerRadius="20dp" />
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="160dp"
+                        android:layout_height="140dp"
+                        android:layout_alignParentLeft="true"
+                        android:backgroundTint="#CFE5FF"
+                        app:cardCornerRadius="20dp" />
 
                  <androidx.cardview.widget.CardView
                      android:layout_alignParentRight="true"
@@ -139,8 +140,32 @@
                      app:cardCornerRadius="20dp"/>
 
              </RelativeLayout>
-         </LinearLayout>
 
+             <TextView
+                 android:layout_gravity="center"
+                 android:textSize="20dp"
+                 android:textStyle="bold"
+                 android:textColor="#2C77B1"
+                 android:text="찾아오시는 길"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginBottom="20dp"
+                 android:layout_marginTop="20dp"
+                 />
+
+             <androidx.cardview.widget.CardView
+                 android:layout_width="300dp"
+                 android:layout_height="300dp"
+                 app:cardCornerRadius="20dp"
+                 android:layout_gravity="center"
+                 >
+
+                 <com.naver.maps.map.MapView
+                     android:id="@+id/map_view"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent" />
+             </androidx.cardview.widget.CardView>
+         </LinearLayout>
 
 
 
@@ -148,4 +173,5 @@
      </FrameLayout>
     </LinearLayout>
 </FrameLayout>
+
 </ScrollView>
