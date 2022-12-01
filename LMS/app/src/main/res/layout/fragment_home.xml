@@ -154,9 +154,9 @@
                  />
 
              <androidx.cardview.widget.CardView
-                 android:layout_width="300dp"
+                 android:layout_width="350dp"
                  android:layout_height="300dp"
-                 app:cardCornerRadius="20dp"
+                 app:cardCornerRadius="10dp"
                  android:layout_gravity="center"
                  >
 
@@ -165,11 +165,164 @@
                      android:layout_width="match_parent"
                      android:layout_height="match_parent" />
              </androidx.cardview.widget.CardView>
+
+             <LinearLayout
+                 android:layout_gravity="center"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="vertical"
+                 >
+
+                 <LinearLayout
+                     android:layout_marginTop="10dp"
+                     android:paddingHorizontal="35dp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal">
+                 <ImageView
+                     android:layout_width="50dp"
+                     android:layout_height="50dp"
+                     android:src="@drawable/adrr"/>
+                 <TextView
+                     android:layout_marginLeft="15dp"
+                     android:layout_gravity="center_vertical"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="광주 광역시 서구 경열로 3"
+                     android:textStyle="bold"
+                     android:textSize="15dp"
+                     android:textColor="#000000"
+                     />
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_marginTop="10dp"
+                     android:paddingHorizontal="35dp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal">
+                     <ImageView
+                         android:layout_width="50dp"
+                         android:layout_height="50dp"
+                         android:src="@drawable/tel"/>
+                     <TextView
+                         android:layout_marginLeft="15dp"
+                         android:layout_gravity="center_vertical"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="062)362-7797"
+                         android:textStyle="bold"
+                         android:textSize="15dp"
+                         android:textColor="#000000"
+                         />
+                 </LinearLayout>
+
+                 <View
+                     android:layout_marginTop="10dp"
+                     android:layout_gravity="center"
+                     android:layout_width="320dp"
+                     android:layout_height="3dp"
+                     android:background="#60656A"
+                     />
+
+                 <LinearLayout
+                     android:layout_marginTop="10dp"
+                     android:paddingHorizontal="35dp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal">
+                     <ImageView
+                         android:layout_width="50dp"
+                         android:layout_height="50dp"
+                         android:src="@drawable/subway"/>
+                     <TextView
+                         android:layout_marginLeft="15dp"
+                         android:layout_gravity="center_vertical"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="1호선 농성역 - 1번, 7번 출구,(도보 5분여 소요)"
+                         android:textStyle="bold"
+                         android:textSize="13dp"
+                         android:textColor="#404040"
+                         />
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_marginTop="10dp"
+                     android:paddingHorizontal="35dp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal">
+                     <ImageView
+                         android:layout_gravity="center_vertical"
+                         android:layout_width="50dp"
+                         android:layout_height="50dp"
+                         android:src="@drawable/bus"/>
+
+                     <LinearLayout
+                         android:layout_gravity="center_vertical"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="vertical">
+                     <LinearLayout
+                         android:layout_gravity="center_vertical"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="vertical">
+                     <TextView
+                         android:layout_marginLeft="15dp"
+                         android:layout_gravity="center_vertical"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="서구청 하차(농성SK뷰 방면 / 서광주한전방면)"
+                         android:textStyle="bold"
+                         android:textSize="13dp"
+                         android:textColor="#000000"
+                         />
+                     <TextView
+                         android:layout_marginLeft="15dp"
+                         android:layout_gravity="center_vertical"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="금호36, 문흥39, 봉선37, 송정19, 송암68, 송암72 \n 나주160, 마을763"
+                         android:textSize="11dp"
+                         android:textColor="#000000"
+                         />
+                     </LinearLayout>
+                     <LinearLayout
+                         android:layout_marginTop="20dp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="vertical">
+                         <TextView
+                             android:layout_marginLeft="15dp"
+                             android:layout_gravity="center_vertical"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="서구청 하차(광주시립미술관하정웅미술관방면)"
+                             android:textStyle="bold"
+                             android:textSize="13dp"
+                             android:textColor="#000000"
+                             />
+                         <TextView
+                             android:layout_marginLeft="15dp"
+                             android:layout_gravity="center_vertical"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="지선1187"
+                             android:textSize="11dp"
+                             android:textColor="#000000"
+                             />
+                     </LinearLayout>
+
+                 </LinearLayout>
+                 </LinearLayout>
+
+
+
+
+             </LinearLayout>
          </LinearLayout>
-
-
-
-
      </FrameLayout>
     </LinearLayout>
 </FrameLayout>

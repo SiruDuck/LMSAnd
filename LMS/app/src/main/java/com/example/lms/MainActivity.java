@@ -188,6 +188,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<SideVO> main_list = new ArrayList<>();
 
         ArrayList<SideVO> sub_list1 = new ArrayList<>();
+        main_list.add(new SideVO("홈으로","(내정보 확인 , 수정 ... )" , "#123456"  , sub_list1 , new HomeFragment()));
         main_list.add(new SideVO("내 정보","(내정보 확인 , 수정 ... )" , "#123456"  , sub_list1 , new MyinfoFragment()));
         main_list.get(0).setImageId(R.drawable.menuimage1);
 
@@ -224,6 +225,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<SideVO> main_list = new ArrayList<>();
 
         ArrayList<SideVO> sub_list1 = new ArrayList<>();
+        main_list.add(new SideVO("홈으로","" , "#123456"  , sub_list1 , new HomeFragment()));
         main_list.add(new SideVO("내 정보","(내정보 확인 , 수정 ... )" , "#123456"  , sub_list1 , new MyinfoFragment()));
         main_list.get(0).setImageId(R.drawable.menuimage1);
 
