@@ -17,7 +17,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.lms.CommonMethod;
 import com.example.lms.R;
 import com.example.lms.lms.CommonAskTask;
-import com.example.lms.lms.CommonVal;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
