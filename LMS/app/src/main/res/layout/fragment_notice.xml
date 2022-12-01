@@ -6,14 +6,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".notice.NoticeFragment"
     android:orientation="vertical"
-
+    android:background="@drawable/back12"
     >
     <androidx.cardview.widget.CardView
         android:layout_marginRight="6dp"
         android:layout_marginLeft="6dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:backgroundTint="#123"
+        android:backgroundTint="@color/navy"
         app:cardCornerRadius="10dp"
         android:layout_width="match_parent"
         android:layout_height="50dp">
@@ -42,7 +42,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
         android:layout_margin="20dp"
-        android:backgroundTint="#D2D8DF"
+        android:backgroundTint="@color/navy"
+        app:tint="@android:color/white"
         android:src="@drawable/ic_baseline_add_24"
         android:id="@+id/notice_btn_add"/>
 

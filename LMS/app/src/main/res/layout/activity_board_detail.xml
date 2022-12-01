@@ -14,36 +14,36 @@
         android:layout_margin="10dp">
 
 
-
-
-
     <RelativeLayout
         android:id="@+id/board_reative"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <androidx.cardview.widget.CardView
+        <LinearLayout
+            android:layout_marginBottom="20dp"
             android:id="@+id/activity_board_detail"
-            android:layout_marginRight="6dp"
-            android:layout_marginLeft="6dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="#123"
-            app:cardCornerRadius="10dp"
             android:layout_width="match_parent"
-            android:layout_height="50dp">
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:orientation="vertical">
             <TextView
-                android:fontFamily="@font/welcomr"
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
+                android:textSize="30dp"
                 android:textStyle="bold"
-                android:textColor="@color/txtwhite"
+                android:textColor="@color/navy"
                 android:text="자유게시판"/>
-        </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_marginTop="3dp"
+                android:layout_width="180dp"
+                android:layout_height="3dp"
+                android:background="@color/navy"/>
+        </LinearLayout>
 
         <LinearLayout
+            android:background="@drawable/back12"
+            android:layout_margin="6dp"
             android:orientation="vertical"
             android:layout_below="@+id/activity_board_detail"
             android:id="@+id/board_table"
@@ -54,14 +54,15 @@
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent">
                 <TextView
+                    android:textStyle="bold"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:textColor="@color/txtwhite"
-                    android:background="@color/navy"
+                    android:background="@color/beige"
                     android:text="제목"/>
                 <TextView
+                    android:textStyle="bold"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -76,32 +77,34 @@
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent">
                 <TextView
+                    android:textStyle="bold"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:background="@color/navy"
-                    android:textColor="@color/txtwhite"
+                    android:background="@color/beige"
                     android:text="작성자"/>
 
                 <TextView
+                    android:textStyle="bold"
                     android:id="@+id/board_detail_writer"
-                    android:layout_width="120dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:text="작성자"
 
                     />
                 <TextView
+                    android:textStyle="bold"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:textColor="@color/txtwhite"
-                    android:background="@color/navy"
+                    android:background="@color/beige"
                     android:text="조회수"/>
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="조회수"
                     android:id="@+id/board_detail_readcnt"
@@ -113,14 +116,15 @@
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent">
                 <TextView
+                    android:textStyle="bold"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:textColor="@color/txtwhite"
-                    android:background="@color/navy"
+                    android:background="@color/beige"
                     android:text="작성일자"/>
                 <TextView
+                    android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -139,14 +143,15 @@
                 android:orientation="horizontal"
                 >
                 <TextView
+                    android:textStyle="bold"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
-                    android:textColor="@color/txtwhite"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:background="@color/navy"
+                    android:background="@color/beige"
                     android:text="내용"/>
                 <TextView
+                    android:textStyle="bold"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -163,14 +168,15 @@
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent">
                 <TextView
+                    android:textStyle="bold"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:textColor="@color/txtwhite"
                     android:gravity="center"
-                    android:background="@color/navy"
+                    android:background="@color/beige"
                     android:text="첨부파일"/>
                 <TextView
+                    android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=""
@@ -192,39 +198,40 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/board_btn_lin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_below="@+id/board_table"
             android:gravity="center"
-            android:id="@+id/board_btn_lin"
-            >
+            android:orientation="horizontal">
 
             <Button
-                android:layout_margin="10dp"
                 android:id="@+id/board_list"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/navy"
-                android:text="목록"/>
-            <Button
                 android:layout_margin="10dp"
+                android:backgroundTint="@color/navy"
+                android:text="목록"
+                android:textStyle="bold" />
+
+            <Button
                 android:id="@+id/board_modify"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/lmsdark"
-                android:text="수정"/>
-            <Button
-                android:backgroundTint="#851A1A"
                 android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/beige"
+                android:text="수정"
+                android:textStyle="bold" />
+
+            <Button
                 android:id="@+id/board_delete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="삭제"/>
-
-
-
-
+                android:layout_margin="10dp"
+                android:backgroundTint="#851A1A"
+                android:text="삭제"
+                android:textStyle="bold" />
 
 
         </LinearLayout>
@@ -235,17 +242,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <TextView
+            <LinearLayout
+                android:layout_marginBottom="20dp"
+                android:id="@+id/activity_board_detail_comment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="댓글"
-                android:textSize="30dp"/>
+                android:layout_margin="6dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/navy"
+                    android:text="댓글"/>
+
+                <View
+                    android:layout_marginTop="3dp"
+                    android:layout_width="70dp"
+                    android:layout_height="3dp"
+                    android:background="@color/navy"/>
+            </LinearLayout>
 
             <FrameLayout
                 android:id="@+id/comment_frame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="8dp"
                 android:orientation="vertical"/>
 
         </LinearLayout>
@@ -263,7 +285,7 @@
                 android:layout_width="match_parent"
                 android:padding="10dp"
                 android:layout_height="wrap_content"
-                android:background="#eeeeee"
+                android:background="@color/beige"
                 android:layout_weight="1"
                 android:hint="댓글 내용을 입력하세요"/>
             <Button

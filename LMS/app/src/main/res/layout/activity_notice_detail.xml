@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".notice.NoticeDetailActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
@@ -12,31 +13,49 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
+        <LinearLayout
+            android:layout_marginBottom="20dp"
+            android:id="@+id/activity_notice_detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="공지사항"
-            android:textSize="30dp"
-            android:id="@+id/notice_detail_txt"
-            />
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/navy"
+                android:text="공지사항 상세 정보"/>
 
-        <TableLayout
-            android:layout_below="@+id/notice_detail_txt"
+            <View
+                android:layout_marginTop="3dp"
+                android:layout_width="260dp"
+                android:layout_height="3dp"
+                android:background="@color/navy"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@drawable/back12"
+            android:orientation="vertical"
+            android:layout_below="@+id/activity_notice_detail"
             android:id="@+id/notice_table"
             android:stretchColumns="0,2,3"
             android:layout_width="match_parent"
-            android:layout_height="600dp">
-            <TableRow
-                android:layout_height="0dp"
+            android:layout_height="550dp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
                 android:layout_width="match_parent">
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:background="@color/lmsmainbl"
+                    android:background="@color/beige"
                     android:text="제목"/>
                 <TextView
+                    android:textStyle="bold"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -46,32 +65,35 @@
                     android:id="@+id/notice_detail_title"
                     />
 
-            </TableRow>
-            <TableRow
-                android:layout_height="0dp"
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
                 android:layout_width="match_parent">
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:background="@color/lmsmainbl"
+                    android:background="@color/beige"
                     android:text="작성자"/>
 
                 <TextView
+                    android:textStyle="bold"
                     android:id="@+id/notice_detail_writer"
-                    android:layout_width="20dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:text="작성자"
 
                     />
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:background="@color/lmsmainbl"
+                    android:background="@color/beige"
                     android:text="조회수"/>
 
                 <TextView
@@ -80,18 +102,21 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:text="조회수" />
-            </TableRow>
-            <TableRow
-                android:layout_height="0dp"
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
                 android:layout_width="match_parent">
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:background="@color/lmsmainbl"
+                    android:background="@color/beige"
                     android:text="작성일자"/>
                 <TextView
+                    android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -100,23 +125,25 @@
                     android:padding="10dp"
 
                     />
-            </TableRow>
+            </LinearLayout>
 
 
 
-            <TableRow
-                android:layout_height="0dp"
+            <LinearLayout
+                android:layout_height="390dp"
                 android:layout_width="match_parent"
-                android:layout_weight="1"
+                android:orientation="horizontal"
                 >
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:background="@color/lmsmainbl"
+                    android:textStyle="bold"
+                    android:background="@color/beige"
                     android:text="내용"/>
                 <TextView
+                    android:textStyle="bold"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -126,19 +153,22 @@
                     android:text="내용"/>
 
 
-            </TableRow>
+            </LinearLayout>
 
-            <TableRow
-                android:layout_height="0dp"
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
                 android:layout_width="match_parent">
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:background="@color/lmsmainbl"
+                    android:background="@color/beige"
                     android:text="첨부파일"/>
                 <TextView
+                    android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=""
@@ -148,18 +178,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:src="@drawable/ic_attachment_fill0_wght400_grad0_opsz48"
+                    android:src="@drawable/book2"
                     android:id="@+id/notice_detail_filepath"
                     android:layout_gravity="center"
 
                     />
 
 
-            </TableRow>
+            </LinearLayout>
 
 
 
-        </TableLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -173,18 +203,22 @@
             <Button
                 android:layout_margin="10dp"
                 android:id="@+id/notice_list"
+                android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/lmsmainbl"
+                android:backgroundTint="@color/navy"
                 android:text="목록"/>
             <Button
+                android:textStyle="bold"
                 android:layout_margin="10dp"
                 android:id="@+id/notice_modify"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/lmsdark"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/beige"
                 android:text="수정"/>
             <Button
+                android:textStyle="bold"
                 android:backgroundTint="#851A1A"
                 android:layout_margin="10dp"
                 android:id="@+id/notice_delete"
