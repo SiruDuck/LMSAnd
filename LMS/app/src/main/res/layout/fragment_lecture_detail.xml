@@ -21,18 +21,19 @@
         android:textSize="30dp"
         android:textStyle="bold"
         android:textColor="#002B5B"
+        android:fontFamily="@font/welcomr"
         android:text="강의 상세 정보"/>
 
     <View
         android:layout_marginTop="3dp"
         android:layout_width="200dp"
         android:layout_height="3dp"
-        android:background="#330000"/>
+        android:background="#ECB365"/>
 
     <LinearLayout
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         >
 
@@ -135,6 +136,7 @@
                     android:textColor="#000000"
                     />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -589,15 +591,17 @@
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#851A1A"
+            android:backgroundTint="#041C32"
+            android:textStyle="bold"
             android:text="뒤로가기"/>
         <Button
             android:id="@+id/btn_modify"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#851A1A"
+            android:backgroundTint="#ECB365"
             android:layout_marginHorizontal="10dp"
+            android:textStyle="bold"
             android:text="수정하기"/>
             <Button
                 android:id="@+id/btn_delete"
@@ -605,10 +609,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#851A1A"
+                android:textStyle="bold"
                 android:text="삭제하기"/>
         </LinearLayout>
 
     </LinearLayout>
 
+        <View
+            android:layout_gravity="right"
+            android:layout_width="200dp"
+            android:layout_height="3dp"
+            android:background="#ECB365"/>
     </LinearLayout>
 </LinearLayout>

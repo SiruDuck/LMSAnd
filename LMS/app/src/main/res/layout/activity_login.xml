@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    android:paddingTop="100dp"
+<FrameLayout android:paddingTop="100dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
+    android:background="@drawable/back05"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     <LinearLayout
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -36,18 +38,21 @@
             </LinearLayout>
         </FrameLayout>
 
-        <FrameLayout
+        <com.google.android.material.card.MaterialCardView
+            app:cardCornerRadius="30dp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="18dp"
+            android:backgroundTint="#FFFFFF"
             android:clipToPadding="false">
 
             <LinearLayout
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="18dp"
+
                 android:layout_marginBottom="20dp"
                 android:elevation="10dp"
-                android:background="#ECECEC"
+
                 android:layout_width="350dp"
                 android:layout_height="300dp"
                 android:orientation="vertical">
@@ -80,8 +85,9 @@
                     <Button
                         android:id="@+id/btnlogin"
                         android:text="로그인"
+                        android:textColor="#000"
                         android:textStyle="bold"
-                        android:backgroundTint="#2D94E3"
+                        android:backgroundTint="#f5efe6"
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
@@ -107,12 +113,13 @@
 
             </LinearLayout>
 
-        </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
 
 
 <TextView
     android:layout_marginTop="20dp"
     android:textSize="10dp"
+    android:textColor="#fff"
     android:gravity="center"
     android:textStyle="bold"
     android:layout_width="match_parent"
