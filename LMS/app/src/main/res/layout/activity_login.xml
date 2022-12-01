@@ -40,26 +40,21 @@
 
         <com.google.android.material.card.MaterialCardView
             app:cardCornerRadius="30dp"
-            android:layout_gravity="center"
+            app:cardElevation="15dp"
+            android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="18dp"
             android:backgroundTint="#FFFFFF"
             android:clipToPadding="false">
 
             <LinearLayout
-
-                android:layout_marginBottom="20dp"
-                android:elevation="10dp"
-
                 android:layout_width="350dp"
                 android:layout_height="300dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingVertical="60dp">
 
                 <LinearLayout
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="70dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -72,9 +67,7 @@
                         android:layout_width="250dp"
                         android:layout_height="50dp"/>
                     <EditText
-
                         android:maxLines="1"
-
                         android:text="1234"
                         android:id="@+id/edtpw"
                         android:hint="PASSWORD"
@@ -85,9 +78,9 @@
                     <Button
                         android:id="@+id/btnlogin"
                         android:text="로그인"
-                        android:textColor="#000"
+                        android:textColor="#fff"
                         android:textStyle="bold"
-                        android:backgroundTint="#f5efe6"
+                        android:backgroundTint="#041C32"
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
@@ -99,7 +92,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:textSize="10dp"
+                        android:textSize="12dp"
                         android:textColor="#959595"
                         android:textStyle="bold"
                         android:text="아이디/비밀번호찾기"
@@ -116,22 +109,15 @@
         </com.google.android.material.card.MaterialCardView>
 
 
-<TextView
-    android:layout_marginTop="20dp"
-    android:textSize="10dp"
-    android:textColor="#fff"
-    android:gravity="center"
-    android:textStyle="bold"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="비밀번호를 잊어 버리셨나요?\n제가 도와드릴게요"/>
-
-
-
-
-
-
-
+        <TextView
+            android:layout_marginTop="30dp"
+            android:textSize="13dp"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="비밀번호를 잊어 버리셨나요?\n제가 도와드릴게요"/>
 
 
 </LinearLayout>
