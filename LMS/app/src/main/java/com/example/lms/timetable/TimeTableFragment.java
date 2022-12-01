@@ -19,6 +19,8 @@ import java.util.ArrayList;
 
 // 내 시간표
 public class TimeTableFragment extends Fragment {
+    TimeTableVO table_vo;
+
     TextView mon1, mon2, mon3, mon4, mon5, mon6, mon7, mon8,
             tue1, tue2, tue3, tue4, tue5, tue6, tue7, tue8,
             wed1, wed2, wed3, wed4, wed5, wed6, wed7, wed8,
@@ -69,6 +71,11 @@ public class TimeTableFragment extends Fragment {
         fri6 = v.findViewById(R.id.fri6);
         fri7 = v.findViewById(R.id.fri7);
         fri8 = v.findViewById(R.id.fri8);
+
+        mon1.setText(table_vo.getLecture_time().equals("1") && table_vo.getLecture_day().equals("월") ? table_vo.getLecture_title()+"\n"+table_vo.getLecture_room() : "");
+        mon2.setText(table_vo.getLecture_time().equals("2") && table_vo.getLecture_day().equals("월") ? table_vo.getLecture_title()+"\n"+table_vo.getLecture_room() : "");
+        
+
         table_list();
         return v;
     }
@@ -76,6 +83,7 @@ public class TimeTableFragment extends Fragment {
     public void table_list(){
         CommonAskTask task = new CommonAskTask("table.at", getContext());
         task.addParam("id", "191002");
+        task.addParam("lecture_num", table_vo.getLecture_num());
         task.executeAsk(new CommonAskTask.AsynckTaskCallback() {
             @Override
             public void onResult(String data, boolean isResult) {
