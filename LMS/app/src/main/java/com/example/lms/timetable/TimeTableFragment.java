@@ -37,7 +37,7 @@ public class TimeTableFragment extends Fragment {
             @Override
             public void onResult(String data, boolean isResult) {
                 if (isResult){
-                    Log.d("lms", "onResult: " + data);
+                    Log.d("lms", "onResult: 시간표" + data);
                     ArrayList<EnrolmentVO> list = new Gson().fromJson(data, new TypeToken<ArrayList<EnrolmentVO>>(){}.getType());
                 }else{
                     Log.d("lms", "onResult:Fail " + data);

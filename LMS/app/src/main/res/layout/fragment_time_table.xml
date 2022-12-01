@@ -94,7 +94,7 @@
                 android:gravity="right"/>
             <TextView
                 android:id="@+id/mon1"
-                android:text="강의이름\n(강의실)"
+                android:text=""
                 android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
@@ -114,7 +114,7 @@
                 android:background="@drawable/shape_timetable_cell"/>
             <TextView
                 android:id="@+id/wed1"
-                android:text="4차산업혁명과데이터사이언스\n(강의실)"
+                android:text=""
                 android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
