@@ -94,7 +94,7 @@ public class BoardFragment extends Fragment {
         askTask.executeAsk(new CommonAskTask.AsynckTaskCallback() {
             @Override
             public void onResult(String data, boolean isResult) {
-                Log.d("자유게시판", "onResult: " + data);
+                Log.d("writedate", "onResult: " + data);
                 if (isResult) {
                     ArrayList<BoardVO> list =
                             new Gson().fromJson(data, new TypeToken<ArrayList<BoardVO>>() {

@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:layout_marginBottom="20dp"
     >
 
     <androidx.cardview.widget.CardView
@@ -28,7 +29,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginRight="100dp"
-                android:background="@color/lmsmainbl" />
+                android:background="#123" />
 
             <LinearLayout
                 android:id="@+id/ln_layout"
@@ -106,10 +107,10 @@
 
                 <ImageView
                     android:id="@+id/board_pop_imgfile"
-                    android:layout_width="match_parent"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
-                    android:src="@drawable/ic_attachment_fill0_wght400_grad0_opsz48" />
+                    android:src="@drawable/book2" />
 
             </LinearLayout>
 

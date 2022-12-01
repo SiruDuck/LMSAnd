@@ -5,6 +5,7 @@
     tools:context=".notice.NoticeDetailActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="10dp"
     android:id="@+id/container2"
     >
@@ -12,19 +13,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
+        <LinearLayout
+            android:layout_margin="6dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/activity_board_insert"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="자유게시판 글쓰기"
-            android:textSize="30dp"
-            android:id="@+id/notice_detail_txt"
-            />
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/navy"
+                android:text="자유 게시판 글쓰기"/>
+
+            <View
+                android:layout_marginTop="3dp"
+                android:layout_width="260dp"
+                android:layout_height="3dp"
+                android:background="@color/navy"/>
+        </LinearLayout>
 
         <TableLayout
-            android:layout_below="@+id/notice_detail_txt"
+            android:background="@drawable/back12"
+            android:layout_margin="6dp"
+            android:layout_below="@+id/activity_board_insert"
             android:id="@+id/board_table"
             android:layout_width="match_parent"
-            android:layout_height="600dp">
+            android:layout_height="550dp">
             <TableRow
                 android:layout_height="0dp"
                 android:layout_width="match_parent">
@@ -33,10 +50,14 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:background="@color/lmsmainbl"
+                    android:textStyle="bold"
+                    android:background="@color/beige"
                     android:maxLines="1"
                     android:text="제목"/>
                 <EditText
+                    android:backgroundTint="@color/gray8"
+                    android:layout_gravity="bottom"
+                    android:textStyle="bold"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -59,9 +80,11 @@
                     android:layout_height="match_parent"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:background="@color/lmsmainbl"
+                    android:textStyle="bold"
+                    android:background="@color/beige"
                     android:text="내용"/>
                 <EditText
+                    android:textStyle="bold"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -79,28 +102,28 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_below="@+id/board_table"
             android:gravity="center"
-            >
+            android:orientation="horizontal">
 
             <Button
-                android:layout_margin="10dp"
                 android:id="@+id/board_insert_save"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/lmsmainbl"
-                android:text="저장"/>
-            <Button
-                android:backgroundTint="@color/lmsdark"
                 android:layout_margin="10dp"
+                android:backgroundTint="@color/navy"
+                android:text="저장"
+                android:textStyle="bold" />
+
+            <Button
                 android:id="@+id/board_insert_cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="취소"/>
-
-
-
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/beige"
+                android:textColor="@color/black"
+                android:text="취소"
+                android:textStyle="bold" />
 
 
         </LinearLayout>

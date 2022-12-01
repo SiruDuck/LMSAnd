@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,7 +18,9 @@ import com.google.gson.Gson;
 public class BoardDetailActivity extends AppCompatActivity {
     TextView board_detail_title, board_detail_writer, board_detail_readcnt, board_detail_writedate, board_detail_content, board_detail_filename;
     ImageView board_detail_filepath;
-    Button board_list, board_modify, board_delete;
+    Button board_list, board_modify, board_delete, reg_button;
+    EditText comment_et;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +38,12 @@ public class BoardDetailActivity extends AppCompatActivity {
         board_modify = findViewById(R.id.board_modify);
         board_delete = findViewById(R.id.board_delete);
 
-        if (CommonVal.loginInfo.getId().equals( vo.getWriter() )) {
+        reg_button = findViewById(R.id.reg_button);
+        comment_et = findViewById(R.id.comment_et);
+
+
+
+        if (CommonVal.loginInfo.getName().equals( vo.getWriter() )) {
             board_modify.setVisibility(View.VISIBLE);
             board_delete.setVisibility(View.VISIBLE);
         }else{
@@ -43,6 +51,7 @@ public class BoardDetailActivity extends AppCompatActivity {
             board_delete.setVisibility(View.GONE);
         }
 
+        getSupportFragmentManager().beginTransaction().replace(R.id.comment_frame, new BoardCommentFragment(vo.getId())).commit();
 
 
         board_detail_title.setText(vo.getTitle()+"");

@@ -41,8 +41,7 @@ public class BoardPopAdapter extends RecyclerView.Adapter<BoardPopAdapter.RecHol
     @Override
     public void onBindViewHolder(@NonNull RecHolder h, @SuppressLint("RecyclerView") int i) {
         h.board_pop_title.setText(list.get(i).getTitle());
-        h.board_pop_time.setText(list.get(i).getWritedate());
-        h.board_pop_writer.setText(list.get(i).getWriter());
+        h.board_pop_time.setText(list.get(i).getWritedate().substring(0, list.get(i).getWritedate().indexOf(" ")));
         h.board_pop_content.setText(list.get(i).getContent());
 
         if(list.get(i).getFilepath() == null){
@@ -51,7 +50,23 @@ public class BoardPopAdapter extends RecyclerView.Adapter<BoardPopAdapter.RecHol
 
         final int index = i;
 
+        h.board_pop_cardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(h.board_pop_title.getContext(),BoardDetailActivity.class);
+                intent.putExtra("vo", list.get(index));
+                h.board_pop_title.getContext().startActivity(intent);
 
+                CommonAskTask askTask = new CommonAskTask("andBolist",context);
+                askTask.addParam("id",list.get(i).getId());
+                askTask.executeAsk(new CommonAskTask.AsynckTaskCallback() {
+                    @Override
+                    public void onResult(String data, boolean isResult) {
+                        Log.d("TAG", "onResult: "+data);
+                    }
+                });
+            }
+        });
 
 
     }
@@ -64,7 +79,7 @@ public class BoardPopAdapter extends RecyclerView.Adapter<BoardPopAdapter.RecHol
     public class RecHolder extends RecyclerView.ViewHolder {
         ImageView board_pop_imgfile;
         TextView board_pop_title, board_pop_time, board_pop_content, board_pop_writer;
-
+        CardView board_pop_cardview;
         public RecHolder(@NonNull View v) {
             super(v);
             board_pop_imgfile = v.findViewById(R.id.board_pop_imgfile);
@@ -72,6 +87,9 @@ public class BoardPopAdapter extends RecyclerView.Adapter<BoardPopAdapter.RecHol
             board_pop_time = v.findViewById(R.id.board_pop_time);
             board_pop_content = v.findViewById(R.id.board_pop_content);
             board_pop_writer = v.findViewById(R.id.board_pop_writer);
+
+            board_pop_cardview = v.findViewById(R.id.board_pop_cardview);
+
         }
     }
 

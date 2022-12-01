@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".notice.NoticeDetailActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
@@ -12,19 +13,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
+        <LinearLayout
+            android:layout_marginBottom="20dp"
+            android:id="@+id/activity_board_modify"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="자유게시판 수정"
-            android:textSize="30dp"
-            android:id="@+id/notice_detail_txt"
-            />
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/navy"
+                android:text="자유 게시판 수정"/>
+
+            <View
+                android:layout_marginTop="3dp"
+                android:layout_width="250dp"
+                android:layout_height="3dp"
+                android:background="#851A1A"/>
+        </LinearLayout>
 
         <TableLayout
-            android:layout_below="@+id/notice_detail_txt"
+            android:layout_margin="6dp"
+            android:layout_below="@+id/activity_board_modify"
             android:id="@+id/board_table"
             android:layout_width="match_parent"
-            android:layout_height="600dp">
+            android:layout_height="550dp">
             <TableRow
                 android:layout_height="0dp"
                 android:layout_width="match_parent">
@@ -33,10 +48,12 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:background="@color/lmsmainbl"
+                    android:background="@color/beige"
                     android:maxLines="1"
+                    android:textStyle="bold"
                     android:text="제목"/>
                 <EditText
+                    android:textStyle="bold"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -59,9 +76,11 @@
                     android:layout_height="match_parent"
                     android:padding="10dp"
                     android:gravity="center"
-                    android:background="@color/lmsmainbl"
+                    android:background="@color/beige"
+                    android:textStyle="bold"
                     android:text="내용"/>
                 <EditText
+                    android:textStyle="bold"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -89,10 +108,13 @@
                 android:id="@+id/board_modify_save"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/lmsmainbl"
+                android:backgroundTint="@color/beige"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 android:text="저장"/>
             <Button
-                android:backgroundTint="@color/lmsdark"
+                android:textStyle="bold"
+                android:backgroundTint="@color/navy"
                 android:layout_margin="10dp"
                 android:id="@+id/board_modify_cancel"
                 android:layout_width="wrap_content"

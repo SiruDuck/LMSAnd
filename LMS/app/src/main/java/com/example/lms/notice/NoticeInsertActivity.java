@@ -55,7 +55,12 @@ public class NoticeInsertActivity extends AppCompatActivity {
             }
         });
 
-
+        notice_insert_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
 
 

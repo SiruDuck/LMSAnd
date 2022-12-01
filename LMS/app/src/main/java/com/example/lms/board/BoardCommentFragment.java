@@ -23,6 +23,10 @@ import java.util.ArrayList;
 
 public class BoardCommentFragment extends Fragment {
     RecyclerView comment_recv;
+    String id;
+    public BoardCommentFragment(String id) {
+        this.id= id;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -51,7 +55,9 @@ public class BoardCommentFragment extends Fragment {
     }
 
     public void board_pop_select() {
-        CommonAskTask askTask = new CommonAskTask("andboard.bo" , getContext());
+        CommonAskTask askTask = new CommonAskTask("comment" , getContext());
+
+        askTask.addParam("board_id", id);
         askTask.executeAsk(new CommonAskTask.AsynckTaskCallback() {
             @Override
             public void onResult(String data, boolean isResult) {

@@ -34,8 +34,10 @@ public class BoardCommentAdapter extends RecyclerView.Adapter<BoardCommentAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecHolder holder, int position) {
-
+    public void onBindViewHolder(@NonNull RecHolder h, int i) {
+        h.board_comment_id.setText(list.get(i).getWriter());
+        h.board_comment_date.setText(list.get(i).getWritedate().substring(0, list.get(i).getWritedate().indexOf(" ")));
+        h.board_comment_content.setText(list.get(i).getContent());
 
     }
 

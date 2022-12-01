@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     tools:context=".board.BoardFragment"
     android:orientation="vertical"
@@ -10,50 +11,79 @@
     >
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".board.BoardFragment"
-        android:orientation="vertical"
-        android:scrollbars="none"
-        >
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:text="자유게시판"
-        android:textStyle="bold"
-        android:textColor="@color/lmsmainbl"/>
+        <androidx.cardview.widget.CardView
+            android:layout_marginRight="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#123"
+            app:cardCornerRadius="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:fontFamily="@font/welcomr"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#F1ECEC"
+                android:text="자유게시판"/>
+        </androidx.cardview.widget.CardView>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="80dp"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/board_pop_txt"
+        <LinearLayout
+            android:id="@+id/fragment_board_lin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="인기글"
-            android:textSize="20dp"
-            android:textColor="@color/translmsdark"/>
+            android:background="@color/gray3"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_marginBottom="20dp"
+                android:id="@+id/activity_board_modify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/navy"
+                    android:text="인기글"/>
+
+                <View
+                    android:layout_gravity="center"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="150dp"
+                    android:layout_height="3dp"
+                    android:background="@color/navy"/>
+            </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/board_pop_recv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/board_pop_txt"
-            android:background="@color/lmsdark" />
+             />
 
-
+        </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_below="@+id/board_pop_recv"
+        android:layout_below="@+id/fragment_board_lin"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/board_recv"/>
@@ -65,15 +95,13 @@
 
 
     </FrameLayout>
-
-    </ScrollView>
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
+        app:tint="@android:color/white"
         android:layout_margin="50dp"
-        android:backgroundTint="@color/lmsmainbl"
+        android:backgroundTint="@color/navy"
         android:src="@drawable/ic_baseline_add_24"
         android:id="@+id/board_btn_add"/>
 </FrameLayout>

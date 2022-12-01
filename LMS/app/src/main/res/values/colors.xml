@@ -28,6 +28,14 @@
     <color name="gray1">#f1f3f5</color>
     <color name="gray2">#e9ecef</color>
     <color name="gray3">#dee2e6</color>
+    <color name="gray7">#495057</color>
+    <color name="gray8">#343a40</color>
+
+    <color name="navy">#041C32</color>
+
+    <color name="txtwhite">#F1ECEC</color>
+    <color name="beige">#F0E9D2</color>
+    <color name="yellow">#ECB365</color>
 
 
 

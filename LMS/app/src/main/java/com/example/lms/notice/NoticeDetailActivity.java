@@ -38,7 +38,7 @@ public class NoticeDetailActivity extends AppCompatActivity {
         notice_delete = findViewById(R.id.notice_delete);
 
 
-        if (CommonVal.loginInfo.getInfo_cd() == 3){
+        if (CommonVal.loginInfo.getInfo_cd() == 4){
             notice_modify.setVisibility(View.VISIBLE);
             notice_delete.setVisibility(View.VISIBLE);
         }else{
