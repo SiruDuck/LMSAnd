@@ -106,7 +106,20 @@
                             android:layout_height="140dp"
                             android:layout_alignParentLeft="true"
                             android:backgroundTint="#CFE5FF"
-                            app:cardCornerRadius="20dp" />
+                            app:cardCornerRadius="20dp">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/welcomb"
+                                    android:text="내정보"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
                             android:id="@+id/my_profile"
@@ -114,7 +127,20 @@
                             android:layout_height="140dp"
                             android:layout_alignParentRight="true"
                             android:backgroundTint="#DEE0FF"
-                            app:cardCornerRadius="20dp" />
+                            app:cardCornerRadius="20dp" >
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/welcomb"
+                                    android:text="내정보"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
 
                     </RelativeLayout>
 
@@ -130,14 +156,39 @@
                             android:layout_height="140dp"
                             android:layout_alignParentLeft="true"
                             android:backgroundTint="#CFE5FF"
-                            app:cardCornerRadius="20dp" />
+                            app:cardCornerRadius="20dp" >
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/welcomb"
+                                    android:text="내정보"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
-                            android:layout_alignParentRight="true"
-                            android:backgroundTint="#DEE0FF"
                             android:layout_width="160dp"
                             android:layout_height="140dp"
-                            app:cardCornerRadius="20dp"/>
+                            android:layout_alignParentRight="true"
+                            android:backgroundTint="#DEE0FF"
+                            app:cardCornerRadius="20dp" >
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/welcomb"
+                                    android:text="내정보"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
 
                     </RelativeLayout>
 
