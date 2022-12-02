@@ -1,7 +1,7 @@
 package com.example.lms.timetable;
 
 import android.os.Bundle;
-
+import static com.example.lms.lms.CommonVal.loginInfo;
 import androidx.dynamicanimation.animation.DynamicAnimation;
 import androidx.dynamicanimation.animation.FlingAnimation;
 import androidx.fragment.app.Fragment;
@@ -51,7 +51,7 @@ public class RegistListFragment extends Fragment {
 
     public void list_select(){
         CommonAskTask task = new CommonAskTask("list.at", getContext());
-        task.addParam("id", "191002");
+        task.addParam("id", loginInfo.getId());
         task.executeAsk(new CommonAskTask.AsynckTaskCallback() {
             @Override
             public void onResult(String data, boolean isResult) {
