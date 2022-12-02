@@ -114,7 +114,14 @@
                                 <TextView
                                     android:layout_centerInParent="true"
                                     android:fontFamily="@font/welcomb"
+                                    android:textSize="20dp"
                                     android:text="내정보"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                                <ImageView
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/people"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
                             </RelativeLayout>
@@ -133,9 +140,18 @@
                                 android:layout_height="match_parent">
 
                                 <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
                                     android:fontFamily="@font/welcomb"
-                                    android:text="내정보"
+                                    android:text="내 시간표"
+                                    android:textSize="20dp" />
+                                <ImageView
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/scadule"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
                             </RelativeLayout>
@@ -164,7 +180,16 @@
                                 <TextView
                                     android:layout_centerInParent="true"
                                     android:fontFamily="@font/welcomb"
-                                    android:text="내정보"
+                                    android:textSize="20dp"
+                                    android:text="공지사항"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                                <ImageView
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/notice"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
                             </RelativeLayout>
@@ -182,9 +207,18 @@
                                 android:layout_height="match_parent">
 
                                 <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
                                     android:fontFamily="@font/welcomb"
-                                    android:text="내정보"
+                                    android:text="자유게시판"
+                                    android:textSize="20dp" />
+                                <ImageView
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/pen"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
                             </RelativeLayout>
