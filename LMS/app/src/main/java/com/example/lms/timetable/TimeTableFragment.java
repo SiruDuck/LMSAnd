@@ -74,7 +74,7 @@ public class TimeTableFragment extends Fragment {
 
         mon1.setText(table_vo.getLecture_time().equals("1") && table_vo.getLecture_day().equals("월") ? table_vo.getLecture_title()+"\n"+table_vo.getLecture_room() : "");
         mon2.setText(table_vo.getLecture_time().equals("2") && table_vo.getLecture_day().equals("월") ? table_vo.getLecture_title()+"\n"+table_vo.getLecture_room() : "");
-        
+
 
         table_list();
         return v;
