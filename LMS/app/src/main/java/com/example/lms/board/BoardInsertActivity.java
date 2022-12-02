@@ -20,6 +20,7 @@ public class BoardInsertActivity extends AppCompatActivity {
     EditText board_insert_title,  board_insert_content;
     Button board_insert_save, board_insert_cancel;
     private Object Writer;
+    BoardCommentFragment fragment;
 
 
     @Override

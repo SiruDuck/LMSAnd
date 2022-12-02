@@ -27,6 +27,8 @@ public class BoardDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_board_detail);
         Intent intent = getIntent();
         BoardVO vo = (BoardVO) intent.getSerializableExtra("vo");
+        BoardCommentVO vo2 = new BoardCommentVO();
+
         board_detail_title = findViewById(R.id.board_detail_title);
         board_detail_writer = findViewById(R.id.board_detail_writer);
         board_detail_readcnt = findViewById(R.id.board_detail_readcnt);
@@ -109,6 +111,38 @@ public class BoardDetailActivity extends AppCompatActivity {
 
             }
         });
+
+
+
+      reg_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                vo2.setBoard_id(Integer.parseInt(vo.getId()));
+                vo2.setWriter(CommonVal.loginInfo.getName());
+                vo2.setContent(comment_et.getText()+"");
+
+                CommonAskTask task = new CommonAskTask("andcomment.insert", BoardDetailActivity.this);
+                task.addParam("vo2", new Gson().toJson(vo2));
+                task.executeAsk(new CommonAskTask.AsynckTaskCallback() {
+                    @Override
+                    public void onResult(String data, boolean isResult) {
+                        if (isResult){
+                            finish();
+                        }
+                    }
+                });
+
+            }
+        });
+
+
+
+
+
+
+
+
+
 
 
     }
