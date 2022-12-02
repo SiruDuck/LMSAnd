@@ -1,7 +1,7 @@
 package com.example.lms.timetable;
 
 import android.os.Bundle;
-
+import static com.example.lms.lms.CommonVal.loginInfo;
 import androidx.fragment.app.Fragment;
 
 import android.util.Log;
@@ -20,61 +20,65 @@ import java.util.ArrayList;
 // 내 시간표
 public class TimeTableFragment extends Fragment {
     TimeTableVO table_vo;
+    EnrolmentVO enrol_vo;
+    ArrayList<TextView> monList = new ArrayList<>();
+    ArrayList<TextView> tueList = new ArrayList<>();
+    ArrayList<TextView> wedList = new ArrayList<>();
+    ArrayList<TextView> thuList = new ArrayList<>();
+    ArrayList<TextView> friList = new ArrayList<>();
 
-    TextView mon1, mon2, mon3, mon4, mon5, mon6, mon7, mon8,
-            tue1, tue2, tue3, tue4, tue5, tue6, tue7, tue8,
-            wed1, wed2, wed3, wed4, wed5, wed6, wed7, wed8,
-            thu1, thu2, thu3, thu4, thu5, thu6, thu7, thu8,
-            fri1, fri2, fri3, fri4, fri5, fri6, fri7, fri8;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_time_table, container, false);
-        mon1 = v.findViewById(R.id.mon1);
-        mon2 = v.findViewById(R.id.mon2);
-        mon3 = v.findViewById(R.id.mon3);
-        mon4 = v.findViewById(R.id.mon4);
-        mon5 = v.findViewById(R.id.mon5);
-        mon6 = v.findViewById(R.id.mon6);
-        mon7 = v.findViewById(R.id.mon7);
-        mon8 = v.findViewById(R.id.mon8);
-        tue1 = v.findViewById(R.id.tue1);
-        tue2 = v.findViewById(R.id.tue2);
-        tue3 = v.findViewById(R.id.tue3);
-        tue4 = v.findViewById(R.id.tue4);
-        tue5 = v.findViewById(R.id.tue5);
-        tue6 = v.findViewById(R.id.tue6);
-        tue7 = v.findViewById(R.id.tue7);
-        tue8 = v.findViewById(R.id.tue8);
-        wed1 = v.findViewById(R.id.wed1);
-        wed2 = v.findViewById(R.id.wed2);
-        wed3 = v.findViewById(R.id.wed3);
-        wed4 = v.findViewById(R.id.wed4);
-        wed5 = v.findViewById(R.id.wed5);
-        wed6 = v.findViewById(R.id.wed6);
-        wed7 = v.findViewById(R.id.wed7);
-        wed8 = v.findViewById(R.id.wed8);
-        thu1 = v.findViewById(R.id.thu1);
-        thu2 = v.findViewById(R.id.thu2);
-        thu3 = v.findViewById(R.id.thu3);
-        thu4 = v.findViewById(R.id.thu4);
-        thu5 = v.findViewById(R.id.thu5);
-        thu6 = v.findViewById(R.id.thu6);
-        thu7 = v.findViewById(R.id.thu7);
-        thu8 = v.findViewById(R.id.thu8);
-        fri1 = v.findViewById(R.id.fri1);
-        fri2 = v.findViewById(R.id.fri2);
-        fri3 = v.findViewById(R.id.fri3);
-        fri4 = v.findViewById(R.id.fri4);
-        fri5 = v.findViewById(R.id.fri5);
-        fri6 = v.findViewById(R.id.fri6);
-        fri7 = v.findViewById(R.id.fri7);
-        fri8 = v.findViewById(R.id.fri8);
+        monList.add(v.findViewById(R.id.mon1));
+        monList.add(v.findViewById(R.id.mon2));
+        monList.add(v.findViewById(R.id.mon3));
+        monList.add(v.findViewById(R.id.mon4));
+        monList.add(v.findViewById(R.id.mon5));
+        monList.add(v.findViewById(R.id.mon6));
+        monList.add(v.findViewById(R.id.mon7));
+        monList.add(v.findViewById(R.id.mon8));
 
-        mon1.setText(table_vo.getLecture_time().equals("1") && table_vo.getLecture_day().equals("월") ? table_vo.getLecture_title()+"\n"+table_vo.getLecture_room() : "");
-        mon2.setText(table_vo.getLecture_time().equals("2") && table_vo.getLecture_day().equals("월") ? table_vo.getLecture_title()+"\n"+table_vo.getLecture_room() : "");
-        
+        tueList.add(v.findViewById(R.id.tue1));
+        tueList.add(v.findViewById(R.id.tue2));
+        tueList.add(v.findViewById(R.id.tue3));
+        tueList.add(v.findViewById(R.id.tue4));
+        tueList.add(v.findViewById(R.id.tue5));
+        tueList.add(v.findViewById(R.id.tue6));
+        tueList.add(v.findViewById(R.id.tue7));
+        tueList.add(v.findViewById(R.id.tue8));
+
+        wedList.add(v.findViewById(R.id.wed1));
+        wedList.add(v.findViewById(R.id.wed2));
+        wedList.add(v.findViewById(R.id.wed3));
+        wedList.add(v.findViewById(R.id.wed4));
+        wedList.add(v.findViewById(R.id.wed5));
+        wedList.add(v.findViewById(R.id.wed6));
+        wedList.add(v.findViewById(R.id.wed7));
+        wedList.add(v.findViewById(R.id.wed8));
+
+        thuList.add(v.findViewById(R.id.thu1));
+        thuList.add(v.findViewById(R.id.thu2));
+        thuList.add(v.findViewById(R.id.thu3));
+        thuList.add(v.findViewById(R.id.thu4));
+        thuList.add(v.findViewById(R.id.thu5));
+        thuList.add(v.findViewById(R.id.thu6));
+        thuList.add(v.findViewById(R.id.thu7));
+        thuList.add(v.findViewById(R.id.thu8));
+
+        friList.add(v.findViewById(R.id.fri1));
+        friList.add(v.findViewById(R.id.fri2));
+        friList.add(v.findViewById(R.id.fri3));
+        friList.add(v.findViewById(R.id.fri4));
+        friList.add(v.findViewById(R.id.fri5));
+        friList.add(v.findViewById(R.id.fri6));
+        friList.add(v.findViewById(R.id.fri7));
+        friList.add(v.findViewById(R.id.fri8));
+
+
+
 
         table_list();
         return v;
@@ -82,14 +86,26 @@ public class TimeTableFragment extends Fragment {
 
     public void table_list(){
         CommonAskTask task = new CommonAskTask("table.at", getContext());
-        task.addParam("id", "191002");
-        task.addParam("lecture_num", table_vo.getLecture_num());
+        task.addParam("id", loginInfo.getId());
         task.executeAsk(new CommonAskTask.AsynckTaskCallback() {
             @Override
             public void onResult(String data, boolean isResult) {
                 if (isResult){
                     Log.d("lms", "onResult: 시간표" + data);
-                    ArrayList<EnrolmentVO> list = new Gson().fromJson(data, new TypeToken<ArrayList<EnrolmentVO>>(){}.getType());
+                     ArrayList<TimeTableVO> list = new Gson().fromJson(data , new TypeToken<ArrayList<TimeTableVO>>(){}.getType());
+                    for (int i = 0; i < list.size(); i++) {
+                        if(list.get(i).getLecture_day().equals("월")){
+                            monList.get(Integer.parseInt(list.get(i).getLecture_time())-1).setText(list.get(i).getLecture_title());
+                        }else if(list.get(i).getLecture_day().equals("화")){
+                            tueList.get(Integer.parseInt(list.get(i).getLecture_time())-1).setText(list.get(i).getLecture_title());
+                        }else if(list.get(i).getLecture_day().equals("수")){
+                            wedList.get(Integer.parseInt(list.get(i).getLecture_time())-1).setText(list.get(i).getLecture_title());
+                        }else if(list.get(i).getLecture_day().equals("목")){
+                            thuList.get(Integer.parseInt(list.get(i).getLecture_time())-1).setText(list.get(i).getLecture_title());
+                        }else if(list.get(i).getLecture_day().equals("금")){
+                            friList.get(Integer.parseInt(list.get(i).getLecture_time())-1).setText(list.get(i).getLecture_title());
+                        }
+                    }
                 }else{
                     Log.d("lms", "onResult:Fail " + data);
                 }

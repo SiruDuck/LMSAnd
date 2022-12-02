@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import static com.example.lms.lms.CommonVal.loginInfo;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.utils.widget.MotionButton;
@@ -65,7 +65,7 @@ public class RegistListAdapter extends RecyclerView.Adapter<RegistListAdapter.Vi
             public void onClick(View v) {
                 CommonAskTask task = new CommonAskTask("insert.at", holder.btn_regist.getContext());
                 //2022/11/29 : CommonVal에 Logininfo.getId로 수정해야함
-                task.addParam("id", "191002");
+                task.addParam("id", loginInfo.getId());
                 task.addParam("lecture_num", table_vo.get(index).getLecture_num());
 
                 task.executeAsk(new CommonAskTask.AsynckTaskCallback() {
@@ -73,6 +73,7 @@ public class RegistListAdapter extends RecyclerView.Adapter<RegistListAdapter.Vi
                     public void onResult(String data, boolean isResult) {
                         if(isResult&&data.equals("1")){
                             Log.d("lms", "onResult: 등록" + data);
+                            table_vo.get(index).setLecture_apply(1);
                             holder.btn_regist.setVisibility(View.INVISIBLE);
                             holder.btn_delete.setVisibility(View.VISIBLE);
 
@@ -89,12 +90,13 @@ public class RegistListAdapter extends RecyclerView.Adapter<RegistListAdapter.Vi
             public void onClick(View v) {
                 Log.d("lms", "onClick: 삭제");
                 CommonAskTask task_d = new CommonAskTask("delete.at", holder.btn_delete.getContext());
-                task_d.addParam("id","191002");
+                task_d.addParam("id", loginInfo.getId());
                 task_d.addParam("lecture_num", table_vo.get(index).getLecture_num());
                 task_d.executeAsk(new CommonAskTask.AsynckTaskCallback() {
                     @Override
                     public void onResult(String data, boolean isResult) {
                         Log.d("lms", "onResult: 삭제" + data);
+                        table_vo.get(index).setLecture_apply(0);
                         holder.btn_regist.setVisibility(View.VISIBLE);
                         holder.btn_delete.setVisibility(View.INVISIBLE);
                     }

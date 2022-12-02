@@ -34,6 +34,7 @@ public class MyinfoFragment extends Fragment {
         start_date = v.findViewById(R.id.start_date);
 
         id = CommonVal.loginInfo.getId();
+
         Log.d("태그", "onCreateView: id값"+id);
 
         info_id.setText(id);
