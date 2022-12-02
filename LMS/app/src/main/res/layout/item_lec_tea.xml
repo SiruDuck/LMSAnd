@@ -18,7 +18,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#E4E4E4">
+            >
 
             <View
                 android:id="@+id/view_line"
@@ -27,7 +27,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginRight="100dp"
-                android:background="#851A1A" />
+                android:background="#11274F" />
 
             <LinearLayout
                 android:id="@+id/ln_layout"

@@ -8,7 +8,7 @@
     android:layout_height="wrap_content"
     tools:context=".HomeFragment"
     android:background="#FAFAFA"
-    android:paddingBottom="20dp">
+    >
 <FrameLayout
 
     android:layout_width="match_parent"
@@ -285,7 +285,7 @@
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:text="금호36, 문흥39, 봉선37, 송정19, 송암68, 송암72 \n 나주160, 마을763"
-                         android:textSize="11dp"
+                         android:textSize="12dp"
                          android:textColor="#000000"
                          />
                      </LinearLayout>
@@ -318,13 +318,114 @@
                  </LinearLayout>
                  </LinearLayout>
 
+                 <LinearLayout
+                     android:layout_marginTop="50dp"
+                     android:layout_width="match_parent"
+                     android:layout_height="250dp"
+                     android:background="#123"
+
+                     >
+
+                     <LinearLayout
+                         android:layout_marginLeft="10dp"
+                         android:layout_gravity="center_vertical"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="vertical">
+
+                         <LinearLayout
+                             android:gravity="center"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:orientation="horizontal">
+                             <ImageView
+                                 android:layout_width="40dp"
+                                 android:layout_height="40dp"
+                                 android:src="@drawable/logo"/>
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:text="영문 대학교"
+                                 android:textSize="25dp"
+                                 android:textColor="#A1AAB4"/>
+                         </LinearLayout>
+                         <LinearLayout
+                             android:layout_marginTop="5dp"
+                             android:gravity="center"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:orientation="horizontal">
+                             <TextView
+                                 android:layout_marginLeft="10dp"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:text="개인정보보호정책"
+                                 android:background="#686868"
+                                 android:textColor="#A1AAB4"
+                                 android:padding="2dp"
+                                 />
+                             <TextView
+                                 android:layout_marginLeft="10dp"
+                                 android:padding="2dp"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:text="메일주소무단수집거부"
+                                 android:background="#686868"
+                                 android:textColor="#A1AAB4"/>
+                         </LinearLayout>
 
 
 
+                         <TextView
+                             android:layout_marginTop="5dp"
+                             android:textAlignment="center"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:text="사업자 번호_410-91-46332"
+                             android:textColor="#A1AAB4"
+                             />
+                         <TextView
+                             android:layout_marginTop="5dp"
+                             android:textAlignment="center"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:text="통신판매업신고번호_제2012-광주서구-000189호"
+                             android:textColor="#A1AAB4"/>
+                         <TextView
+                             android:layout_marginTop="5dp"
+                             android:textAlignment="center"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:text="대표자 / 개인정보보호 책임자.김영문"
+                             android:textColor="#A1AAB4"/>
+                         <TextView
+                             android:layout_marginTop="5dp"
+                             android:textAlignment="center"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:text="61928 광주광역시 서구 경열로3(농성동 271-4)"
+                             android:textColor="#A1AAB4"/>
+
+
+                         <TextView
+                             android:layout_marginTop="30dp"
+                             android:textAlignment="center"
+                             android:textSize="10dp"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:text="copyright © 영문대학교. All Rights Reserved."
+                             android:textColor="#E1B06E"/>
+
+                     </LinearLayout>
+                 </LinearLayout>
              </LinearLayout>
+
          </LinearLayout>
+
      </FrameLayout>
     </LinearLayout>
+
 </FrameLayout>
 
 </ScrollView>

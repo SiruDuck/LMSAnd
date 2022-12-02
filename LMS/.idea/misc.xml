@@ -70,11 +70,14 @@
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/fragment_lecture__stu.xml" value="0.34270833333333334" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/fragment_lecture__tea.xml" value="0.34270833333333334" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/fragment_lecture_detail.xml" value="0.33" />
-        <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/fragment_lecture_modify.xml" value="0.34270833333333334" />
+        <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/fragment_lecture_modify.xml" value="0.33" />
+        <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/fragment_my_info.xml" value="0.24947916666666667" />
+        <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/fragment_myinfo.xml" value="0.24947916666666667" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/fragment_notice_detail.xml" value="0.34270833333333334" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/fragment_regist.xml" value="0.29375" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/fragment_regist_list.xml" value="0.34270833333333334" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/fragment_score.xml" value="0.34270833333333334" />
+        <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/fragment_score_teacher.xml" value="0.24947916666666667" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/fragment_time_table.xml" value="0.29375" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/item_board_list.xml" value="0.27760416666666665" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/item_equipment.xml" value="0.27760416666666665" />
@@ -87,9 +90,6 @@
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/item_side_sub.xml" value="0.29375" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/item_stu_info.xml" value="0.34270833333333334" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/nav_header_main.xml" value="0.34270833333333334" />
-        <entry key="..\:/Project/LMSAnd/LMS/app/src/main/res/layout/fragment_score.xml" value="0.34270833333333334" />
-        <entry key="..\:/Project/LMSAnd/LMS/app/src/main/res/layout/fragment_score_teacher.xml" value="0.21822916666666667" />
-        <entry key="..\:/Project/LMSAnd/LMS/app/src/main/res/layout/item_subject_avg.xml" value="0.21822916666666667" />
         <entry key="..\:/Study_Android/workspace/LMS/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.37135416666666665" />
       </map>
     </option>
