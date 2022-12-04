@@ -101,7 +101,7 @@
                         <com.google.android.material.card.MaterialCardView
                             app:cardElevation="5dp"
                             android:layout_margin="20dp"
-                            android:id="@+id/eqlist"
+                            android:id="@+id/my_info"
                             android:layout_width="160dp"
                             android:layout_height="140dp"
                             android:layout_alignParentLeft="true"
@@ -125,7 +125,7 @@
                         </com.google.android.material.card.MaterialCardView>
 
                         <androidx.cardview.widget.CardView
-                            android:id="@+id/my_profile"
+                            android:id="@+id/time_table"
                             app:cardElevation="5dp"
                             android:layout_margin="20dp"
                             android:layout_width="160dp"
@@ -157,6 +157,7 @@
                         android:layout_height="wrap_content">
 
                         <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/notice"
                             android:layout_margin="20dp"
                             app:cardElevation="5dp"
                             android:layout_width="160dp"
@@ -182,6 +183,7 @@
                         </com.google.android.material.card.MaterialCardView>
 
                         <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/board"
                             android:layout_margin="20dp"
                             app:cardElevation="5dp"
                             android:layout_width="160dp"
