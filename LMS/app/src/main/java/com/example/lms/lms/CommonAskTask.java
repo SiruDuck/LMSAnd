@@ -51,7 +51,7 @@ public class CommonAskTask extends AsyncTask <String, String, String>{
         dialog.setTitle("데이터 처리");
         dialog.setMessage("스프링으로 데이터 가져오는 중");
         dialog.setCancelable(false);
-        dialog.show();//← 실제 다이얼로그가 보이게 만든다
+        //dialog.show();//← 실제 다이얼로그가 보이게 만든다
     }
 
 
