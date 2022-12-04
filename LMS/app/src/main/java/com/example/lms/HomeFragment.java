@@ -11,6 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
+import com.example.lms.board.BoardFragment;
+import com.example.lms.myinfo.MyinfoFragment;
+import com.example.lms.notice.NoticeFragment;
+import com.example.lms.timetable.TimeTableFragment;
 import com.naver.maps.geometry.LatLng;
 import com.naver.maps.map.CameraAnimation;
 import com.naver.maps.map.CameraUpdate;
@@ -22,7 +26,7 @@ import com.naver.maps.map.overlay.Marker;
 
 
 public class HomeFragment extends Fragment implements OnMapReadyCallback {
-CardView eqlist;
+CardView my_info, time_table, board, notice;
     NaverMap naverMap;
     MapView map_view;
     @Override
@@ -30,13 +34,35 @@ CardView eqlist;
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_home, container, false);
-        eqlist = v.findViewById(R.id.eqlist);
-        eqlist.setOnClickListener(new View.OnClickListener() {
+        time_table = v.findViewById(R.id.time_table);
+        board = v.findViewById(R.id.board);
+        notice = v.findViewById(R.id.notice);
+        my_info = v.findViewById(R.id.my_info);
+        my_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new MyinfoFragment()).commit();
             }
         });
+        time_table.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new TimeTableFragment()).commit();
+            }
+        });
+        board.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new BoardFragment()).commit();
+            }
+        });
+        notice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new NoticeFragment()).commit();
+            }
+        });
+
 
         map_view = v.findViewById(R.id.map_view);
         NaverMapSdk.getInstance(getContext()).setClient(

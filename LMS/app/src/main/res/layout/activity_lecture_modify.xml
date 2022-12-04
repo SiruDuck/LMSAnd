@@ -8,13 +8,13 @@
     tools:context=".timetable.TimeTableDetailActivity"
     android:orientation="vertical"
     android:background="@drawable/back12"
+    android:padding="15dp"
     >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_margin="20dp"
         >
 
     <TextView

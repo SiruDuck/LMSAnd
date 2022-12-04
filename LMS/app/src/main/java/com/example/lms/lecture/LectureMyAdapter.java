@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.lms.MainActivity;
 import com.example.lms.R;
+import com.example.lms.lms.CommonVal;
 import com.example.lms.member.MemberVO;
 
 import java.util.ArrayList;
@@ -43,17 +44,21 @@ public class LectureMyAdapter extends RecyclerView.Adapter<LectureMyAdapter.MyHo
         h.teacher_name.setText(list.get(i).getTeacher_name());
         h.lecture_room.setText(list.get(i).getLecture_room());
         h.sortation.setText(list.get(i).getSortation());
-        h.lecture_num.setText(list.get(i).getLecture_num()+"");
-        final int index = i ;
+        h.lecture_num.setText(list.get(i).getLecture_num() + "");
+        final int index = i;
+
+        if (CommonVal.loginInfo.getInfo_cd() == 3) {
         h.lec_tea_stu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(h.lecture_num.getContext() , Lecture_Tea_DetailActivity.class);
+                Intent intent = new Intent(h.lecture_num.getContext(), Lecture_Tea_DetailActivity.class);
                 intent.putExtra("vo", list.get(index));
                 h.lecture_num.getContext().startActivity(intent);
             }
         });
+        }else {
 
+        }
 
 
 
