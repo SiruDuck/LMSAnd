@@ -20,6 +20,7 @@ public class BoardDetailActivity extends AppCompatActivity {
     ImageView board_detail_filepath;
     Button board_list, board_modify, board_delete, reg_button;
     EditText comment_et;
+    BoardCommentFragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,11 @@ public class BoardDetailActivity extends AppCompatActivity {
         Intent intent = getIntent();
         BoardVO vo = (BoardVO) intent.getSerializableExtra("vo");
         BoardCommentVO vo2 = new BoardCommentVO();
+
+
+
+
+
 
         board_detail_title = findViewById(R.id.board_detail_title);
         board_detail_writer = findViewById(R.id.board_detail_writer);
@@ -126,9 +132,7 @@ public class BoardDetailActivity extends AppCompatActivity {
                 task.executeAsk(new CommonAskTask.AsynckTaskCallback() {
                     @Override
                     public void onResult(String data, boolean isResult) {
-                        if (isResult){
-                            finish();
-                        }
+                        getSupportFragmentManager().beginTransaction().replace(R.id.comment_frame, new BoardCommentFragment(vo.getId())).commit();
                     }
                 });
 

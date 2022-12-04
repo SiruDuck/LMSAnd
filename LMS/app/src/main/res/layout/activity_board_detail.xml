@@ -41,14 +41,23 @@
                 android:background="@color/navy"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:background="@drawable/back12"
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_board_frame"
+            android:layout_below="@+id/activity_board_detail"
+            >
+
+
+
+            <LinearLayout
             android:layout_margin="6dp"
             android:orientation="vertical"
             android:layout_below="@+id/activity_board_detail"
             android:id="@+id/board_table"
             android:layout_width="match_parent"
-            android:layout_height="600dp">
+            android:layout_height="wrap_content">
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_height="wrap_content"
@@ -138,7 +147,8 @@
 
 
             <LinearLayout
-                android:layout_height="440dp"
+
+                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
                 >
@@ -197,11 +207,15 @@
 
         </LinearLayout>
 
+
+
+
+        </FrameLayout>
         <LinearLayout
             android:id="@+id/board_btn_lin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/board_table"
+            android:layout_below="@+id/activity_board_frame"
             android:gravity="center"
             android:orientation="horizontal">
 

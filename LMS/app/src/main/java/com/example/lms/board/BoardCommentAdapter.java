@@ -65,7 +65,7 @@ public class BoardCommentAdapter extends RecyclerView.Adapter<BoardCommentAdapte
             @Override
             public void onClick(View v) {
                 CommonAskTask task = new CommonAskTask("andcomment.delete", h.board_comment_id.getContext());
-                task.addParam("board_id", list.get(index).getBoard_id());
+                task.addParam("id", list.get(index).getId());
                 task.executeAsk(new CommonAskTask.AsynckTaskCallback() {
                     @Override
                     public void onResult(String data, boolean isResult) {
