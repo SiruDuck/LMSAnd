@@ -47,6 +47,8 @@ public class BoardModifyActivity extends AppCompatActivity {
                     @Override
                     public void onResult(String data, boolean isResult) {
                         if (isResult){
+                           /* getSupportFragmentManager().beginTransaction().replace(R.id.container, new BoardFragment()).commit();
+                            getSupportFragmentManager().beginTransaction().replace(R.id.comment_frame, new BoardCommentFragment(vo.getId())).commit();*/
                             finish();
                         }
 
