@@ -1,5 +1,7 @@
 package com.example.lms;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -9,6 +11,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.ViewFlipper;
 
 
 import com.example.lms.board.BoardFragment;
@@ -29,6 +33,8 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
 CardView my_info, time_table, board, notice;
     NaverMap naverMap;
     MapView map_view;
+    ViewFlipper viewflipper;
+    ImageView qnet, hrdnet, goyong, worknet;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -69,6 +75,43 @@ CardView my_info, time_table, board, notice;
                 new NaverMapSdk.NaverCloudPlatformClient("mohdfmnbxf")
         );
         map_view.getMapAsync(this);
+
+
+        viewflipper = v.findViewById(R.id.viewflipper);
+        hrdnet = v.findViewById(R.id.hrdnet);
+        qnet = v.findViewById(R.id.qnet);
+        goyong = v.findViewById(R.id.goyong);
+        worknet = v.findViewById(R.id.worknet);
+        qnet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.q-net.or.kr/man001.do?imYn=Y&gSite=Q"));
+                startActivity(intent);
+            }
+        });
+        hrdnet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.hrd.go.kr/hrdp/ma/pmmao/newIndexRenewal.do"));
+                startActivity(intent);
+            }
+        });
+        goyong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.moel.go.kr/index.do"));
+                startActivity(intent);
+            }
+        });
+        worknet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.work.go.kr/seekWantedMain.do"));
+                startActivity(intent);
+            }
+        });
+
+
 
 
         return v;

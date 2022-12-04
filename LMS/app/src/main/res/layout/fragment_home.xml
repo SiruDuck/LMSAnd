@@ -209,6 +209,11 @@
 
                     </RelativeLayout>
 
+
+
+
+
+
                     <TextView
                         android:layout_gravity="center"
                         android:textSize="20dp"
@@ -218,7 +223,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="20dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="80dp"
                         />
 
                     <androidx.cardview.widget.CardView
@@ -235,6 +240,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <LinearLayout
+                        android:layout_marginTop="20dp"
                         android:layout_gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -387,7 +393,51 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_marginTop="50dp"
+                            android:layout_marginTop="60dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:background="#fff"
+                            >
+
+                            <ViewFlipper
+                                android:layout_gravity="center"
+                                android:id="@+id/viewflipper"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:autoStart="true"
+
+                                >
+
+                                <ImageView
+                                    android:id="@+id/hrdnet"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/hrdnet"
+
+                                    />
+
+                                <ImageView
+                                    android:id="@+id/qnet"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/qnet"
+
+                                    />
+                                <ImageView
+                                    android:id="@+id/goyong"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/goyong"/>
+                                <ImageView
+                                    android:id="@+id/worknet"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/worknet"/>
+
+                            </ViewFlipper>
+
+                        </LinearLayout>
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="250dp"
                             android:background="#123"
