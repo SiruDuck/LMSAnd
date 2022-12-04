@@ -35,6 +35,7 @@
         </LinearLayout>
 
         <TableLayout
+            android:background="@drawable/back12"
             android:layout_margin="6dp"
             android:layout_below="@+id/activity_board_modify"
             android:id="@+id/board_table"
@@ -108,13 +109,14 @@
                 android:id="@+id/board_modify_save"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/beige"
-                android:textColor="@color/black"
+                android:backgroundTint="@color/navy"
+                android:textColor="@color/beige"
                 android:textStyle="bold"
                 android:text="저장"/>
             <Button
                 android:textStyle="bold"
-                android:backgroundTint="@color/navy"
+                android:backgroundTint="@color/beige"
+                android:textColor="@color/navy"
                 android:layout_margin="10dp"
                 android:id="@+id/board_modify_cancel"
                 android:layout_width="wrap_content"

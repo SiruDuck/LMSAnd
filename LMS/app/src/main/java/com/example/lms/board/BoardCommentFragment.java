@@ -68,7 +68,7 @@ public class BoardCommentFragment extends Fragment {
                             }.getType());
                     Log.d("공지사항", "onResult: " + list.size());
 
-                    BoardCommentAdapter adapter = new BoardCommentAdapter(getLayoutInflater(), list ,getContext());
+                    BoardCommentAdapter adapter = new BoardCommentAdapter(getLayoutInflater(), list ,getContext(), BoardCommentFragment.this);
                     RecyclerView.LayoutManager manager = new LinearLayoutManager(
                             getContext() , RecyclerView.VERTICAL , false
                     );
@@ -80,6 +80,9 @@ public class BoardCommentFragment extends Fragment {
         });
 
     }
+
+
+
 
 
 }
