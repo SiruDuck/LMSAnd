@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
         tv1.setText(vo.getName() + "님");
         tv2.setText(vo.getId());
         if(vo.getProfile() == null){
-            Glide.with(this).load("http://192.168.0.26/lms/upload/profile/2022/11/24/normal.png").into(loginImage);
+            Glide.with(this).load("http://192.168.0.26/lms/upload/profile/2022/11/24/ic_no_user.png").into(loginImage);
         }else{
             Glide.with(this).load(vo.getProfile()).into(loginImage);
         }

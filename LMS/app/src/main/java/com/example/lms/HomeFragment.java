@@ -1,5 +1,6 @@
 package com.example.lms;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,7 +12,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.ViewFlipper;
 
 
@@ -31,6 +34,7 @@ import com.naver.maps.map.overlay.Marker;
 
 public class HomeFragment extends Fragment implements OnMapReadyCallback {
 CardView my_info, time_table, board, notice;
+    ViewFlipper flipper;
     NaverMap naverMap;
     MapView map_view;
     ViewFlipper viewflipper;
@@ -44,6 +48,21 @@ CardView my_info, time_table, board, notice;
         board = v.findViewById(R.id.board);
         notice = v.findViewById(R.id.notice);
         my_info = v.findViewById(R.id.my_info);
+        flipper = v.findViewById(R.id.flipper);
+        // -------------------------- 찾기 ------------------------------//
+
+        int benner_img[] = {
+                R.drawable.cimg1,
+                R.drawable.cimg2,
+                R.drawable.cimg3,
+        };      //배너 플리퍼 리스트
+        for(int image : benner_img) {
+            flipperImages(image);
+        }   //리스트를 플리퍼 실행 메소드에 반복
+
+
+
+        // -------------------------- 버튼 -----------------------------//
         my_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -149,5 +168,17 @@ CardView my_info, time_table, board, notice;
         Marker marker = new Marker();
         marker.setPosition(new LatLng(35.1535583, 126.8879957));
         marker.setMap(naverMap);
+    }
+
+    public void flipperImages(int image) {
+        ImageView imageView = new ImageView(getContext());
+        imageView.setBackgroundResource(image);
+        flipper.addView(imageView);
+        flipper.setFlipInterval(3000);       // 자동 이미지 슬라이드 딜레이시간(1000 당 1초)
+        flipper.setAutoStart(true);          // 자동 스타트
+
+
+
+
     }
 }
