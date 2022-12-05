@@ -52,7 +52,9 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginBottom="40dp">
 
-                        <com.synnapps.carouselview.CarouselView
+                        <androidx.viewpager2.widget.ViewPager2
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
                             android:id="@+id/carouselView"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
@@ -61,7 +63,7 @@
                             app:radius="6dp"
                             app:slideInterval="3000"
                             app:strokeColor="#FF777777"
-                            app:strokeWidth="1dp"/>
+                            app:strokeWidth="1dp" />
                     </RelativeLayout>
 
                 </RelativeLayout>
