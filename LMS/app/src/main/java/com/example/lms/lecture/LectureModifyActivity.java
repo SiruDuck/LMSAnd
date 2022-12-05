@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -38,13 +39,13 @@ public class LectureModifyActivity extends AppCompatActivity {
         book = findViewById(R.id.book);
         lecture_day = findViewById(R.id.lecture_day);
         lecture_time = findViewById(R.id.lecture_time);
-        enrolment = findViewById(R.id.enrolment);
+        //enrolment = findViewById(R.id.enrolment);
         capacity = findViewById(R.id.capacity);
         midex = findViewById(R.id.midex);
         finalex = findViewById(R.id.finalex);
         state = findViewById(R.id.state);
         sortation = findViewById(R.id.sortation);
-        reception_status = findViewById(R.id.reception_status);
+        //reception_status = findViewById(R.id.reception_status);
 
 
         lecture_num.setText(vo.getLecture_num() + "");
@@ -57,13 +58,13 @@ public class LectureModifyActivity extends AppCompatActivity {
         book.setText(vo.getBook());
         lecture_day.setText(vo.getLecture_day());
         lecture_time.setText(vo.getLecture_time());
-        enrolment.setText(vo.getEnrolment());
+        //enrolment.setText(vo.getEnrolment());
         capacity.setText(vo.getCapacity() + "");
         midex.setText(vo.getMidex() + "");
         finalex.setText(vo.getFinalex() + "");
         state.setText(vo.getState());
         sortation.setText(vo.getSortation());
-        reception_status.setText(vo.getReception_status());
+        //reception_status.setText(vo.getReception_status());
 
         btn_save = findViewById(R.id.btn_save);
         btn_cancel = findViewById(R.id.btn_cancel);
@@ -79,7 +80,6 @@ public class LectureModifyActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 CommonAskTask task = new CommonAskTask("andupdate.lec", LectureModifyActivity.this);
-
                 vo.setLecture_num(Integer.parseInt(lecture_num.getText() + ""));
                 vo.setLecture_room (lecture_room.getText()+"");
                 vo.setTeacher_name (teacher_name.getText()+"");
@@ -90,13 +90,13 @@ public class LectureModifyActivity extends AppCompatActivity {
                 vo.setBook         (book.getText()+"");
                 vo.setLecture_day  (lecture_day.getText()+"");
                 vo.setLecture_time (lecture_time .getText()+"");
-                vo.setEnrolment    (enrolment.getText()+"");
+//                vo.setEnrolment    (enrolment.getText()+"");
                 vo.setCapacity     (capacity.getText()+"");
 //                vo.setMidex        ( midex.getText());
 //                vo.setFinalex      (finalex.getText());
                 vo.setState        (state.getText()+"");
                 vo.setSortation    (sortation.getText()+"");
-                vo.setReception_status( reception_status.getText()+"");
+//                vo.setReception_status( reception_status.getText()+"");
 
 
                 task.addParam("vo", new Gson().toJson(vo));

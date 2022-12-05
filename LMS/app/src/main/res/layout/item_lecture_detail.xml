@@ -221,7 +221,7 @@
                 android:layout_weight="3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="교재명"
+                android:text="수강인원"
                 android:gravity="center"
                 android:background="#4CC7DCF7"
                 android:textAlignment="center"
@@ -229,12 +229,12 @@
                 android:textStyle="bold"
                 />
             <TextView
-                android:id="@+id/book"
+                android:id="@+id/capacity"
                 android:padding="5dp"
                 android:layout_weight="7"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="책"
+                android:text="수강인원"
                 />
         </LinearLayout>
     </LinearLayout>
@@ -294,62 +294,7 @@
                 />
         </LinearLayout>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content">
-            <TextView
-                android:padding="5dp"
-                android:layout_weight="3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="수강여부"
-                android:gravity="center"
-                android:background="#4CC7DCF7"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textStyle="bold"
-                />
-            <TextView
-                android:id="@+id/enrolment"
-                android:padding="5dp"
-                android:layout_weight="7"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="수강신청여부"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content">
-            <TextView
-                android:padding="5dp"
-                android:layout_weight="3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="수강인원"
-                android:gravity="center"
-                android:background="#4CC7DCF7"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textStyle="bold"
-                />
-            <TextView
-                android:id="@+id/capacity"
-                android:padding="5dp"
-                android:layout_weight="7"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="수강인원"
-                />
-        </LinearLayout>
-    </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -468,16 +413,17 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         >
+
         <LinearLayout
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content">
             <TextView
                 android:padding="5dp"
-                android:layout_weight="3"
+                android:layout_weight="2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="접수상태"
+                android:text="교재명"
                 android:gravity="center"
                 android:background="#4CC7DCF7"
                 android:textAlignment="center"
@@ -485,35 +431,12 @@
                 android:textStyle="bold"
                 />
             <TextView
-                android:id="@+id/reception_status"
+                android:id="@+id/book"
                 android:padding="5dp"
-                android:layout_weight="7"
+                android:layout_weight="8"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="강의번호내용"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content">
-            <TextView
-                android:padding="5dp"
-                android:layout_width="62dp"
-                android:layout_height="wrap_content"
-                android:text="비고"
-                android:gravity="center"
-                android:background="#4CC7DCF7"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textStyle="bold"
-                />
-            <TextView
-                android:padding="5dp"
-                android:layout_weight="7"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="비고"
+                android:text="책"
                 />
         </LinearLayout>
     </LinearLayout>
