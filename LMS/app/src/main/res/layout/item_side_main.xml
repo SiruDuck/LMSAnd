@@ -76,7 +76,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginRight="100dp"
-        android:background="#123" />
+        android:background="#6394C2" />
 
 </RelativeLayout>
 
