@@ -1,18 +1,27 @@
 package com.example.lms.notice;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.lms.R;
+import com.example.lms.board.BoardVO;
 import com.example.lms.lms.CommonAskTask;
 import com.example.lms.lms.CommonVal;
 import com.google.gson.Gson;
+
+import java.nio.channels.InterruptedByTimeoutException;
 
 public class NoticeDetailActivity extends AppCompatActivity {
     TextView notice_detail_title, notice_detail_writer, notice_detail_readcnt, notice_detail_writedate, notice_detail_content, notice_detail_filename;
@@ -74,7 +83,8 @@ public class NoticeDetailActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent1 = new Intent(NoticeDetailActivity.this, NoticeModifyActivity.class);
                 intent1.putExtra("vo", vo);
-                startActivity(intent1);
+
+                activityResultLauncher.launch(intent1);
 
             }
         });
@@ -98,4 +108,44 @@ public class NoticeDetailActivity extends AppCompatActivity {
         });
 
     }
+
+
+    ActivityResultLauncher<Intent> activityResultLauncher
+            = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+        @Override
+        public void onActivityResult(ActivityResult result) {
+            Log.d("게시글상세", "상세화면으로 돌아옴");
+            if(result.getResultCode() == Activity.RESULT_OK ) {
+                Log.d("게시글상세", "확인시 돌아옴");
+                //수정화면에서 수정저장하여 spring 에서 반환받은 DB에 저장된 고객정보를 출력
+                Intent intent = result.getData();
+                NoticeVO vo = (NoticeVO) intent.getSerializableExtra("vo");
+
+                notice_detail_title.setText(vo.getTitle());
+                notice_detail_writer.setText(vo.getWriter());
+                notice_detail_readcnt.setText(vo.getReadcnt()+"");
+                notice_detail_writedate.setText(vo.getWritedate().substring(0, vo.getWritedate().indexOf(" ")));
+                notice_detail_content.setText(vo.getContent());
+                if(vo.getFilename() != null) {
+                    notice_detail_filename.setText(vo.getFilename());
+                }
+
+
+                if(vo.getFilepath() == null) {
+                    notice_detail_filepath.setVisibility(View.INVISIBLE);
+                }
+
+
+
+            }else if(result.getResultCode() == Activity.RESULT_CANCELED ){
+                Log.d("게시글상세", "취소시 돌아옴");
+            }
+        }
+    });
+
+
+
+
+
+
 }
