@@ -114,9 +114,9 @@ public class NoticeDetailActivity extends AppCompatActivity {
             = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
         @Override
         public void onActivityResult(ActivityResult result) {
-            Log.d("게시글상세", "상세화면으로 돌아옴");
+            Log.d("공지글상세", "상세화면으로 돌아옴");
             if(result.getResultCode() == Activity.RESULT_OK ) {
-                Log.d("게시글상세", "확인시 돌아옴");
+                Log.d("공지글상세", "확인시 돌아옴");
                 //수정화면에서 수정저장하여 spring 에서 반환받은 DB에 저장된 고객정보를 출력
                 Intent intent = result.getData();
                 NoticeVO vo = (NoticeVO) intent.getSerializableExtra("vo");
@@ -138,7 +138,7 @@ public class NoticeDetailActivity extends AppCompatActivity {
 
 
             }else if(result.getResultCode() == Activity.RESULT_CANCELED ){
-                Log.d("게시글상세", "취소시 돌아옴");
+                Log.d("공지글상세", "취소시 돌아옴");
             }
         }
     });

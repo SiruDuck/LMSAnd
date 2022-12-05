@@ -19,6 +19,7 @@ import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.lms.board.BoardFragment;
 import com.example.lms.equipment.EquipmentFragment;
 import com.example.lms.lecture.LectureFragment;
@@ -38,6 +39,8 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
@@ -89,8 +92,18 @@ public class MainActivity extends AppCompatActivity {
         View headerView = nav_view.getHeaderView(0);
         TextView tv1 = headerView.findViewById(R.id.loginID);
         TextView tv2 = headerView.findViewById(R.id.loginno);
+        CircleImageView loginImage = headerView.findViewById(R.id.loginImage);
+
+
         tv1.setText(vo.getName() + "님");
         tv2.setText(vo.getId());
+        if(vo.getProfile() == null){
+            Glide.with(this).load("http://192.168.0.26/lms/upload/profile/2022/11/24/normal.png").into(loginImage);
+        }else{
+            Glide.with(this).load(vo.getProfile()).into(loginImage);
+        }
+
+
         headerView.findViewById(R.id.imgv_back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
