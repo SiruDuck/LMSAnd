@@ -105,6 +105,7 @@ public class EqModifyActivity extends AppCompatActivity {
                             Toast.makeText(EqModifyActivity.this,"실패",Toast.LENGTH_SHORT).show();
                         }
                         //return null;
+                        finish();
                     }
                 });
 

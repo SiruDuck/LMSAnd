@@ -15,6 +15,8 @@ import com.example.lms.R;
 import com.example.lms.lms.CommonAskTask;
 import com.google.gson.Gson;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -41,13 +43,14 @@ public class EqInsertActivity extends AppCompatActivity {
         int mMonth = c.get(Calendar.MONTH);
         int mDay = c.get(Calendar.DAY_OF_MONTH);
         //--------------------DatePickerDialog-------------------//
-
         DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                 adddate.setText(year+"/" + (month+1) +"/" +dayOfMonth);
+                Calendar c = Calendar.getInstance();
                 c.set(year , month , dayOfMonth);
                 vo.setBuy_day(new Date(c.getTimeInMillis()));      //구입날자
+
             }
         }, mYear, mMonth, mDay);
 
@@ -76,11 +79,11 @@ public class EqInsertActivity extends AppCompatActivity {
         eqinsert_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                 Log.d("태그", "onClick: 버튼 눌렀음.");
                 try {
                     vo.setEquipment_num(Integer.parseInt(addeqquantity.getText()+""));
                     vo.setPrice(Integer.parseInt(addprice.getText()+""));
-
                 }catch (Exception e){
                     Log.d("로그", "onClick: insert 오류");
                 }
@@ -93,15 +96,15 @@ public class EqInsertActivity extends AppCompatActivity {
                     @Override
                     public void onResult(String data, boolean isResult) {
                         if(isResult && data.equals("1")){
+                            Log.d("태그", "onResult: 실패");
                             finish();
                         }else{
+                            Log.d("태그", "onResult: 실패");
                             Toast.makeText(EqInsertActivity.this,"실패",Toast.LENGTH_SHORT).show();
                         }
                         //return null;
                     }
                 });
-                Toast.makeText(EqInsertActivity.this,"비품 추가 완료!",Toast.LENGTH_SHORT).show();
-                finish();
             }
         });
 
