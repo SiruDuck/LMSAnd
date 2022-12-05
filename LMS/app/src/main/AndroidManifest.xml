@@ -50,9 +50,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LMS"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".viewpager.HomeViewActivity"
+            android:exported="true" />
+
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
             android:value="mohdfmnbxf" />
+
         <activity
             android:name=".notice.NoticeInsertActivity"
             android:exported="true" />

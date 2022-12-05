@@ -52,7 +52,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginBottom="40dp">
 
-                        <androidx.viewpager2.widget.ViewPager2
+                        <ScrollView
                             android:clipChildren="false"
                             android:clipToPadding="false"
                             android:id="@+id/carouselView"
