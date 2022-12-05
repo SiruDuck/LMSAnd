@@ -42,15 +42,18 @@
             android:orientation="vertical">
 
             <TextView
+                android:fontFamily="@font/welcomb"
+                android:layout_gravity="center_vertical"
                 android:id="@+id/tv_menu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:text="강의관리"
                 android:textColor="#292929"
-                android:textSize="15dp" />
+                android:textSize="20dp" />
 
             <TextView
+                android:visibility="gone"
                 android:id="@+id/tv_menu_sub"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

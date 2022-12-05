@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.FragmentManager;
 
 import com.example.lms.R;
@@ -17,7 +18,7 @@ import com.example.lms.R;
 import java.util.ArrayList;
 
 public class SideAdapter extends BaseExpandableListAdapter {
-
+    //Typeface font = ResourcesCompat.getFont(convertView.getContext(), R.font.welcomb);
 
     //어댑터에서는 붙일수있는 칸을 제공함.
     //실제로 칸에 어떤 Layout을 붙이는 처리는 개발자(LayoutInflater)
@@ -80,6 +81,7 @@ public class SideAdapter extends BaseExpandableListAdapter {
     //(ViewHolder를 강제 x)
     @Override
     public View getGroupView(int i, boolean isExpanded, View convertView, ViewGroup parent) {
+
         GroupViewHolder h = null;
         if(convertView == null ){
 
@@ -100,12 +102,13 @@ public class SideAdapter extends BaseExpandableListAdapter {
         if(isExpanded){
             h.imgv_arrow.setImageResource(R.drawable.ic_baseline_keyboard_arrow_up_24);
             h.tv_menu.setTypeface(h.tv_menu.getTypeface(), Typeface.BOLD);
-            h.tv_menu.setTextSize(18);
+            h.tv_menu.setTextSize(17);
+            //h.tv_menu.setTypeface(font);
             h.ln_layout.setBackgroundColor(Color.parseColor("#ECECF3"));
         }else{
             h.imgv_arrow.setImageResource(R.drawable.ic_baseline_keyboard_arrow_down_24);
             h.tv_menu.setTypeface(null, Typeface.NORMAL);
-            h.tv_menu.setTextSize(15);
+            h.tv_menu.setTextSize(17);
             h.ln_layout.setBackgroundColor(Color.parseColor("#FFFFFF"));
         }
         h.tv_menu.setText(list.get(i).getMenu());
