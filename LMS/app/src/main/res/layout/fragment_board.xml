@@ -10,11 +10,7 @@
     android:scrollbars="none"
     >
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="none"
-        >
+
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -38,7 +34,9 @@
                 android:textColor="#F1ECEC"
                 android:text="자유게시판"/>
         </androidx.cardview.widget.CardView>
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -96,12 +94,11 @@
 
 
     </RelativeLayout>
-
+</ScrollView>
 
 
 
     </FrameLayout>
-    </ScrollView>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
