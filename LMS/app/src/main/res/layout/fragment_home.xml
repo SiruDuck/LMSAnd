@@ -52,18 +52,11 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginBottom="40dp">
 
-                        <ScrollView
-                            android:clipChildren="false"
-                            android:clipToPadding="false"
-                            android:id="@+id/carouselView"
+                        <RelativeLayout
+                            android:id="@+id/view"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
-                            app:fillColor="#FFFFFFFF"
-                            app:pageColor="#00000000"
-                            app:radius="6dp"
-                            app:slideInterval="3000"
-                            app:strokeColor="#FF777777"
-                            app:strokeWidth="1dp" />
+                            />
                     </RelativeLayout>
 
                 </RelativeLayout>

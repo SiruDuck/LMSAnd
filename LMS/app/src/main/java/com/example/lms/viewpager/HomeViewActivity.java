@@ -34,9 +34,9 @@ public class HomeViewActivity extends AppCompatActivity {
         @NonNull
         @Override
         public Fragment createFragment(int position) {//포지션마다 있을 fragment설정
-           // if(position==0) return new ShortsFragment();
-            //else if(position==1) return new ShortsFragment2();
-            //else return new ShortFragment3();
+           if(position==0) return new page1Fragment();
+            else if(position==1) return new page2Fragment();
+            else return new page3Fragment();
         }
 
         @Override
