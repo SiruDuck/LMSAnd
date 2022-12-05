@@ -19,7 +19,6 @@ import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.example.lms.board.BoardFragment;
 import com.example.lms.equipment.EquipmentFragment;
 import com.example.lms.lecture.LectureFragment;
@@ -39,8 +38,6 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
@@ -92,10 +89,8 @@ public class MainActivity extends AppCompatActivity {
         View headerView = nav_view.getHeaderView(0);
         TextView tv1 = headerView.findViewById(R.id.loginID);
         TextView tv2 = headerView.findViewById(R.id.loginno);
-        CircleImageView loginImage = headerView.findViewById(R.id.loginImage);
         tv1.setText(vo.getName() + "님");
         tv2.setText(vo.getId());
-        Glide.with(this).load(vo.getProfile()).into(loginImage);
         headerView.findViewById(R.id.imgv_back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -193,9 +188,9 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<SideVO> main_list = new ArrayList<>();
 
         ArrayList<SideVO> sub_list1 = new ArrayList<>();
-        main_list.add(new SideVO("홈으로","" , "#123456"  , sub_list1 , new HomeFragment()));
-        main_list.add(new SideVO("내 정보","" , "#123456"  , sub_list1 , new MyinfoFragment()));
-        main_list.add(new SideVO("학생 성적 확인", "" , "#661234", sub_list1, new ScoreTeacherFragment() ));
+        main_list.add(new SideVO("홈으로","(내정보 확인 , 수정 ... )" , "#123456"  , sub_list1 , new HomeFragment()));
+        main_list.add(new SideVO("내 정보","(내정보 확인 , 수정 ... )" , "#123456"  , sub_list1 , new MyinfoFragment()));
+
         main_list.get(0).setImageId(R.drawable.menuimage1);
 
 
@@ -203,17 +198,25 @@ public class MainActivity extends AppCompatActivity {
         sub_list2.add(new SideVO("전체 강의목록", new LectureFragment()));
         sub_list2.add(new SideVO("내 강의목록", new Lecture_TeaFragment()));
         sub_list2.add(new SideVO("내 시간표", new LectureFragment()));
-        main_list.add(new SideVO("강의 관리","" , "#654321"  , sub_list2 ));
+        main_list.add(new SideVO("강의 관리","(강의 목록 , 시간표 ... )" , "#654321"  , sub_list2 ));
         main_list.get(1).setImageId(R.drawable.menuimage2);
 
+        ArrayList<SideVO> sub_list3 = new ArrayList<>();
+        sub_list3.add(new SideVO("과제 등록", new LectureFragment()));
+        sub_list3.add(new SideVO("시험문제 등록", new LectureFragment()));
+        sub_list3.add(new SideVO("학생 성적 확인", new ScoreTeacherFragment()));
+
+        main_list.add(new SideVO("성적 관리","(과제 등록 , 학생 성적 확인... )" , "#661234"  , sub_list3 ));
 
         main_list.get(2).setImageId(R.drawable.menuimage3);
 
 
         ArrayList<SideVO> sub_list4 = new ArrayList<>();
         sub_list4.add(new SideVO("공지사항", new NoticeFragment()));
+        sub_list4.add(new SideVO("학습자료", new LectureFragment()));
+        sub_list4.add(new SideVO("수강후기", new LectureFragment()));
         sub_list4.add(new SideVO("자유게시판", new BoardFragment()));
-        main_list.add(new SideVO("게시판","" , "#661234"  , sub_list4 ));
+        main_list.add(new SideVO("게시판","(공지사항 , 학습 자료 게시판... )" , "#661234"  , sub_list4 ));
         main_list.get(3).setImageId(R.drawable.menuimage4);
 
         return main_list;
@@ -225,7 +228,6 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<SideVO> sub_list1 = new ArrayList<>();
         main_list.add(new SideVO("홈으로","" , "#123456"  , sub_list1 , new HomeFragment()));
         main_list.add(new SideVO("내 정보","" , "#123456"  , sub_list1 , new MyinfoFragment()));
-        main_list.add(new SideVO("학생 성적 확인", "" , "#661234", sub_list1, new ScoreTeacherFragment() ));
         main_list.get(0).setImageId(R.drawable.menuimage1);
 
 
@@ -234,16 +236,23 @@ public class MainActivity extends AppCompatActivity {
         sub_list2.add(new SideVO("내 강의목록", new Lecture_StuFragment()));
         sub_list2.add(new SideVO("내 시간표", new TimeTableFragment()));
         sub_list2.add(new SideVO("수강신청", new RegistListFragment()));
-        main_list.add(new SideVO("강의 관리","" , "#654321"  , sub_list2 ));
+        main_list.add(new SideVO("강의 관리","(강의 목록 , 시간표 ... )" , "#654321"  , sub_list2 ));
         main_list.get(1).setImageId(R.drawable.menuimage2);
 
+        ArrayList<SideVO> sub_list3 = new ArrayList<>();
+        sub_list3.add(new SideVO("과제 제출", new LectureFragment()));
+        sub_list3.add(new SideVO("성적 조회", new ScoreFragment()));
+
+        main_list.add(new SideVO("성적 관리","(과제 등록 , 학생 성적 확인... )" , "#661234"  , sub_list3 ));
         main_list.get(2).setImageId(R.drawable.menuimage3);
 
 
         ArrayList<SideVO> sub_list4 = new ArrayList<>();
         sub_list4.add(new SideVO("공지사항", new NoticeFragment()));
+        sub_list4.add(new SideVO("학습자료", new LectureFragment()));
+        sub_list4.add(new SideVO("수강후기", new LectureFragment()));
         sub_list4.add(new SideVO("자유게시판", new BoardFragment()));
-        main_list.add(new SideVO("게시판","" , "#661234"  , sub_list4 ));
+        main_list.add(new SideVO("게시판","(공지사항 , 학습 자료 게시판... )" , "#661234"  , sub_list4 ));
         main_list.get(3).setImageId(R.drawable.menuimage4);
 
         return main_list;
@@ -254,9 +263,8 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<SideVO> main_list = new ArrayList<>();
 
         ArrayList<SideVO> sub_list1 = new ArrayList<>();
-        main_list.add(new SideVO("내 정보","" , "#123456"  , sub_list1 , new MyinfoFragment()));
-        main_list.add(new SideVO("비품관리","" , "#123456"  , sub_list1 , new EquipmentFragment()));
-        main_list.add(new SideVO("학생 성적 확인", "" , "#661234", sub_list1, new ScoreTeacherFragment() ));
+        main_list.add(new SideVO("내 정보","(내정보 확인 , 수정 ... )" , "#123456"  , sub_list1 , new MyinfoFragment()));
+        main_list.add(new SideVO("비품관리","비품관리" , "#123456"  , sub_list1 , new EquipmentFragment()));
         main_list.get(0).setImageId(R.drawable.menuimage1);
 
 
@@ -265,17 +273,23 @@ public class MainActivity extends AppCompatActivity {
         sub_list2.add(new SideVO("내 강의목록", new Lecture_StuFragment()));
         sub_list2.add(new SideVO("내 시간표", new TimeTableFragment()));
         sub_list2.add(new SideVO("수강신청", new RegistListFragment()));
-        main_list.add(new SideVO("강의 관리","" , "#654321"  , sub_list2 ));
+        main_list.add(new SideVO("강의 관리","(강의 목록 , 시간표 ... )" , "#654321"  , sub_list2 ));
         main_list.get(1).setImageId(R.drawable.menuimage2);
 
+        ArrayList<SideVO> sub_list3 = new ArrayList<>();
+        sub_list3.add(new SideVO("과제 제출", new LectureFragment()));
 
+
+        main_list.add(new SideVO("성적 관리","(과제 등록 , 학생 성적 확인... )" , "#661234"  , sub_list3 ));
         main_list.get(2).setImageId(R.drawable.menuimage3);
 
 
         ArrayList<SideVO> sub_list4 = new ArrayList<>();
         sub_list4.add(new SideVO("공지사항", new NoticeFragment()));
+        sub_list4.add(new SideVO("학습자료", new LectureFragment()));
+        sub_list4.add(new SideVO("수강후기", new LectureFragment()));
         sub_list4.add(new SideVO("자유게시판", new BoardFragment()));
-        main_list.add(new SideVO("게시판","" , "#661234"  , sub_list4 ));
+        main_list.add(new SideVO("게시판","(공지사항 , 학습 자료 게시판... )" , "#661234"  , sub_list4 ));
         main_list.get(3).setImageId(R.drawable.menuimage4);
 
         return main_list;

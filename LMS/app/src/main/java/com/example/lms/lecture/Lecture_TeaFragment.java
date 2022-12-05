@@ -38,7 +38,7 @@ public class Lecture_TeaFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_lecture__tea, container, false);
         //lec_tea_stu = v.findViewById(R.id.lec_tea_stu);
-
+        Log.d("TAG", "강귄강귄강귄강귄강귄강귄강귄강귄강귄강귄강귄강귄");
 
         recv_tea = v.findViewById(R.id.recv_tea);
         teacher_name = v.findViewById(R.id.teacher_name);

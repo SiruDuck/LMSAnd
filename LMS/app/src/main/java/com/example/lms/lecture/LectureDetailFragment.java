@@ -59,13 +59,13 @@ public class LectureDetailFragment extends Fragment {
         book = v.findViewById(R.id.book);
         lecture_day = v.findViewById(R.id.lecture_day);
         lecture_time = v.findViewById(R.id.lecture_time);
-        enrolment = v.findViewById(R.id.enrolment);
+        //enrolment = v.findViewById(R.id.enrolment);
         capacity = v.findViewById(R.id.capacity);
         midex = v.findViewById(R.id.midex);
         finalex = v.findViewById(R.id.finalex);
         state = v.findViewById(R.id.state);
         sortation = v.findViewById(R.id.sortation);
-        reception_status = v.findViewById(R.id.reception_status);
+        //reception_status = v.findViewById(R.id.reception_status);
 
 
 
@@ -89,7 +89,6 @@ public class LectureDetailFragment extends Fragment {
                Intent intent = new Intent(lecture_num.getContext(), LectureModifyActivity.class);
                intent.putExtra("vo" , vo);
                intent.putExtra("isEnable", false);
-
                getActivity().startActivity(intent);
             }
         });
@@ -144,13 +143,13 @@ public class LectureDetailFragment extends Fragment {
                    book.setText(vo.getBook());
                    lecture_day.setText(vo.getLecture_day());
                    lecture_time.setText(vo.getLecture_time());
-                   enrolment.setText(vo.getEnrolment());
+                   //enrolment.setText(vo.getEnrolment());
                    capacity.setText(vo.getCapacity()+"");
                    midex.setText(vo.getMidex()+"");
                    finalex.setText(vo.getFinalex()+"");
                    state.setText(vo.getState());
                    sortation.setText(vo.getSortation());
-                   reception_status.setText(vo.getReception_status());
+                   //reception_status.setText(vo.getReception_status());
 
 
 

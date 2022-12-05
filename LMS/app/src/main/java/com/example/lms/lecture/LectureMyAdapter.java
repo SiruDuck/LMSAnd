@@ -54,6 +54,7 @@ public class LectureMyAdapter extends RecyclerView.Adapter<LectureMyAdapter.MyHo
                 Intent intent = new Intent(h.lecture_num.getContext(), Lecture_Tea_DetailActivity.class);
                 intent.putExtra("vo", list.get(index));
                 h.lecture_num.getContext().startActivity(intent);
+
             }
         });
         }else {
