@@ -16,7 +16,7 @@
         <androidx.cardview.widget.CardView
             android:layout_marginBottom="5dp"
             app:cardCornerRadius="15dp"
-            android:backgroundTint="#66A3FF"
+            android:backgroundTint="#123"
             android:layout_width="match_parent"
             android:layout_height="40dp">
 
@@ -31,7 +31,7 @@
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="15dp"
-            android:backgroundTint="#EAF2FF"
+            android:backgroundTint="#EEEDEF"
             android:layout_width="match_parent"
             android:layout_height="250dp">
             <LinearLayout
@@ -53,9 +53,9 @@
                     <EditText
                         android:textAlignment="center"
                         android:id="@+id/addeqname"
-                        android:background="#FFFFFF"
+                        android:background="@drawable/edround"
                         android:hint="비품이름"
-                        android:layout_width="300dp"
+                        android:layout_width="250dp"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
                 <LinearLayout
@@ -73,9 +73,9 @@
                     <EditText
                         android:textAlignment="center"
                         android:id="@+id/addeqquantity"
-                        android:background="#FFFFFF"
+                        android:background="@drawable/edround"
                         android:hint="비품수량"
-                        android:layout_width="300dp"
+                        android:layout_width="250dp"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
                 <LinearLayout
@@ -91,16 +91,15 @@
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"/>
                     <EditText
-                        android:paddingLeft="50dp"
                         android:textAlignment="center"
                         android:id="@+id/adddate"
-                        android:background="#FFFFFF"
+                        android:background="@drawable/edround"
                         android:hint="구매일"
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"/>
 
                     <Button
-                        android:backgroundTint="#373F47"
+                        android:backgroundTint="#123"
                         android:id="@+id/insert_date"
                         android:layout_width="25dp"
                         android:layout_height="30dp"
@@ -126,9 +125,9 @@
                     <EditText
                         android:textAlignment="center"
                         android:id="@+id/addinfo"
-                        android:background="#FFFFFF"
+                        android:background="@drawable/edround"
                         android:hint="기타정보"
-                        android:layout_width="300dp"
+                        android:layout_width="250dp"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
                 <LinearLayout
@@ -146,9 +145,9 @@
                     <EditText
                         android:textAlignment="center"
                         android:id="@+id/addprice"
-                        android:background="#FFFFFF"
+                        android:background="@drawable/edround"
                         android:hint="가격"
-                        android:layout_width="300dp"
+                        android:layout_width="250dp"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
             </LinearLayout>
@@ -164,7 +163,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="90dp"
-                android:backgroundTint="#527DA6"
+                android:backgroundTint="#123"
                 android:text="추가" />
 
             <Button
@@ -173,7 +172,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="90dp"
-                android:backgroundTint="#A7B4C1"
+                android:backgroundTint="#FFA352"
                 android:text="취소" />
 
         </RelativeLayout>

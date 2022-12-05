@@ -7,7 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.ViewFlipper;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -25,6 +27,7 @@ public class LectureFragment extends Fragment {
     RecyclerView recv_lecture;
     Button lec_detail;
     View view_line;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -10,6 +10,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.lms.CommonMethod;
@@ -48,9 +49,7 @@ EquipmentFragment fragment;
 
         final int index = i;
         // 목록 컬러 변경
-        if(index%2==0){
-            h.layout.setBackgroundColor(Color.parseColor("#e8eaeb"));
-        }
+
         h.eqmodify_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,7 +67,7 @@ EquipmentFragment fragment;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        RelativeLayout layout;
+        CardView layout;
         TextView eq_name, eq_quantity, eq_day, eq_price;
         Button eqmodify_btn;
 
@@ -79,7 +78,7 @@ EquipmentFragment fragment;
             eq_day = v.findViewById(R.id.eq_day);
             eq_price = v.findViewById(R.id.eq_price);
             eqmodify_btn = v.findViewById(R.id.eqmodify);
-            layout = v.findViewById(R.id.rayoutcolor);
+            layout = v.findViewById(R.id.background);
         }
     }
 }
