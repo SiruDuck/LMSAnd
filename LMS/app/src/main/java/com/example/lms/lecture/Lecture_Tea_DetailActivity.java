@@ -50,6 +50,7 @@ public class Lecture_Tea_DetailActivity extends AppCompatActivity {
                                 getParent(), RecyclerView.VERTICAL, false
                         );
 
+
                         lec_my_stu.setAdapter(adapter);
                         lec_my_stu.setLayoutManager(manager);
                     }

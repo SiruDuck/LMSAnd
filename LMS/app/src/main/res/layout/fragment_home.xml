@@ -433,6 +433,21 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:src="@drawable/worknet"/>
+                                <ImageView
+                                    android:id="@+id/kgoyong"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/kgoyong"/>
+                                <ImageView
+                                    android:id="@+id/worldjob"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/worldjob"/>
+                                <ImageView
+                                    android:id="@+id/hrdk"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/hrdk"/>
 
                             </ViewFlipper>
 

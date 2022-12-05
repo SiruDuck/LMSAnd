@@ -86,6 +86,7 @@ public class LectureAdapter extends RecyclerView.Adapter<LectureAdapter.LecHolde
             lecture_title = v.findViewById(R.id.lecture_title);
             lecture_year = v.findViewById(R.id.lecture_year);
             semester = v.findViewById(R.id.semester);
+//            reception_status = v.findViewById(R.id.reception_status);
             btn_modify = v.findViewById(R.id.btn_modify);
             btn_delete = v.findViewById(R.id.btn_delete);
             btn_save = v.findViewById(R.id.btn_save);

@@ -86,9 +86,11 @@
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/item_lecture_detail.xml" value="0.33" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/item_my_lec.xml" value="0.34270833333333334" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/item_regist.xml" value="0.31666666666666665" />
+        <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/item_scoret_list.xml" value="0.34270833333333334" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/item_side_main.xml" value="0.34270833333333334" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/item_side_sub.xml" value="0.29375" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/item_stu_info.xml" value="0.34270833333333334" />
+        <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/item_subject_avg.xml" value="0.34270833333333334" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/nav_header_main.xml" value="0.34270833333333334" />
         <entry key="..\:/Study_Android/workspace/LMS/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.37135416666666665" />
       </map>

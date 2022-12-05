@@ -37,9 +37,9 @@ public class EquipmentVO implements Serializable {
 	public void setBuy_day(Date buy_day) {
 		this.buy_day = buy_day;
 	}
-	
-	
-	
-	
-	
+
+
+
+
+
 }

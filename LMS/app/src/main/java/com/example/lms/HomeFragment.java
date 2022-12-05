@@ -34,7 +34,7 @@ CardView my_info, time_table, board, notice;
     NaverMap naverMap;
     MapView map_view;
     ViewFlipper viewflipper;
-    ImageView qnet, hrdnet, goyong, worknet;
+    ImageView qnet, hrdnet, goyong, worknet, kgoyong, worldjob, hrdk;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -82,6 +82,9 @@ CardView my_info, time_table, board, notice;
         qnet = v.findViewById(R.id.qnet);
         goyong = v.findViewById(R.id.goyong);
         worknet = v.findViewById(R.id.worknet);
+        kgoyong = v.findViewById(R.id.kgoyong);
+        worldjob = v.findViewById(R.id.worldjob);
+        hrdk = v.findViewById(R.id.hrdk);
         qnet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -110,9 +113,27 @@ CardView my_info, time_table, board, notice;
                 startActivity(intent);
             }
         });
-
-
-
+        kgoyong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.keis.or.kr/main/index.do"));
+                startActivity(intent);
+            }
+        });
+        worldjob.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.worldjob.or.kr/new_index.do"));
+                startActivity(intent);
+            }
+        });
+        hrdk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.hrdkorea.or.kr/"));
+                startActivity(intent);
+            }
+        });
 
         return v;
     }
