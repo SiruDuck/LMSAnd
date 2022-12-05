@@ -1,9 +1,15 @@
 package com.example.lms.board;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -81,7 +87,8 @@ public class BoardDetailActivity extends AppCompatActivity {
         board_list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                //getSupportFragmentManager().beginTransaction().replace(R.id.container, new BoardFragment()).commit(); //12.05
+                finish(); //12.05
             }
         });
 
@@ -90,11 +97,8 @@ public class BoardDetailActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent1 = new Intent(BoardDetailActivity.this, BoardModifyActivity.class);
                 intent1.putExtra("vo", vo);
-
-
-
-
-                startActivity(intent1);
+                //startActivity(intent1); //12.05
+                activityResultLauncher.launch(intent1);  //12.05
 
             }
         });
@@ -141,13 +145,36 @@ public class BoardDetailActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
-
     }
+
+    //12.05 ----------
+    ActivityResultLauncher<Intent> activityResultLauncher
+            = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+        @Override
+        public void onActivityResult(ActivityResult result) {
+            Log.d("게시글상세", "상세화면으로 돌아옴");
+            if(result.getResultCode() == Activity.RESULT_OK ) {
+                Log.d("게시글상세", "확인시 돌아옴");
+                //수정화면에서 수정저장하여 spring 에서 반환받은 DB에 저장된 고객정보를 출력
+                Intent intent = result.getData();
+                BoardVO vo = (BoardVO) intent.getSerializableExtra("vo");
+
+                board_detail_title.setText(vo.getTitle()+"");
+                board_detail_writer.setText(vo.getWriter()+"");
+                board_detail_readcnt.setText(vo.getReadcnt()+ "");
+                board_detail_writedate.setText(vo.getWritedate().substring(0, vo.getWritedate().indexOf(" ")));
+                board_detail_content.setText(vo.getContent()+"");
+
+
+            }else if(result.getResultCode() == Activity.RESULT_CANCELED ){
+                Log.d("게시글상세", "취소시 돌아옴");
+            }
+        }
+    });
+    //---------------
+
+
+
+
+
 }

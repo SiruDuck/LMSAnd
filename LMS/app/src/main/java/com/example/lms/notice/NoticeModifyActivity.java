@@ -44,7 +44,15 @@ public class NoticeModifyActivity extends AppCompatActivity {
                     @Override
                     public void onResult(String data, boolean isResult) {
                         if (isResult){
+                            /*Intent intent1 = new Intent(NoticeModifyActivity.this, NoticeDetailActivity.class);
+                            intent1.putExtra("vo", vo);
+                            startActivity(intent1);*/
+                            Intent intent1 = new Intent();
+                            intent1.putExtra("vo", vo);
+                            setResult(RESULT_OK, intent1);
                             finish();
+
+
                         }
 
                     }

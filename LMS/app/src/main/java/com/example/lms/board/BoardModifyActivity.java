@@ -47,9 +47,17 @@ public class BoardModifyActivity extends AppCompatActivity {
                     @Override
                     public void onResult(String data, boolean isResult) {
                         if (isResult){
-                           /* getSupportFragmentManager().beginTransaction().replace(R.id.container, new BoardFragment()).commit();
-                            getSupportFragmentManager().beginTransaction().replace(R.id.comment_frame, new BoardCommentFragment(vo.getId())).commit();*/
+                            /* //12.05
+                            Intent intent1 = new Intent(BoardModifyActivity.this, BoardDetailActivity.class);
+                            intent1.putExtra("vo",vo);
+                            startActivity(intent1);
+                            */
+                            //12.05 ---
+                            Intent intent1 = new Intent();
+                            intent1.putExtra("vo",vo);
+                            setResult(RESULT_OK, intent1);
                             finish();
+                            //----------
                         }
 
                     }
