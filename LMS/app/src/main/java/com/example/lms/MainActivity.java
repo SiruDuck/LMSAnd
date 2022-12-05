@@ -202,7 +202,6 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<SideVO> sub_list2 = new ArrayList<>();
         sub_list2.add(new SideVO("전체 강의목록", new LectureFragment()));
         sub_list2.add(new SideVO("내 강의목록", new Lecture_TeaFragment()));
-        sub_list2.add(new SideVO("내 시간표", new LectureFragment()));
         main_list.add(new SideVO("강의 관리","" , "#654321"  , sub_list2 ));
         main_list.get(1).setImageId(R.drawable.menuimage2);
 

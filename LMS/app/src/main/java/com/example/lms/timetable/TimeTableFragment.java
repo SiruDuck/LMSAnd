@@ -21,17 +21,24 @@ import java.util.ArrayList;
 public class TimeTableFragment extends Fragment {
     TimeTableVO table_vo;
     EnrolmentVO enrol_vo;
-    ArrayList<TextView> monList = new ArrayList<>();
-    ArrayList<TextView> tueList = new ArrayList<>();
-    ArrayList<TextView> wedList = new ArrayList<>();
-    ArrayList<TextView> thuList = new ArrayList<>();
-    ArrayList<TextView> friList = new ArrayList<>();
+    ArrayList<TextView> monList;
+    ArrayList<TextView> tueList;
+    ArrayList<TextView> wedList;
+    ArrayList<TextView> thuList;
+    ArrayList<TextView> friList;
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_time_table, container, false);
+
+        monList = new ArrayList<>();
+        tueList = new ArrayList<>();
+        wedList = new ArrayList<>();
+        thuList = new ArrayList<>();
+        friList = new ArrayList<>();
+
         monList.add(v.findViewById(R.id.mon1));
         monList.add(v.findViewById(R.id.mon2));
         monList.add(v.findViewById(R.id.mon3));
@@ -82,6 +89,12 @@ public class TimeTableFragment extends Fragment {
 
         table_list();
         return v;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        table_list();
     }
 
     public void table_list(){

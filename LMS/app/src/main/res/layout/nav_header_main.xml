@@ -46,7 +46,7 @@
         android:id="@+id/loginImage"
         android:layout_width="90dp"
         android:layout_height="90dp"
-        android:src="@drawable/ic_no_user" />
+        android:src="@drawable/imgman05" />
 
     <TextView
         android:textSize="20dp"
@@ -59,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#000"
-        android:text="정은진님"/>
+        android:text="이름"/>
     <TextView
         android:id="@+id/loginno"
         android:layout_below="@id/loginID"
@@ -70,7 +70,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="10dp"
         android:textColor="#666"
-        android:text="20181210"/>
+        android:text="아이디"/>
 
         <FrameLayout
             android:layout_width="match_parent"
