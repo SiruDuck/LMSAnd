@@ -51,7 +51,8 @@ public class EqModifyActivity extends AppCompatActivity {
         modieqquantity.setText(vo.getEquipment_num()+"");
         modiinfo.setText(vo.getSituation());
         modiprice.setText(vo.getPrice()+"");
-        modidate.setText(  CommonMethod.dateToString(vo.getBuy_day()));
+        modidate.setText( vo.getBuy_day());
+        //modidate.setText(  CommonMethod.dateToString(vo.getBuy_day()));
 
 
 
@@ -62,7 +63,9 @@ public class EqModifyActivity extends AppCompatActivity {
                 modidate.setText(year+"/" + (month+1) +"/" +dayOfMonth);
                 Calendar c = Calendar.getInstance();
                 c.set(year , month , dayOfMonth);
-                vo.setBuy_day(new Date(c.getTimeInMillis()));      //구입날자
+
+                vo.setBuy_day( format.format(new Date(c.getTimeInMillis())) );     //구입날자
+                //vo.setBuy_day(new Date(c.getTimeInMillis()));      //구입날자
 
             }
         }, mYear, mMonth, mDay);

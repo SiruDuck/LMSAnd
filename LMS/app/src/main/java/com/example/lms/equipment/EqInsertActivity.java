@@ -49,7 +49,8 @@ public class EqInsertActivity extends AppCompatActivity {
                 adddate.setText(year+"/" + (month+1) +"/" +dayOfMonth);
                 Calendar c = Calendar.getInstance();
                 c.set(year , month , dayOfMonth);
-                vo.setBuy_day(new Date(c.getTimeInMillis()));      //구입날자
+                vo.setBuy_day( new SimpleDateFormat("yyyy/MM/dd").format(new Date(c.getTimeInMillis())) );      //구입날자
+                //vo.setBuy_day(new Date(c.getTimeInMillis()));      //구입날자
 
             }
         }, mYear, mMonth, mDay);
@@ -96,7 +97,7 @@ public class EqInsertActivity extends AppCompatActivity {
                     @Override
                     public void onResult(String data, boolean isResult) {
                         if(isResult && data.equals("1")){
-                            Log.d("태그", "onResult: 실패");
+                            Log.d("태그", "zonResult: 실패");
                             finish();
                         }else{
                             Log.d("태그", "onResult: 실패");

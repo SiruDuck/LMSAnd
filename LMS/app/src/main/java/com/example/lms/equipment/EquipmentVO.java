@@ -1,12 +1,12 @@
 package com.example.lms.equipment;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.sql.Date;
 
 public class EquipmentVO implements Serializable {
 	private String equipment, situation;
 	private int equipment_num,  price;
-	private Date buy_day;
+	private String buy_day;
 	public String getEquipment() {
 		return equipment;
 	}
@@ -31,13 +31,22 @@ public class EquipmentVO implements Serializable {
 	public void setPrice(int price) {
 		this.price = price;
 	}
+
+	public String getBuy_day() {
+		return buy_day;
+	}
+
+	public void setBuy_day(String buy_day) {
+		this.buy_day = buy_day;
+	}
+/*
 	public Date getBuy_day() {
 		return buy_day;
 	}
 	public void setBuy_day(Date buy_day) {
 		this.buy_day = buy_day;
 	}
-
+*/
 
 
 
