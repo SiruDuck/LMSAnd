@@ -37,7 +37,7 @@ public class EqModifyActivity extends AppCompatActivity {
         Intent intent = getIntent();
         DateFormat format = new SimpleDateFormat("yyyy/MM/dd");
         //---------------------찾기--------------------//
-        eqmodify_btn = findViewById(R.id.eqmodify_btn); eqdelete_btn = findViewById(R.id.eqdelete_btn) ; eqback_btn = findViewById(R.id.eqback_btn); date = findViewById(R.id.date);
+        eqmodify_btn = findViewById(R.id.eqmodify_btn); eqdelete_btn = findViewById(R.id.eqdelete_btn) ; eqback_btn = findViewById(R.id.eqback_btn);
         modieqname = findViewById(R.id.modieqname); modieqquantity = findViewById(R.id.modieqquantity); modiinfo = findViewById(R.id.modiinfo); modiprice = findViewById(R.id.modiprice);
         modidate = findViewById(R.id.modidate);
 
@@ -56,7 +56,7 @@ public class EqModifyActivity extends AppCompatActivity {
 
 
 
-        //--------------------DatePickerDialog-------------------//
+       /* //--------------------DatePickerDialog-------------------//
         DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
@@ -68,9 +68,9 @@ public class EqModifyActivity extends AppCompatActivity {
                 //vo.setBuy_day(new Date(c.getTimeInMillis()));      //구입날자
 
             }
-        }, mYear, mMonth, mDay);
+        }, mYear, mMonth, mDay);*/
 
-        date.setOnClickListener(new View.OnClickListener() {
+    /*    date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (date.isClickable()) {
@@ -78,7 +78,7 @@ public class EqModifyActivity extends AppCompatActivity {
 
                 }
             }
-        });
+        });*/
 
         //----------------------Btn처리----------------------//
 
