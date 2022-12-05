@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    android:padding="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,7 +15,8 @@
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
-                android:backgroundTint="#85B4E3"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#EC9B35"
                 app:cardCornerRadius="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="50dp">
@@ -35,7 +38,7 @@
                         <TextView
                             android:gravity="center"
                             android:text="수량"
-                            android:layout_width="60dp"
+                            android:layout_width="40dp"
                             android:layout_height="50dp"/>
                         <TextView
                             android:gravity="center"
@@ -55,7 +58,7 @@
 
                             <Button
                                 android:id="@+id/eqinsert_btn"
-                                android:backgroundTint="#333"
+                                android:backgroundTint="#123"
                                 android:layout_width="55dp"
                                 android:layout_height="wrap_content"
                                 app:icon="@drawable/ic_baseline_add_24" />
