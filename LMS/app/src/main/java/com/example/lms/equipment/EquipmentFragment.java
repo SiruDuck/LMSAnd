@@ -58,10 +58,10 @@ public class EquipmentFragment extends Fragment {
             @Override
             public void onResult(String data, boolean isResult) {
                 //통신 완료 시 데이터를 가지고 온다.
-                Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
+               // Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
                 if(isResult){
                     ArrayList<EquipmentVO> list =
-                            gson.fromJson(data, new TypeToken<ArrayList<EquipmentVO>>(){}.getType());
+                            new Gson().fromJson(data, new TypeToken<ArrayList<EquipmentVO>>(){}.getType());
 
                    EquipmentAdapter adapter = new EquipmentAdapter(getLayoutInflater(),list,EquipmentFragment.this);
                     RecyclerView.LayoutManager manager = new LinearLayoutManager(
