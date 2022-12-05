@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.lms.R;
 import com.example.lms.lms.CommonAskTask;
 import com.example.lms.lms.CommonVal;
@@ -20,10 +21,14 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 
 public class MyinfoFragment extends Fragment {
     TextView info_id,info_name, info_department_name, info_grade, info_state, info_start_date, info_phone, info_email, info_addr, info_post, start_date;
-    String id;
+    CircleImageView info_profile;
+    String id, profile;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -32,6 +37,8 @@ public class MyinfoFragment extends Fragment {
         info_grade = v.findViewById(R.id.info_grade); info_state = v.findViewById(R.id.info_state   ); info_start_date = v.findViewById(R.id.info_start_date);
         info_phone = v.findViewById(R.id.info_phone); info_email = v.findViewById(R.id.info_email); info_addr = v.findViewById(R.id.info_addr);
         start_date = v.findViewById(R.id.start_date);
+        info_profile = v.findViewById(R.id.info_profile);
+
 
         id = CommonVal.loginInfo.getId();
 
@@ -39,6 +46,12 @@ public class MyinfoFragment extends Fragment {
 
         info_id.setText(id);
 
+
+        profile = CommonVal.loginInfo.getProfile();
+
+        Log.d("프로필", "onCreateView: "+ profile);
+
+        Glide.with(getContext()).load(profile).into(info_profile);
 
         CommonAskTask.AsynckTaskCallback callback = new CommonAskTask.AsynckTaskCallback() {
             @Override
