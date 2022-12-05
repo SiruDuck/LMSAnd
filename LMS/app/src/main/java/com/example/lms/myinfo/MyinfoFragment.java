@@ -51,7 +51,12 @@ public class MyinfoFragment extends Fragment {
 
         Log.d("프로필", "onCreateView: "+ profile);
 
-        Glide.with(getContext()).load(profile).into(info_profile);
+        if (CommonVal.loginInfo.getProfile() == null){
+            Glide.with(getContext()).load("http://112.164.58.181:3301/lms/upload/profile/2022/11/24/student.png").into(info_profile);
+        }else{
+            Glide.with(getContext()).load(profile).into(info_profile);
+        }
+
 
         CommonAskTask.AsynckTaskCallback callback = new CommonAskTask.AsynckTaskCallback() {
             @Override
