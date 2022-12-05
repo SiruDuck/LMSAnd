@@ -60,7 +60,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
                     <EditText
-                        android:text="191002"
+                        android:text="admin"
                         android:id="@+id/edtid"
                         android:hint="ID"
                         android:maxLines="1"
@@ -69,7 +69,7 @@
                         android:layout_height="50dp"/>
                     <EditText
                         android:maxLines="1"
-                        android:text="1234"
+                        android:text="admin"
                         android:id="@+id/edtpw"
                         android:hint="PASSWORD"
                         android:inputType="textPassword"
