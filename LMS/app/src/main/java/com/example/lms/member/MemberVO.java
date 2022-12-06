@@ -41,7 +41,7 @@ public class MemberVO implements Serializable {
 		this.gender = gender;
 	}
 
-	public String getPhone() {
+	public String getPhone(String s) {
 		return phone;
 	}
 
@@ -49,7 +49,7 @@ public class MemberVO implements Serializable {
 		this.phone = phone;
 	}
 
-	public String getEmail() {
+	public String getEmail(String s) {
 		return email;
 	}
 
@@ -65,7 +65,7 @@ public class MemberVO implements Serializable {
 		this.post = post;
 	}
 
-	public String getAddr() {
+	public String getAddr(String s) {
 		return addr;
 	}
 

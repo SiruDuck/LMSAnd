@@ -1,5 +1,6 @@
 package com.example.lms.myinfo;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -28,7 +30,8 @@ public class MyinfoFragment extends Fragment {
     TextView info_id,info_name, info_department_name, info_grade, info_state, info_start_date, info_phone, info_email, info_addr, info_post, start_date;
     CircleImageView info_profile;
     String id, profile;
-
+    Button myinfo_update;
+    MemberVO vo = null;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -38,7 +41,7 @@ public class MyinfoFragment extends Fragment {
         info_phone = v.findViewById(R.id.info_phone); info_email = v.findViewById(R.id.info_email); info_addr = v.findViewById(R.id.info_addr);
         start_date = v.findViewById(R.id.start_date);
         info_profile = v.findViewById(R.id.info_profile);
-
+        myinfo_update = v.findViewById(R.id.myinfo_update);
 
         id = CommonVal.loginInfo.getId();
 
@@ -80,6 +83,16 @@ public class MyinfoFragment extends Fragment {
         
         cus_select(id,callback);
 
+        myinfo_update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(getActivity(), MyinfoUpdateActivity.class);
+                intent1.putExtra("vo", vo);
+                startActivity(intent1);
+            }
+        });
+
+
 
 
 
@@ -92,6 +105,23 @@ public class MyinfoFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+        cus_select(  CommonVal.loginInfo.getId(),new CommonAskTask.AsynckTaskCallback() {
+            @Override
+            public void onResult(String data, boolean isResult) {
+                if(isResult){
+                    Log.d("로그", "onResult: "+data);
+                    ArrayList<InfoMemberVO> list =
+                            new Gson().fromJson(data, new TypeToken<ArrayList<InfoMemberVO>>(){}.getType());
+
+                    test(list);
+
+
+                }else{
+                    Log.d("로그", "onResult:"+data);
+                }
+            }
+        } );
+
     }
 public void test(ArrayList<InfoMemberVO> list){
     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy년 MM월 dd일");

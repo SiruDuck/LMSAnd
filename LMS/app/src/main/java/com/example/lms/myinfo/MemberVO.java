@@ -1,15 +1,14 @@
 package com.example.lms.myinfo;
 
 import java.io.Serializable;
-import java.util.ArrayList;
+import java.sql.Date;
 
-public class InfoMemberVO implements Serializable {
+public class MemberVO implements Serializable {
 	private String id,	pw,	name,	gender, phone,	email,	post,	addr,	grade, state, department_id, department_name, 	info_name, profile;
 	private String birth, start_date, end_date;
-	private int info_cd;
-	ArrayList<InfoMemberVO> list;
+	private int info_cd, lecture_num;
 
-	public InfoMemberVO(String id, String pw, String name, String gender, String phone, String email, String post, String addr, String grade, String state, String department_id, String department_name, String info_name, String profile, String birth, String start_date, String end_date, int info_cd, ArrayList<InfoMemberVO> list) {
+	public MemberVO() {
 		this.id = id;
 		this.pw = pw;
 		this.name = name;
@@ -28,9 +27,15 @@ public class InfoMemberVO implements Serializable {
 		this.start_date = start_date;
 		this.end_date = end_date;
 		this.info_cd = info_cd;
-		this.list = list;
+		this.lecture_num = lecture_num;
 	}
 
+	public int getLecture_num() {
+		return lecture_num;
+	}
+	public void setLecture_num(int lecture_num) {
+		this.lecture_num = lecture_num;
+	}
 	public String getId() {
 		return id;
 	}
@@ -55,13 +60,13 @@ public class InfoMemberVO implements Serializable {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public String getPhone() {
+	public String getPhone(String s) {
 		return phone;
 	}
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	public String getEmail() {
+	public String getEmail(String s) {
 		return email;
 	}
 	public void setEmail(String email) {
@@ -73,7 +78,7 @@ public class InfoMemberVO implements Serializable {
 	public void setPost(String post) {
 		this.post = post;
 	}
-	public String getAddr() {
+	public String getAddr(String s) {
 		return addr;
 	}
 	public void setAddr(String addr) {
