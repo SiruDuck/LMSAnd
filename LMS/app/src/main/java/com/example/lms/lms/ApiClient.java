@@ -7,7 +7,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class ApiClient {
-    private static final String BASEURL = "http://192.168.0.26/lms/";
+    private static final String BASEURL = "http://192.168.0.225/lms/";
     private static Retrofit retrofit;
     public static Retrofit getApiClient(){
         if(retrofit == null) { // 최초로 Retrofit객체를 사용할때 초기화가 안되어있다면 그때 한번만 초기화되게 함.

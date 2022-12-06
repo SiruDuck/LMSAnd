@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         TextView tv1 = headerView.findViewById(R.id.loginID);
         TextView tv2 = headerView.findViewById(R.id.loginno);
         CircleImageView loginImage = headerView.findViewById(R.id.loginImage);
-        tv1.setText(vo.getName() + "님");
+        tv1.setText(vo.getName());
         tv2.setText(vo.getId());
         Glide.with(this).load(vo.getProfile()).into(loginImage);
         headerView.findViewById(R.id.imgv_back).setOnClickListener(new View.OnClickListener() {
@@ -222,10 +222,10 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<SideVO> main_list = new ArrayList<>();
 
         ArrayList<SideVO> sub_list1 = new ArrayList<>();
-        main_list.add(new SideVO("홈으로","" , "#123456"  , sub_list1 , new HomeFragment()));
-        main_list.add(new SideVO("내 정보","" , "#123456"  , sub_list1 , new MyinfoFragment()));
-        main_list.add(new SideVO("학생 성적 확인", "" , "#661234", sub_list1, new ScoreTeacherFragment() ));
-        main_list.get(0).setImageId(R.drawable.menuimage1);
+        main_list.add(new SideVO("홈으로","" , "#ECB365"  , sub_list1 , new HomeFragment()));
+        main_list.add(new SideVO("내 정보","" , "#C84B31"  , sub_list1 , new MyinfoFragment()));
+        main_list.add(new SideVO("학생 성적 확인", "" , "#1E5128", sub_list1, new ScoreTeacherFragment() ));
+        main_list.get(0).setImageId(R.drawable.planet);     // 홈으로
 
 
         ArrayList<SideVO> sub_list2 = new ArrayList<>();
@@ -233,18 +233,18 @@ public class MainActivity extends AppCompatActivity {
         sub_list2.add(new SideVO("내 강의목록", new Lecture_StuFragment()));
         sub_list2.add(new SideVO("내 시간표", new TimeTableFragment()));
         sub_list2.add(new SideVO("수강신청", new RegistListFragment()));
-        main_list.add(new SideVO("강의 관리","" , "#654321"  , sub_list2 ));
-        main_list.get(1).setImageId(R.drawable.menuimage2);
+        main_list.add(new SideVO("강의 관리","" , "#1597BB"  , sub_list2 ));
+        main_list.get(1).setImageId(R.drawable.myinfo);     // 내 정보
 
-        main_list.get(2).setImageId(R.drawable.menuimage3);
+        main_list.get(2).setImageId(R.drawable.book); // 성적관리
 
 
         ArrayList<SideVO> sub_list4 = new ArrayList<>();
         sub_list4.add(new SideVO("공지사항", new NoticeFragment()));
         sub_list4.add(new SideVO("자유게시판", new BoardFragment()));
-        main_list.add(new SideVO("게시판","" , "#661234"  , sub_list4 ));
-        main_list.get(3).setImageId(R.drawable.menuimage4);
-
+        main_list.add(new SideVO("게시판","" , "#4E9F3D"  , sub_list4 ));
+        main_list.get(3).setImageId(R.drawable.lecture);     // 강의 관리
+        main_list.get(4).setImageId(R.drawable.document);   // 게시판
         return main_list;
     }
 

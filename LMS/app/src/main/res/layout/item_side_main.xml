@@ -7,8 +7,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.cardview.widget.CardView
         app:cardCornerRadius="10dp"
-        android:elevation="20dp"
-        android:layout_margin="10dp"
+        app:cardElevation="5dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="12dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -23,16 +24,16 @@
 
         android:id="@+id/ln_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="10dp">/
 
         <ImageView
             android:id="@+id/imgv_logo"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/menuimage1" />
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/planet" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -42,25 +43,26 @@
             android:orientation="vertical">
 
             <TextView
-                android:fontFamily="@font/welcomb"
-                android:layout_gravity="center_vertical"
                 android:id="@+id/tv_menu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/welcomb"
                 android:text="강의관리"
                 android:textColor="#292929"
+                android:textFontWeight="600"
                 android:textSize="20dp" />
 
             <TextView
-                android:visibility="gone"
                 android:id="@+id/tv_menu_sub"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:text="(내정보 확인 , 수정 ..)"
                 android:textColor="#979797"
-                android:textSize="12dp" />
+                android:textSize="12dp"
+                android:visibility="gone" />
         </LinearLayout>
 
         <ImageView
@@ -79,7 +81,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginRight="100dp"
-        android:background="#123" />
+        android:background="#333" />
 
 </RelativeLayout>
 
