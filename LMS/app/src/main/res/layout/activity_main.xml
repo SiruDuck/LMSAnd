@@ -53,11 +53,11 @@
         >
 
         <ExpandableListView
-            android:padding="20dp"
             android:divider="#FFFFFF"
             android:dividerHeight="0px"
             android:groupIndicator="@null"
             android:layout_marginTop="285dp"
+            android:paddingBottom="20dp"
             android:id="@+id/expd_listv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
