@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".myinfo.MyinfoFragment"
+    tools:context=".myinfo.MyinfoUpdateActivity"
     android:background="#F4F0F0">
 
     <ScrollView
@@ -30,7 +30,7 @@
                     android:layout_height="250dp">
 
                     <TextView
-                        android:id="@+id/info_id"
+                        android:id="@+id/infoupdate_id"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
@@ -43,7 +43,7 @@
                         android:textStyle="bold" />
 
                     <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/info_profile"
+                        android:id="@+id/infoupdate_profile"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:layout_centerInParent="true"
@@ -64,7 +64,7 @@
                     <TextView
                         android:textColor="#123"
                         android:fontFamily="@font/welcomr"
-                        android:id="@+id/info_name"
+                        android:id="@+id/infoupdate_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
@@ -81,13 +81,13 @@
                         android:layout_marginRight="15dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/info_name"
+                        android:layout_below="@+id/infoupdate_name"
                         android:orientation="vertical">
 
                         <TextView
                             android:elevation="5dp"
                             android:gravity="center"
-                            android:id="@+id/info_department_name"
+                            android:id="@+id/infoupdate_department_name"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:layout_margin="10dp"
@@ -98,7 +98,7 @@
                         <TextView
                             android:elevation="5dp"
                             android:gravity="center"
-                            android:id="@+id/info_grade"
+                            android:id="@+id/infoupdate_grade"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:layout_margin="10dp"
@@ -109,7 +109,7 @@
                         <TextView
                             android:elevation="5dp"
                             android:gravity="center"
-                            android:id="@+id/info_state"
+                            android:id="@+id/infoupdate_state"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:layout_margin="10dp"
@@ -120,18 +120,20 @@
                         <TextView
                             android:elevation="5dp"
                             android:gravity="center"
-                            android:id="@+id/info_start_date"
+                            android:id="@+id/infoupdate_start_date"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:layout_margin="10dp"
+                            android:textColor="@color/navy"
                             android:background="@drawable/border"
                             android:text="1999/11/30"
                             android:textAlignment="center" />
 
-                        <TextView
+                        <EditText
                             android:elevation="5dp"
                             android:gravity="center"
-                            android:id="@+id/info_phone"
+                            android:id="@+id/infoupdate_phone"
+                            android:textColor="@color/navy"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:layout_margin="10dp"
@@ -139,10 +141,11 @@
                             android:text="010-0000-0000"
                             android:textAlignment="center" />
 
-                        <TextView
+                        <EditText
                             android:elevation="5dp"
                             android:gravity="center"
-                            android:id="@+id/info_email"
+                            android:textColor="@color/navy"
+                            android:id="@+id/infoupdate_email"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:layout_margin="10dp"
@@ -150,10 +153,10 @@
                             android:text="kim@naver.com"
                             android:textAlignment="center" />
 
-                        <TextView
+                        <EditText
                             android:elevation="5dp"
                             android:gravity="center"
-                            android:id="@+id/info_addr"
+                            android:id="@+id/infoupdate_addr"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:layout_margin="10dp"
@@ -166,7 +169,7 @@
                         <TextView
                             android:elevation="5dp"
                             android:gravity="center"
-                            android:id="@+id/start_date"
+                            android:id="@+id/startupdate_date"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:layout_margin="10dp"
@@ -176,17 +179,31 @@
 
                             />
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/myinfoupdate_btn"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="확인"
+                            android:layout_marginRight="10dp"
+                            android:backgroundTint="@color/navy"/>
 
                             <Button
-                                android:id="@+id/myinfo_update"
+                                android:id="@+id/myinfoupdate_cancle"
                                 android:layout_gravity="center"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="수정"
-                                android:backgroundTint="@color/navy"/>
+                                android:text="취소"
+                                android:textColor="@color/navy"
+                                android:backgroundTint="#DAE4ED"/>
 
-
-
+                    </LinearLayout>
 
 
                     </LinearLayout>

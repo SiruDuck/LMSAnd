@@ -50,6 +50,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LMS"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".myinfo.MyinfoUpdateActivity"
+            android:exported="true" />
 
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
