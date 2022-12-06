@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         TextView tv1 = headerView.findViewById(R.id.loginID);
         TextView tv2 = headerView.findViewById(R.id.loginno);
         CircleImageView loginImage = headerView.findViewById(R.id.loginImage);
-        tv1.setText(vo.getName());
+        tv1.setText(vo.getName()+"");
         tv2.setText(vo.getId());
         Glide.with(this).load(vo.getProfile()).into(loginImage);
         headerView.findViewById(R.id.imgv_back).setOnClickListener(new View.OnClickListener() {
