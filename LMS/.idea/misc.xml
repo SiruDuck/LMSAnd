@@ -89,6 +89,7 @@
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/fragment_score.xml" value="0.34270833333333334" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/fragment_score_teacher.xml" value="0.24947916666666667" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/fragment_time_table.xml" value="0.29375" />
+        <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/item_board_comment.xml" value="0.36770833333333336" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/item_board_list.xml" value="0.27760416666666665" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/item_equipment.xml" value="0.27760416666666665" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/item_lec_tea.xml" value="0.3046875" />
@@ -96,6 +97,7 @@
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/item_lecture_detail.xml" value="0.33" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/item_my_lec.xml" value="0.34270833333333334" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/item_regist.xml" value="0.31666666666666665" />
+        <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/item_score_list.xml" value="0.36770833333333336" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/item_side_main.xml" value="0.34270833333333334" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/item_side_sub.xml" value="0.29375" />
         <entry key="..\:/LMSAnd/LMS/app/src/main/res/layout/item_stu_info.xml" value="0.34270833333333334" />

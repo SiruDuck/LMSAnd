@@ -127,6 +127,7 @@ public class BoardCommentAdapter extends RecyclerView.Adapter<BoardCommentAdapte
 
                             fragment.board_pop_select();
                         }
+
                     }
                 });
             }

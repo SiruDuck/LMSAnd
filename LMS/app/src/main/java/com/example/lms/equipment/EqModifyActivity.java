@@ -105,7 +105,7 @@ public class EqModifyActivity extends AppCompatActivity {
                         if(isResult && data.equals("1")){
                             finish();
                         }else{
-                            Toast.makeText(EqModifyActivity.this,"실패",Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(EqModifyActivity.this,"실패",Toast.LENGTH_SHORT).show();
                         }
                         //return null;
                         finish();
@@ -128,7 +128,7 @@ public class EqModifyActivity extends AppCompatActivity {
                         if(isResult && data.equals("1")){
                             finish();
                         }else{
-                            Toast.makeText(EqModifyActivity.this,"실패",Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(EqModifyActivity.this,"실패",Toast.LENGTH_SHORT).show();
                         }
                         //return null;
                     }

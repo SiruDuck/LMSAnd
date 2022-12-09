@@ -57,7 +57,7 @@ public class BoardDetailActivity extends AppCompatActivity {
 
 
 
-        if (CommonVal.loginInfo.getName().equals( vo.getWriter() )) {
+        if (CommonVal.loginInfo.getName().equals( vo.getName() )) {
             board_modify.setVisibility(View.VISIBLE);
             board_delete.setVisibility(View.VISIBLE);
         }else{
@@ -69,7 +69,7 @@ public class BoardDetailActivity extends AppCompatActivity {
 
 
         board_detail_title.setText(vo.getTitle()+"");
-        board_detail_writer.setText(vo.getWriter()+"");
+        board_detail_writer.setText(vo.getName()+"");
         board_detail_readcnt.setText(vo.getReadcnt()+ "");
         board_detail_writedate.setText(vo.getWritedate().substring(0, vo.getWritedate().indexOf(" ")));
         board_detail_content.setText(vo.getContent()+"");
@@ -137,6 +137,7 @@ public class BoardDetailActivity extends AppCompatActivity {
                     @Override
                     public void onResult(String data, boolean isResult) {
                         getSupportFragmentManager().beginTransaction().replace(R.id.comment_frame, new BoardCommentFragment(vo.getId())).commit();
+                        comment_et.setText("");
                     }
                 });
 

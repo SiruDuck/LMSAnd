@@ -56,8 +56,9 @@ public class BoardInsertActivity extends AppCompatActivity {
                         }
                     }
                 });
-
+                finish();
             }
+
         });
 
 

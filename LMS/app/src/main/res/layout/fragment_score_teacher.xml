@@ -1,9 +1,14 @@
-<LinearLayout
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_margin="10dp"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
     >
 
     <TextView
@@ -25,7 +30,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:padding="20dp" />
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recv_scoret"
         android:layout_width="match_parent"
@@ -35,3 +43,5 @@
 
 
 </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

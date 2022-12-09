@@ -101,7 +101,8 @@ public class EqInsertActivity extends AppCompatActivity {
                             finish();
                         }else{
                             Log.d("태그", "onResult: 실패");
-                            Toast.makeText(EqInsertActivity.this,"실패",Toast.LENGTH_SHORT).show();
+                            finish();
+                            //Toast.makeText(EqInsertActivity.this,"실패",Toast.LENGTH_SHORT).show();
                         }
                         //return null;
                     }

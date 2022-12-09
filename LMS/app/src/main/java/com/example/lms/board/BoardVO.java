@@ -8,11 +8,18 @@ public class BoardVO implements Serializable {
 	private String id;
 	private  int readcnt;
 	private String title, content, writer,filename,	filepath;
-	private String writedate;
+	private String writedate, name;
 	ArrayList<BoardVO> list = new ArrayList<>();
 
+	public String getName() {
+		return name;
+	}
 
-	public BoardVO(String id, int readcnt, String title, String content, String writer, String filename, String filepath, String writedate, ArrayList<BoardVO> list) {
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public BoardVO(String id, int readcnt, String title, String content, String writer, String filename, String filepath, String writedate, String name, ArrayList<BoardVO> list) {
 		this.id = id;
 		this.readcnt = readcnt;
 		this.title = title;
@@ -21,14 +28,17 @@ public class BoardVO implements Serializable {
 		this.filename = filename;
 		this.filepath = filepath;
 		this.writedate = writedate;
+		this.name = name;
 		this.list = list;
 	}
 
-    public BoardVO() {
 
-    }
 
-    public String getId() {
+	public BoardVO() {
+
+	}
+
+	public String getId() {
 		return id;
 	}
 

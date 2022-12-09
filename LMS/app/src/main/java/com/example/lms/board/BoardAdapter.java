@@ -44,7 +44,7 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.RecHolder>{
     public void onBindViewHolder(@NonNull RecHolder h, @SuppressLint("RecyclerView") int i) {
         h.board_title.setText(list.get(i).getTitle());
         h.board_time.setText(list.get(i).getWritedate().substring(0, list.get(i).getWritedate().indexOf(" ")));
-        h.board_writer.setText(list.get(i).getWriter());
+        h.board_writer.setText(list.get(i).getName());
         h.board_content.setText(list.get(i).getContent());
 
        if(list.get(i).getFilepath()==null){

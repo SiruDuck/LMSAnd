@@ -251,11 +251,15 @@
 
         </LinearLayout>
 
+
+
+
         <LinearLayout
             android:id="@+id/comment_linea"
             android:layout_below="@+id/board_btn_lin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:orientation="vertical">
             <LinearLayout
                 android:layout_marginBottom="20dp"
